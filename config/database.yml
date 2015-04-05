@@ -24,6 +24,9 @@ default: &default
 development:
   <<: *default
   database: kratos_development
+  username: postgres
+  password: <%= ENV['KRATOS_DATABASE_PASSWORD'] %>
+  host: localhost
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +61,10 @@ development:
 test:
   <<: *default
   database: kratos_test
+  username: postgres
+  password: <%= ENV['KRATOS_DATABASE_PASSWORD'] %>
+  host: localhost
+
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,5 +88,6 @@ test:
 production:
   <<: *default
   database: kratos_production
-  username: kratos
-  password: <%= ENV['KRATOS_DATABASE_PASSWORD'] %>
+  # heroku does this automatically
+  # username: kratos
+  # password: <%= ENV['KRATOS_DATABASE_PASSWORD'] %>
