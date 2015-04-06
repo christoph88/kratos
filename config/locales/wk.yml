@@ -19,10 +19,10 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+wk:
   welcome:
-    title: "Welcome"
-    paragraph: "Thank you for visiting our store. Please browse through the products below and buy some stuff. You'll love the unique quality and workmanship put into these items."
+    title: "Wyah"
+    paragraph: "Wyaaaaaa. Ruh ruh. Huwaa muaa mumwa. Wyogg, ur oh. Wua ga ma uma ahuma ooma. Ruh gwyaaaag. Youw."
   products:
-      title: "Products"
-      released: "Released"
+    title: "Mauhwaa"
+    released: "Ruhhha"
