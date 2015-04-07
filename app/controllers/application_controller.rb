@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   private
  
   def set_locale
-    I18n.locale = :wk || I18n.default_locale
+    I18n.locale = :en || I18n.default_locale
   end
   
   #-> Prelang (user_login:devise)
