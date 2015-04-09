@@ -50,6 +50,7 @@ gem 'acts_as_votable', github: 'ryanto/acts_as_votable'
 gem 'rails_config'
 gem 'bootstrap-sass', github: 'twbs/bootstrap-sass'
 gem 'bootstrap-sass-extras'
+gem 'font-awesome-sass'
 gem 'tzinfo-data'
 gem 'validates_formatting_of'
 
