@@ -13,3 +13,37 @@
 *= require landingpage/manifest.css
 *= require_self
 */
+
+#menu, .logo img {
+  background: black;
+  display: inline-block;
+  padding: 10px;
+}
+.kra-header-text {
+  color: white;
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100px;
+  font-weight: 700;
+  background: black;
+  display: inline-block;
+  padding: 10px;
+  letter-spacing: -2px;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.kra-catchphrase {
+  align: center;
+  h3, p {
+    background: black;
+    padding: 10px;
+  }
+}
+
+.copy p {
+  text-align: left;
+}
