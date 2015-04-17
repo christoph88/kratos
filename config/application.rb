@@ -24,5 +24,7 @@ module Kratos
     config.assets.paths << "#{Rails.root}/app/vendor/assets/stylesheets/landingpage"
     config.assets.paths << "#{Rails.root}/app/vendor/assets/javascripts/landingpage"
     
+    # needed for heroku to function properly
+    config.assets.initialize_on_precompile = false 
   end
 end
