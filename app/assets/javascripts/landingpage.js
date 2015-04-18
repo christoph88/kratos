@@ -11,4 +11,3 @@
 // about supported directives.
 //
 //= require turbolinks
-//= require landingpage/manifest.js

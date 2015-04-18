@@ -15,9 +15,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
+# install bower-rails for front end asset management
+gem "bower-rails", "~> 0.9.2"
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -48,9 +47,6 @@ gem 'omniauth-facebook'
 gem 'binding_of_caller'
 gem 'acts_as_votable', github: 'ryanto/acts_as_votable'
 gem 'rails_config'
-gem 'bootstrap-sass', github: 'twbs/bootstrap-sass'
-gem 'bootstrap-sass-extras'
-gem 'font-awesome-sass', '~> 4.3.0'
 gem 'tzinfo-data'
 gem 'validates_formatting_of'
 

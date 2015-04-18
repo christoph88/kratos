@@ -21,9 +21,8 @@ module Kratos
     # config.i18n.default_locale = :de
     
     # add vendor and images subfolders to assets
-    config.assets.paths << "#{Rails.root}/app/vendor/assets/stylesheets/landingpage"
-    config.assets.paths << "#{Rails.root}/app/vendor/assets/javascripts/landingpage"
-    
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'components') 
+
     # needed for heroku to function properly
     config.assets.initialize_on_precompile = false 
   end
