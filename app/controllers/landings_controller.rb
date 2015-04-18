@@ -3,4 +3,7 @@ class LandingsController < ApplicationController
 
   def index
   end
+
+  def test
+  end
 end

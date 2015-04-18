@@ -3,6 +3,7 @@
   "dependencies": {
     "bootstrap": "latest",
     "fontawesome": "latest",
-    "jquery": "latest"
+    "jquery": "latest",
+    "jquery-ujs": "latest"
   }
 }

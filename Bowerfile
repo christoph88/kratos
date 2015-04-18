@@ -5,3 +5,4 @@
 asset 'bootstrap'
 asset 'fontawesome'
 asset 'jquery'
+asset 'jquery-ujs'
