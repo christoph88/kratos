@@ -4,6 +4,7 @@
     "bootstrap": "latest",
     "fontawesome": "latest",
     "jquery": "latest",
-    "jquery-ujs": "latest"
+    "jquery-ujs": "latest",
+    "slicknav": "latest"
   }
 }
