@@ -1,7 +1,7 @@
 class LandingsController < ApplicationController
-  layout 'landingpage', only: :index
+  layout 'landingpage', only: :landingpage
 
-  def index
+  def landingpage
   end
 
   def test

@@ -1,0 +1,166 @@
+<!--home start-->    
+<div id="home">
+  <div class="headerLine">
+    <div id="menuF" class="default">
+      <div class="container">
+        <div class="row">
+          <div class="logo col-md-4">
+            <div>
+              <a href="#">
+                <%= image_tag "landingpage/logo.png" %>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="navmenu"style="text-align: center;">
+              <ul id="menu">
+                <li class="active" ><a href="#home"><%=t "landingpage.menu.brand" %></a></li>
+                <li><a href="#about"><%=t "landingpage.menu.about" %></a></li>
+                <li><a href="#reviews"><%=t "landingpage.menu.reviews" %></a></li>
+                <li><a href="#beta"><%=t "landingpage.menu.join" %></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row wrap">
+        <div class="col-md-12 gallery"> 
+          <h2 class="kra-header-text"><%=t "landingpage.header.text" %></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!--about start-->    
+<div id="about">
+
+  <div class="container">
+    <div class="row aboutUs">
+      <div class="col-md-4 project">
+        <h4><%=t "landingpage.about.column1.headline" %></h4>
+        <p><%=t "landingpage.about.column1.paragraph" %></p>
+      </div>
+      <div class="col-md-4 project">
+        <h4><%=t "landingpage.about.column2.headline" %></h4>
+        <p><%=t "landingpage.about.column2.paragraph" %></p>
+      </div>
+      <div class="col-md-4 project">
+        <h4 style="margin-left: 20px;"><%=t "landingpage.about.column3.headline" %></h4>
+        <p><%=t "landingpage.about.column3.paragraph" %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--reviews start-->    
+
+<div id="reviews">
+  <div class="container">
+    <div class="row aboutUs">
+      <div class="col-md-12 ">
+        <h3><%=t "landingpage.reviews.headline" %></h3>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: relative;">
+
+    <div class="container">
+      <div class="row about">
+        <div class="col-md-6">
+          <div class="about1">
+            <%= image_tag "landingpage/picAbout/aboutP1.png", class: "pic1Ab" %>
+            <h3><%=t "landingpage.reviews.testimonial1.headline" %></h3>
+            <p><%=t "landingpage.reviews.testimonial1.paragraph" %></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="about2">
+            <%= image_tag "landingpage/picAbout/aboutP2.png", class: "pic2Ab" %>
+            <h3><%=t "landingpage.reviews.testimonial2.headline" %></h3>
+            <p><%=t "landingpage.reviews.testimonial2.paragraph" %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="horL"></div>
+
+    <div class="container">
+      <div class="row about">
+        <div class="col-md-6">
+          <div class="about1">
+            <%= image_tag "landingpage/picAbout/aboutP3.png", class: "pic1Ab" %>
+            <h3><%=t "landingpage.reviews.testimonial3.headline" %></h3>
+            <p><%=t "landingpage.reviews.testimonial3.paragraph" %></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="about2">
+            <%= image_tag "landingpage/picAbout/aboutP4.png", class: "pic2Ab" %>
+            <h3><%=t "landingpage.reviews.testimonial4.headline" %></h3>
+            <p><%=t "landingpage.reviews.testimonial4.paragraph" %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="beta">
+  <div class="line3">
+    <div class="container">
+      <div id="project1" ></div>
+      <div class="row Ama">
+        <div class="col-md-12 kra-catchphrase">
+          <h3><%=t "landingpage.cta.text" %></h3>
+        </div>
+      </div>
+    </div>
+  </div>          
+
+
+
+
+
+
+  <!--contact start-->
+
+  <div class="container">
+    <div class="row ftext">
+      <div class="col-md-12">
+        <a id="features"></a>
+        <h3><%=t "landingpage.join.header" %></h3>
+        <p><%=t "landingpage.join.paragraph" %></p>
+      </div>
+      <div class="cBtn">
+        <ul style="margin-top: 23px; margin-bottom: 0px; padding-left: 26px;">
+          <li class="dowbload"><a href="#"><i class="fa fa-star"></i><%=t "landingpage.join.button" %></a></li>
+          <li class="buy"><a href="#"><i class="fa fa-download"></i><%=t "landingpage.join.button" %></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="lineBlack">
+    <div class="container">
+      <div class="row downLine">
+        <div class="col-md-6 text-left copy">
+          <p><%=t "landingpage.footer.copyright" %></p>
+        </div>
+        <div class="col-md-6 text-right dm">
+          <ul id="downMenu">
+            <li class="active" ><a href="#home"><%=t "landingpage.menu.brand" %></a></li>
+            <li><a href="#about"><%=t "landingpage.menu.about" %></a></li>
+            <li><a href="#reviews"><%=t "landingpage.menu.reviews" %></a></li>
+            <li><a href="#beta"><%=t "landingpage.menu.join" %></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>		
