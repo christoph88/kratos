@@ -23,7 +23,5 @@ module Kratos
     # add vendor and images subfolders to assets
     config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components') 
 
-    # needed for heroku to function properly
-    config.assets.initialize_on_precompile = false 
   end
 end
