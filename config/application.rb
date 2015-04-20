@@ -23,8 +23,10 @@ module Kratos
     # load locale files from subfolders
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
     
-    # add vendor and images subfolders to assets
-    config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components') 
+    # add all asset pipeline images sub folders
+    Dir.glob("#{Rails.root}/app/assets/images/**/").each do |path|
+      config.assets.paths << path
+    end
 
   end
 end
