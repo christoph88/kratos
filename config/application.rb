@@ -27,6 +27,9 @@ module Kratos
     Dir.glob("#{Rails.root}/app/assets/images/**/").each do |path|
       config.assets.paths << path
     end
+    
+    # add vendor and images subfolders to assets
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components') 
 
   end
 end
