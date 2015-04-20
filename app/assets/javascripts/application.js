@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery-ujs
 //= require turbolinks
-//= require bootstrap
+//= require bootstrap-sass
 
 // require_tree is commented out!
 // require_tree .

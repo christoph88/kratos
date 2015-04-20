@@ -13,5 +13,5 @@
 //= require turbolinks
 //= require jquery
 //= require jquery-ujs
-//= require bootstrap
+//= require bootstrap-sass
 //= require slicknav

@@ -8,4 +8,5 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 
 # Self added assets should be precompiled
-Rails.application.config.assets.precompile += [/.*\.js/,/.*\.css/]
+Rails.application.config.assets.precompile += %w( landingpage.css )
+Rails.application.config.assets.precompile += %w( landingpage.js )
