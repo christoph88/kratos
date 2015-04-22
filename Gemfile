@@ -8,6 +8,8 @@ gem 'rails', '4.1.4'
 gem 'pg'
 # Gems for Heroku
 gem 'rails_12factor'
+# Use puma webserver
+gem 'puma'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
