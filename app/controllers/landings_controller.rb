@@ -1,6 +1,9 @@
 class LandingsController < ApplicationController
-  layout 'onepager', only: :index
- 
-  def index
+  layout 'landingpage', only: :landingpage
+
+  def landingpage
+  end
+
+  def test
   end
 end
