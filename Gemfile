@@ -51,7 +51,6 @@ gem 'omniauth-facebook'
 gem 'binding_of_caller'
 gem 'acts_as_votable', github: 'ryanto/acts_as_votable'
 gem 'rails_config'
-gem 'bootstrap-sass-extras'
 gem 'tzinfo-data'
 gem 'validates_formatting_of'
 

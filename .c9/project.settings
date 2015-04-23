@@ -26,7 +26,15 @@
         "@runner": "Ruby on Rails (Rails 4.0 + Ruby 2.1)",
         "configs": {
             "@inited": "true",
-            "json()": {}
+            "json()": {
+                "Puma": {
+                    "command": "bundle exec puma -C config/puma.rb",
+                    "cwd": "/",
+                    "debug": true,
+                    "name": "Puma",
+                    "runner": "Shell command"
+                }
+            }
         }
     },
     "share": {
