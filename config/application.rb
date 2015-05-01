@@ -31,5 +31,8 @@ module Kratos
     # Content compression using Rack::Deflater
     config.middleware.use Rack::Deflater
 
+    # disable precompiling assets for devise
+    config.assets.initialize_on_precompile = false
+
   end
 end
