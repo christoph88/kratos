@@ -1,9 +1,9 @@
-<div class="container">
+<div id ="devhelp" class="container">
     <div class="row">
 		<div class="col-md-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Dev help</h3>
+					<h3 class="panel-title clickable">Dev help</h3>
 				</div>
         <div class="panel-body">
           <%= debug(params) if Rails.env.development? %>
@@ -28,3 +28,15 @@
 		</div>
 	</div>
 </div>
+
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+    $('.clickable').on('click', function(){
+      $(this).closest('.panel').addClass('hidden');
+      });
+    });
+
+</script>
