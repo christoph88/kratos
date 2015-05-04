@@ -4,7 +4,7 @@ RSpec.describe LandingsController, type: :controller do
 
   describe "GET #index" do
     it "returns http success" do
-      get :index
+      get :landingpage
       expect(response).to have_http_status(:success)
     end
   end
