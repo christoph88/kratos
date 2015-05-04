@@ -18,6 +18,8 @@
 
 <%= yield %>
 
+<%= render partial: "elements/devhelp" if Rails.env.development? %>
+
 
 <script type="text/javascript">
 jQuery(document).ready(function(){

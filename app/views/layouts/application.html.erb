@@ -13,5 +13,7 @@
 
 <%= yield %>
 
+<%= render partial: "elements/devhelp" if Rails.env.development? %>
+
 </body>
 </html>
