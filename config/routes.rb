@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :submissions
+
   get 'landings/index'
   get '/test', to: 'landings#test'
 
