@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :contests
+
   resources :submissions
 
   get 'landings/index'

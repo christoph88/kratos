@@ -1,5 +1,8 @@
 class AddBirthdateToUsers < ActiveRecord::Migration
-  def change
+  def up
     add_column :users, :birthdate, :datetime
+  end
+  def down
+    remove_column :users, :birthdate
   end
 end
