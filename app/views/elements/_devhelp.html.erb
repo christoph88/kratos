@@ -1,10 +1,10 @@
 <div id ="devhelp" class="container">
-    <div class="row">
-		<div class="col-md-12">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title clickable">Dev help</h3>
-				</div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title clickable">Dev help</h3>
+        </div>
         <div class="panel-body">
           <%= debug(params) if Rails.env.development? %>
           <p><%= link_to "Root path", defined?(root_path) ? root_path : "#" %></p>
@@ -21,17 +21,20 @@
 
         <% end %>
 
-      <% end %>
+        <% end %>
 
-      <p>Vartest:<br />
-      <%=t "controller.correct_user" %><br />
-      <%=t "landingpage.menu.join" %>
-      </p>
+          <p><%= link_to "Contests", defined?(contests_path) ? contests_path : "#" %></p>
+          <p><%= link_to "Submissions", defined?(submissions_path) ? submissions_path : "#" %></p>
 
+          <p>Vartest:<br />
+          <%=t "controller.correct_user" %><br />
+          <%=t "landingpage.menu.join" %>
+          </p>
+
+        </div>
+      </div>
     </div>
-    </div>
-		</div>
-	</div>
+  </div>
 </div>
 
 
