@@ -22,6 +22,7 @@ class ContestsController < ApplicationController
 
   def create
     @contest = current_user.contests.new(contest_params)
+    @contest.admin_id = current_user.id
     @contest.save
     respond_with(@contest)
   end
@@ -42,6 +43,6 @@ class ContestsController < ApplicationController
     end
 
     def contest_params
-      params.require(:contest).permit(:name, :description, :admin_id)
+      params.require(:contest).permit(:name, :description)
     end
 end
