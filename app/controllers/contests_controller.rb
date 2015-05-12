@@ -1,6 +1,11 @@
 class ContestsController < ApplicationController
   before_action :set_contest, only: [:show, :edit, :update, :destroy]
 
+  # the current user can only edit, update or destroy if the id of the pin matches the id the user is linked with.
+  before_action :correct_user, only: [:edit, :update, :destroy]
+  # the user has to authenticate for every action except index and show.
+  before_action :authenticate_user!, except: [:index, :show]
+
   respond_to :html
 
   def index
@@ -44,5 +49,10 @@ class ContestsController < ApplicationController
 
     def contest_params
       params.require(:contest).permit(:name, :description)
+    end
+
+    def correct_user
+      @contest = current_user.contests.find_by(id: params[:id])
+      redirect_to contests_path, notice: t('controller.correct_user') if @contest.nil?
     end
 end

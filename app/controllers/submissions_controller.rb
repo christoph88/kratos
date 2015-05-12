@@ -52,8 +52,8 @@ class SubmissionsController < ApplicationController
     end
 
     def correct_user
-      @pin = current_user.submissions.find_by(id: params[:id])
-      redirect_to submissions_path, notice: t('controller.correct_user') if @pin.nil?
+      @submission = current_user.submissions.find_by(id: params[:id])
+      redirect_to submissions_path, notice: t('controller.correct_user') if @submission.nil?
     end
 
 end
