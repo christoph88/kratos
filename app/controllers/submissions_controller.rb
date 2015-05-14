@@ -10,34 +10,48 @@ class SubmissionsController < ApplicationController
   respond_to :html
 
   def index
+    @title = t('submissions.index.title')
+
     @submissions = Submission.all
     respond_with(@submissions)
   end
 
   def show
+    @title = t('submissions.show.title')
+
     respond_with(@submission)
   end
 
   def new
+    @title = t('submissions.new.title')
+
     @submission = Submission.new
     respond_with(@submission)
   end
 
   def edit
+    @title = t('submissions.edit.title')
+
   end
 
   def create
+    @title = t('submissions.create.title')
+
     @submission = Submission.new(submission_params)
     @submission.save
     respond_with(@submission)
   end
 
   def update
+    @title = t('submissions.update.title')
+
     @submission.update(submission_params)
     respond_with(@submission)
   end
 
   def destroy
+    @title = t('submissions.destroy.title')
+
     @submission.destroy
     respond_with(@submission)
   end
@@ -53,7 +67,7 @@ class SubmissionsController < ApplicationController
 
     def correct_user
       @submission = current_user.submissions.find_by(id: params[:id])
-      redirect_to submissions_path, notice: t('controller.correct_user') if @submission.nil?
+      redirect_to submissions_path, notice: t('submissions.controller.correct_user') if @submission.nil?
     end
 
 end

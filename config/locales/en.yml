@@ -20,20 +20,6 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  submissions:
-    index:
-      title: "Show all submissions"
-    show:
-      title: "View a particular submission"
-    new:
-      title: "Create a new submission"
-    edit:
-      title: "Edit a submission"
-    create:
-      title: "Create a new submission"
-    update:
-      title: "Edit a submission"
-    destroy:
-      title: "Delete a submission"
-    controller:
-      correct_user: "You cannot edit this submission."
+  general:
+    brand_name: "Kratos"
+    base_title: "What?"

@@ -9,23 +9,33 @@ class ContestsController < ApplicationController
   respond_to :html
 
   def index
+    @title = t('contests.index.title')
+
     @contests = Contest.all
     respond_with(@contests)
   end
 
   def show
+    @title = t('contests.show.title')
+
     respond_with(@contest)
   end
 
   def new
+    @title = t('contests.new.title')
+
     @contest = current_user.contests.new
     respond_with(@contest)
   end
 
   def edit
+    @title = t('contests.edit.title')
+
   end
 
   def create
+    @title = t('contests.create.title')
+
     @contest = current_user.contests.new(contest_params)
     @contest.admin_id = current_user.id
     @contest.save
@@ -33,11 +43,15 @@ class ContestsController < ApplicationController
   end
 
   def update
+    @title = t('contests.update.title')
+
     @contest.update(contest_params)
     respond_with(@contest)
   end
 
   def destroy
+    @title = t('contests.destroy.title')
+
     @contest.destroy
     respond_with(@contest)
   end

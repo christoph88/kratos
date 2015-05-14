@@ -20,20 +20,19 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  submissions:
+  contests:
     index:
-      title: "Show all submissions"
+      title: "Show all contests"
     show:
-      title: "View a particular submission"
+      title: "View a particular contest"
     new:
-      title: "Create a new submission"
+      title: "Create a new contest"
     edit:
-      title: "Edit a submission"
+      title: "Edit a contest"
     create:
-      title: "Create a new submission"
+      title: "Create a new contest"
     update:
-      title: "Edit a submission"
+      title: "Edit a contest"
     destroy:
-      title: "Delete a submission"
-    controller:
-      correct_user: "You cannot edit this submission."
+      title: "Delete a contest"
+                  
