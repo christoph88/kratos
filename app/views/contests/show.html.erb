@@ -12,7 +12,7 @@
 
 <p>
   <strong>Admin:</strong>
-  <%= User.find_by_id(@contest.admin_id).name %>
+  <%= @contest.admin_name %>
 </p>
 
 <%= link_to 'Edit', edit_contest_path(@contest) %> |
