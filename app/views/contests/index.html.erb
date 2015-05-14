@@ -15,7 +15,7 @@
       <tr>
         <td><%= contest.name %></td>
         <td><%= contest.description %></td>
-        <td><%= contest.admin_id.nil? ? "No admin" : User.find_by_id(contest.admin_id).name %></td>
+        <td><%= User.find_by_id(contest.admin_id).name %></td>
         <td><%= link_to 'Show', contest %></td>
         <td><%= link_to 'Edit', edit_contest_path(contest) %></td>
         <td><%= link_to 'Destroy', contest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
