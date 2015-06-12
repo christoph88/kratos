@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= title %></title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-<meta name="viewport" content="width=device-width, initial-scale=1"/></head>
+<title><%= title %></title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700|Open+Sans:700' rel='stylesheet' type='text/css'>
+
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
+
+
+</head>
 <body>
-<%= render partial: "elements/navbar" %>
-<%= bootstrap_flash %>
 
-<%= yield %>
+<section id="container" >
 
-<%= render partial: "elements/devhelp" if Rails.env.development? %>
+  <%= render partial: "elements/navbar" %>
+
+  <%= render partial: "elements/sidebar" %>
+
+  <!--main content start-->
+  <section id="main-content">
+    <section class="wrapper site-min-height">
+      <h3><i class="fa fa-angle-right"></i> <%= pagetitle %></h3>
+      <div class="row mt">
+        <div class="col-lg-12">
+
+          <%= bootstrap_flash %>
+
+          <%= yield %>
+
+        </div>
+      </div>
+    </section><!-- /wrapper -->
+  </section><!-- /MAIN CONTENT -->
+  <!--main content end-->
+
+  <%= render partial: "elements/footer" %>
+
+  <!-- /section#container -->
+</section>
 
 </body>
 </html>

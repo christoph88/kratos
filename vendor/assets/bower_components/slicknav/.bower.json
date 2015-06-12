@@ -1,12 +1,12 @@
 {
   "name": "slicknav",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "authors": [
     "Josh Cope"
   ],
   "main": [
-    "jquery.slicknav.js",
-    "slicknav.css"
+    "dist/jquery.slicknav.js",
+    "dist/slicknav.css"
   ],
   "ignore": [
     "**/.*",
@@ -19,11 +19,11 @@
     "jquery": ">=1.7.0"
   },
   "homepage": "https://github.com/ComputerWolf/SlickNav",
-  "_release": "1.0.2",
+  "_release": "1.0.4",
   "_resolution": {
     "type": "version",
-    "tag": "1.0.2",
-    "commit": "5d8445a2358951db7ba2fb21ab0c04448fb21f5e"
+    "tag": "1.0.4",
+    "commit": "38593c5821b4bbaf73cf3aa8428090f87b4b8d15"
   },
   "_source": "git://github.com/ComputerWolf/SlickNav.git",
   "_target": "*",

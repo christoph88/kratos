@@ -10,4 +10,13 @@ module ApplicationHelper
     end
   end
 
+  # Return a title on a per-page basis. (visible on page itself)
+  def pagetitle
+    if @title.nil?
+      t('general.newpage_title')
+    else
+      "#{@title}"
+    end
+  end
+
 end

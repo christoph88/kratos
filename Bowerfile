@@ -3,7 +3,7 @@
 
 # asset 'bootstrap'
 asset 'bootstrap-sass'
-asset 'fontawesome'
+asset 'font-awesome'
 asset 'jquery'
 asset 'jquery-ujs'
 asset 'slicknav'

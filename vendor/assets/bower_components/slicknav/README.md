@@ -1,4 +1,4 @@
-# SlickNav v1.0.2
+# SlickNav v1.0.4
 ## Responsive Mobile Menu jQuery Plugin
 
 ###[SlickNav.com](http://slicknav.com)
@@ -17,8 +17,8 @@
 ####Include the CSS & JS
 slicknav.css can be modified to fit website design
 
-    <link rel="stylesheet" href="SlickNav/slicknav.css" />
-    <script src="SlickNav/jquery.slicknav.min.js"></script>
+    <link rel="stylesheet" href="SlickNav/dist/slicknav.min.css" />
+    <script src="SlickNav/dist/jquery.slicknav.min.js"></script>
 
 ####Menu Markup
 
@@ -50,12 +50,16 @@ slicknav.css can be modified to fit website design
     'allowParentLinks': false // Allow clickable links as parent elements.
     'nestedParentLinks': true // If false, parent links will be separated from the sub-menu toggle.
     'showChildren': false // Show children of parent links by default.
+    'removeIds': false // Remove IDs from all menu elements. Defaults to true if duplicate is true.
+    'removeClasses': false // Remove classes from all menu elements.
 	'brand': '' // Add branding to menu bar.
     
 ### Callbacks
     'init': function(){}, // Called after SlickNav creation
-    'open': function(trigger){}, // Called after menu or sub-menu opened. 
-    'close': function(trigger){} // Called after menu or sub-menu closed.
+    'beforeOpen': function(trigger){}, // Called before menu or sub-menu opened. 
+    'beforeClose': function(trigger){} // Called before menu or sub-menu closed.
+    'afterOpen': function(trigger){} // Called after menu or sub-menu opened.
+    'afterClose': function(trigger){} // Called after menu or sub-menu closed.
 
 ### Methods
     $('.menu').slicknav('toggle'); // Method to toggle the menu

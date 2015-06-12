@@ -11,8 +11,12 @@
 * file per style scope.
 *
 *= require bootstrap-sass
+*= require font-awesome
 *= require shared
 *= require_self
+*= require style
+*= require style-responsive
+*= require table-responsive
 */
 
 //->Prelang (ui_framework:twitter_bootstrap)

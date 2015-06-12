@@ -2,7 +2,7 @@
   "name": "dsl-generated dependencies",
   "dependencies": {
     "bootstrap-sass": "latest",
-    "fontawesome": "latest",
+    "font-awesome": "latest",
     "jquery": "latest",
     "jquery-ujs": "latest",
     "slicknav": "latest"
