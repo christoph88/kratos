@@ -14,6 +14,8 @@
 //= require jquery-ujs
 //= require turbolinks
 //= require bootstrap-sass
+//= require nicescroll
+//= require common-scripts
 
 // require_tree is commented out!
 // require_tree .

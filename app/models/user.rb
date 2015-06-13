@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
   has_many :submissions
   has_many :contests, through: :submissions
 
+  def fullname
+    "#{self.firstname} #{self.name}"
+  end
+
   #->Prelang (user_login/devise)
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(provider: auth.provider, uid: auth.uid).first

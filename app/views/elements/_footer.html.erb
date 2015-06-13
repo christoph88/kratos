@@ -1,9 +1,9 @@
 <footer class="site-footer">
   <div class="text-center">
-    2014 - Alvarez.is
-    <a href="panels.html#" class="go-top">
+    2015 - Kratos
+    <%= link_to request.url + "#", class: "go-top" do %>
       <i class="fa fa-angle-up"></i>
-    </a>
+    <% end %>
     <%= render partial: "elements/devhelp" if Rails.env.development? %>
   </div>
 </footer>
