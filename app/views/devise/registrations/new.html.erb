@@ -1,4 +1,4 @@
-<% provide(:title, t('.sign_up', :default => "Sign up")) %>
+<% @title = t('.sign_up', :default => "Sign up") %>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
