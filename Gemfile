@@ -46,6 +46,8 @@ gem 'spring',        group: :development
 gem 'bundler'
 
 gem 'devise', github: 'plataformatec/devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'binding_of_caller'
