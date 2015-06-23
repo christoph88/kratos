@@ -9,4 +9,8 @@ Rails.application.config.assets.version = '1.0'
 
 # Self added assets should be precompiled
 Rails.application.config.assets.precompile += %w( landingpage.css )
+Rails.application.config.assets.precompile += %w( style.css )
+Rails.application.config.assets.precompile += %w( style-responsive.css )
+Rails.application.config.assets.precompile += %w( table-responsive.css )
 Rails.application.config.assets.precompile += %w( landingpage.js )
+Rails.application.config.assets.precompile += %w( common-scripts.js )
