@@ -6,6 +6,6 @@ class Contest < ActiveRecord::Base
   validates :admin_id, presence: true
 
   def admin_name
-    User.find_by_id(self.admin_id).name
+    User.find_by_id(self.admin_id).username
   end
 end

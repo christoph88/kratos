@@ -4,60 +4,52 @@ namespace :db do
   task populate: :environment do
     make_users
     make_contests
-    make_relationships
   end
 end
 
 def make_users
-  admin = User.create!(
-    firstname: "Example firstname",
-    name: "Example name",
-    username: "Example username",
-    bio: "Example bio",
-    email: "example@railstutorial.org",
-    password: "foobar",
-    password_confirmation: "foobar"
+  User.create!(
+    firstname:              "Christoph",
+    name:                   "Geypen",
+    username:               "chris88",
+    bio:                    "He is the best!",
+    email:                  "test@test.be",
+    password:               "testtest",
+    password_confirmation:  "testtest"
   )
 
-  admin.toggle!(:admin)
-
-  99.times do |n|
+  15.times do |n|
     firstname = Faker::Name.first_name
-    name = Faker::Name.last_name
-    username = Faker::Name.user_name
-    bio = Faker::Lorem.sentences(3)
-    email = "example-#{n+1}@railstutorial.org"
-    password = "password"
+    name      = Faker::Name.last_name
+    username  = Faker::Internet.user_name
+    bio       = Faker::Lorem.sentence
+    email     = "example-#{n+1}@railstutorial.org"
+    password  = "longpassword"
 
     User.create!(
-      firstname: firstname,
-      name: name,
-      username: username,
-      bio: bio,
-      email: email,
-      password: password,
-      password_confirmation: password
+      firstname:              firstname,
+      name:                   name,
+      username:               username,
+      bio:                    bio,
+      email:                  email,
+      password:               password,
+      password_confirmation:  password
     )
   end
 end
 
-#onderstaand moet ik nog bekijken
-#def make_contests
-  #users = User.all(limit: 6)
+def make_contests
+  users = User.all.limit(5)
 
-  #50.times do
-    #content = Faker::Lorem.sentence(5)
-    #users.each { |user| user.microposts.create!(content: content) }
-  #end
-#end
+  10.times do
+    name        = Faker::Team.creature
+    description = Faker::Lorem.sentence
 
-#def make_relationships
-  #users = User.all
-  #user = users.first
+    users.each { |user| user.contests.create!(
+      name:         name,
+      description:  description,
+      admin_id:     user.id
+    ) }
+  end
+end
 
-  #followed_users = users[2..50]
-  #followers = users[3..40]
-
-  #followed_users.each { |followed| user.follow!(followed) }
-  #followers.each       { |follower| follower.follow!(user) }
-#end

@@ -12,7 +12,6 @@
 *
 *= require bootstrap-sass
 *= require font-awesome
-*= require shared
 *= require_self
 *= require style
 *= require style-responsive
@@ -33,4 +32,9 @@
 //->Prelang (user_login:devise)
 .form-user {
   max-width: 450px;
+}
+
+// devhelp
+#devhelp {
+  margin-top: 20px;
 }
