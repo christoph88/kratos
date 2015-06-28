@@ -8,4 +8,5 @@ class Contest < ActiveRecord::Base
   def admin_name
     User.find_by_id(self.admin_id).username
   end
+
 end
