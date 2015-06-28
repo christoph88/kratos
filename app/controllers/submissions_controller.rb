@@ -55,8 +55,9 @@ class SubmissionsController < ApplicationController
   def destroy
     @title = t('submissions.destroy.title')
 
+    @contest = Contest.find_by_id(@submission.contest_id)
     @submission.destroy
-    respond_with(@submission)
+    respond_with(@contest)
   end
 
   private
