@@ -1,3 +1,25 @@
+<h1>Contest information</h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @contest.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @contest.description %>
+</p>
+
+<p>
+  <strong>Admin:</strong>
+  <%= @contest.admin_name %>
+</p>
+
+<%= link_to 'Edit', edit_contest_path(@contest) %> |
+<%= button_to "Delete", @contest, method: :delete %>
+
 <h1>Listing submissions</h1>
 
 <table>
@@ -27,3 +49,4 @@
 <br>
 
 <%= link_to 'New Submission', new_contest_submission_path %>
+<%= link_to 'Back', contests_path %>

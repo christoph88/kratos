@@ -33,6 +33,7 @@ class SubmissionsController < ApplicationController
 
   def edit
     @title = t('submissions.edit.title')
+    @contestid = @submission.contest
 
   end
 

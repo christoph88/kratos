@@ -3,7 +3,6 @@
 
 # asset 'bootstrap'
 asset 'bootstrap-sass'
-asset 'font-awesome'
 asset 'jquery'
 asset 'jquery-ujs'
 asset 'nicescroll'

@@ -24,7 +24,7 @@ module Kratos
     Dir.glob("#{Rails.root}/app/assets/images/**/").each do |path|
       config.assets.paths << path
     end
-    
+
     # Content compression using Rack::Deflater
     config.middleware.use Rack::Deflater
 

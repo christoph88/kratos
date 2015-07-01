@@ -1,0 +1,2673 @@
+/*
+Template Name: DASHGUM FREE - Bootstrap 3.2 Admin Theme
+Template Version: 1.0
+Author: Carlos Alvarez
+Website: http://blacktie.co
+Premium: http://www.gridgum.com
+*/
+/* Import fonts */
+@import url(http://fonts.googleapis.com/css?family=Ruda:400,700,900);
+/* BASIC THEME CONFIGURATION */
+/* line 14, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+body {
+  color: #797979;
+  background: #f2f2f2;
+  font-family: 'Ruda', sans-serif;
+  padding: 0px !important;
+  margin: 0px !important;
+  font-size: 13px;
+}
+
+/* line 23, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+ul li {
+  list-style: none;
+}
+
+/* line 27, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+a, a:hover, a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+/* line 31, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+::selection {
+  background: #68dff0;
+  color: #fff;
+}
+
+/* line 36, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+::-moz-selection {
+  background: #68dff0;
+  color: #fff;
+}
+
+/* line 41, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#container {
+  width: 100%;
+  height: 100%;
+}
+
+/* Bootstrap Modifications */
+/* line 47, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.modal-header {
+  background: #68dff0;
+}
+
+/* line 51, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.modal-title {
+  color: white;
+}
+
+/* line 55, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.btn-round {
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+}
+
+/* line 60, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.accordion-heading .accordion-toggle {
+  display: block;
+  cursor: pointer;
+  border-top: 1px solid #F5F5F5;
+  padding: 5px 0px;
+  line-height: 28.75px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  outline: none !important;
+  text-decoration: none;
+}
+
+/*Theme Backgrounds*/
+/* line 77, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.bg-theme {
+  background-color: #68dff0;
+}
+
+/* line 81, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.bg-theme02 {
+  background-color: #ac92ec;
+}
+
+/* line 85, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.bg-theme03 {
+  background-color: #48cfad;
+}
+
+/* line 89, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.bg-theme04 {
+  background-color: #ed5565;
+}
+
+/*Theme Buttons*/
+/* line 94, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.btn-theme {
+  color: #fff;
+  background-color: #68dff0;
+  border-color: #48bcb4;
+}
+
+/* line 103, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.btn-theme:hover,
+.btn-theme:focus,
+.btn-theme:active,
+.btn-theme.active,
+.open .dropdown-toggle.btn-theme {
+  color: #fff;
+  background-color: #48bcb4;
+  border-color: #48bcb4;
+}
+
+/* line 109, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.btn-theme02 {
+  color: #fff;
+  background-color: #ac92ec;
+  border-color: #967adc;
+}
+
+/* line 118, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.btn-theme02:hover,
+.btn-theme02:focus,
+.btn-theme02:active,
+.btn-theme02.active,
+.open .dropdown-toggle.btn-theme02 {
+  color: #fff;
+  background-color: #967adc;
+  border-color: #967adc;
+}
+
+/* line 124, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.btn-theme03 {
+  color: #fff;
+  background-color: #48cfad;
+  border-color: #37bc9b;
+}
+
+/* line 133, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.btn-theme03:hover,
+.btn-theme03:focus,
+.btn-theme03:active,
+.btn-theme03.active,
+.open .dropdown-toggle.btn-theme03 {
+  color: #fff;
+  background-color: #37bc9b;
+  border-color: #37bc9b;
+}
+
+/* line 139, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.btn-theme04 {
+  color: #fff;
+  background-color: #ed5565;
+  border-color: #da4453;
+}
+
+/* line 148, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.btn-theme04:hover,
+.btn-theme04:focus,
+.btn-theme04:active,
+.btn-theme04.active,
+.open .dropdown-toggle.btn-theme04 {
+  color: #fff;
+  background-color: #da4453;
+  border-color: #da4453;
+}
+
+/* line 154, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.btn-clear-g {
+  color: #48bcb4;
+  background: transparent;
+  border-color: #48bcb4;
+}
+
+/* line 160, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.btn-clear-g:hover {
+  color: white;
+}
+
+/* line 164, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #797979;
+}
+
+/*Helpers*/
+/* line 175, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.centered {
+  text-align: center;
+}
+
+/* line 179, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.goleft {
+  text-align: left;
+}
+
+/* line 183, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.goright {
+  text-align: right;
+}
+
+/* line 187, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.mt {
+  margin-top: 25px;
+}
+
+/* line 191, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.mb {
+  margin-bottom: 25px;
+}
+
+/* line 195, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ml {
+  margin-left: 5px;
+}
+
+/* line 199, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.no-padding {
+  padding: 0 !important;
+}
+
+/* line 203, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.no-margin {
+  margin: 0 !important;
+}
+
+/*Exclusive Theme Colors Configuration*/
+/* line 209, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.label-theme {
+  background-color: #68dff0;
+}
+
+/* line 213, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.bg-theme {
+  background-color: #68dff0;
+}
+
+/* line 217, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+ul.top-menu > li > .logout {
+  color: #f2f2f2;
+  font-size: 12px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border: 1px solid #64c3c2 !important;
+  padding: 5px 15px;
+  margin-right: 15px;
+  background: #68dff0;
+  margin-top: 15px;
+}
+
+/*sidebar navigation*/
+/* line 232, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#sidebar {
+  width: 210px;
+  height: 100%;
+  position: fixed;
+  background: #424a5d;
+}
+
+/* line 239, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#sidebar h5 {
+  color: #f2f2f2;
+  font-weight: 700;
+}
+
+/* line 244, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#sidebar ul li {
+  position: relative;
+}
+
+/* line 248, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#sidebar .sub-menu > .sub li {
+  padding-left: 32px;
+}
+
+/* line 252, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#sidebar .sub-menu > .sub li:last-child {
+  padding-bottom: 10px;
+}
+
+/*LEFT NAVIGATION ICON*/
+/* line 257, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dcjq-icon {
+  height: 17px;
+  width: 17px;
+  display: inline-block;
+  background: url(/images/img/nav-expand.png) no-repeat top;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+/* line 269, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.active .dcjq-icon {
+  background: url(/images/img/nav-expand.png) no-repeat bottom;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+/*---*/
+/* line 277, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.nav-collapse.collapse {
+  display: inline;
+}
+
+/* line 281, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+ul.sidebar-menu, ul.sidebar-menu li ul.sub {
+  margin: -2px 0 0;
+  padding: 0;
+}
+
+/* line 286, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+ul.sidebar-menu {
+  margin-top: 75px;
+}
+
+/* line 290, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#sidebar > ul > li > ul.sub {
+  display: none;
+}
+
+/* line 294, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#sidebar > ul > li.active > ul.sub, #sidebar > ul > li > ul.sub > li > a {
+  display: block;
+}
+
+/* line 298, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+ul.sidebar-menu li ul.sub li {
+  background: #424a5d;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 305, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+ul.sidebar-menu li ul.sub li:last-child {
+  border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 4px 4px;
+}
+
+/* line 310, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+ul.sidebar-menu li ul.sub li a {
+  font-size: 12px;
+  padding: 6px 0;
+  line-height: 35px;
+  height: 35px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #aeb2b7;
+}
+
+/* line 323, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+ul.sidebar-menu li ul.sub li a:hover {
+  color: white;
+  background: transparent;
+}
+
+/* line 328, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+ul.sidebar-menu li ul.sub li.active a {
+  color: #68dff0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+/* line 338, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+ul.sidebar-menu li {
+  /*line-height: 20px !important;*/
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* line 345, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+ul.sidebar-menu li.sub-menu {
+  line-height: 15px;
+}
+
+/* line 349, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+ul.sidebar-menu li a span {
+  display: inline-block;
+}
+
+/* line 353, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+ul.sidebar-menu li a {
+  color: #aeb2b7;
+  text-decoration: none;
+  display: block;
+  padding: 15px 0 15px 10px;
+  font-size: 12px;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 367, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
+  background: #68dff0;
+  color: #fff;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 380, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+ul.sidebar-menu li a i {
+  font-size: 15px;
+  padding-right: 6px;
+}
+
+/* line 385, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+ul.sidebar-menu li a:hover i, ul.sidebar-menu li a:focus i {
+  color: #fff;
+}
+
+/* line 389, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+ul.sidebar-menu li a.active i {
+  color: #fff;
+}
+
+/* line 394, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.mail-info, .mail-info:hover {
+  margin: -3px 6px 0 0;
+  font-size: 11px;
+}
+
+/* MAIN CONTENT CONFIGURATION */
+/* line 400, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#main-content {
+  margin-left: 210px;
+}
+
+/* line 404, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.header, .footer {
+  min-height: 60px;
+  padding: 0 15px;
+}
+
+/* line 409, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1002;
+}
+
+/* line 416, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.black-bg {
+  background: #fff;
+  border-bottom: 1px solid #797979;
+}
+
+/* line 421, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.wrapper {
+  display: inline-block;
+  margin-top: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-top: 0px;
+  width: 100%;
+}
+
+/* line 431, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+a.logo {
+  font-size: 20px;
+  color: #000;
+  float: left;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+/* line 439, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+a.logo b {
+  font-weight: 900;
+}
+
+/* line 443, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+a.logo:hover, a.logo:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+/* line 448, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+a.logo span {
+  color: #68dff0;
+}
+
+/*notification*/
+/* line 454, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#top_menu .nav > li, ul.top-menu > li {
+  float: left;
+}
+
+/* line 458, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.notify-row {
+  float: left;
+  margin-top: 15px;
+  margin-left: 92px;
+}
+
+/* line 464, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.notify-row .notification span.label {
+  display: inline-block;
+  height: 18px;
+  width: 20px;
+  padding: 5px;
+}
+
+/* line 471, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+ul.top-menu > li > a {
+  color: #666666;
+  font-size: 16px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border: 1px solid #666666 !important;
+  padding: 2px 6px;
+  margin-right: 15px;
+}
+
+/* line 481, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
+  border: 1px solid #b6b6b6 !important;
+  background-color: transparent !important;
+  border-color: #b6b6b6 !important;
+  text-decoration: none;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  color: #b6b6b6 !important;
+}
+
+/* line 491, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.notify-row .badge {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  z-index: 100;
+}
+
+/* line 498, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.extended {
+  max-width: 300px !important;
+  min-width: 160px !important;
+  top: 42px;
+  width: 235px !important;
+  padding: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.176) !important;
+  border: none !important;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* Safari and Chrome */
+  /* line 512, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+  .dropdown-menu.extended {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.176) !important;
+  }
+}
+/* line 517, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.extended li p {
+  background-color: #F1F2F7;
+  color: #666666;
+  margin: 0;
+  padding: 10px;
+  border-radius: 4px 4px 0px 0px;
+  -webkit-border-radius: 4px 4px 0px 0px;
+}
+
+/* line 526, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.extended li p.green {
+  background-color: #68dff0;
+  color: #fff;
+}
+
+/* line 531, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.extended li p.yellow {
+  background-color: #fcb322;
+  color: #fff;
+}
+
+/* line 536, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.extended li a {
+  border-bottom: 1px solid #EBEBEB !important;
+  font-size: 12px;
+  list-style: none;
+}
+
+/* line 542, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.extended li a {
+  padding: 15px 10px !important;
+  width: 100%;
+  display: inline-block;
+}
+
+/* line 548, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.extended li a:hover {
+  background-color: #F7F8F9 !important;
+  color: #2E2E2E;
+}
+
+/* line 553, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.tasks-bar .task-info .desc {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+/* line 558, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.tasks-bar .task-info .percent {
+  display: inline-block;
+  float: right;
+  font-size: 13px;
+  font-weight: 600;
+  padding-left: 10px;
+  margin-top: -4px;
+}
+
+/* line 567, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.extended .progress {
+  margin-bottom: 0 !important;
+  height: 10px;
+}
+
+/* line 572, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.inbox li a .photo img {
+  border-radius: 2px 2px 2px 2px;
+  float: left;
+  height: 40px;
+  margin-right: 4px;
+  width: 40px;
+}
+
+/* line 580, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.inbox li a .subject {
+  display: block;
+}
+
+/* line 584, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.inbox li a .subject .from {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* line 589, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.inbox li a .subject .time {
+  font-size: 11px;
+  font-style: italic;
+  font-weight: bold;
+  position: absolute;
+  right: 5px;
+}
+
+/* line 597, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.inbox li a .message {
+  display: block !important;
+  font-size: 11px;
+}
+
+/* line 602, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.top-nav {
+  margin-top: 7px;
+}
+
+/* line 606, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.top-nav ul.top-menu > li .dropdown-menu.logout {
+  width: 268px !important;
+}
+
+/* line 611, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.top-nav li.dropdown .dropdown-menu {
+  float: right;
+  right: 0;
+  left: auto;
+}
+
+/* line 617, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.extended.logout > li {
+  float: left;
+  text-align: center;
+  width: 33.3%;
+}
+
+/* line 623, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.extended.logout > li:last-child {
+  float: left;
+  text-align: center;
+  width: 100%;
+  background: #a9d96c;
+  border-radius: 0 0 3px 3px;
+}
+
+/* line 631, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.extended.logout > li:last-child > a, .dropdown-menu.extended.logout > li:last-child > a:hover {
+  color: #fff;
+  border-bottom: none !important;
+  text-transform: uppercase;
+}
+
+/* line 637, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.extended.logout > li:last-child > a:hover > i {
+  color: #fff;
+}
+
+/* line 641, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.extended.logout > li > a {
+  color: #a4abbb;
+  border-bottom: none !important;
+}
+
+/* line 646, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.full-width .dropdown-menu.extended.logout > li > a:hover {
+  background: none !important;
+  color: #50c8ea !important;
+}
+
+/* line 651, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.extended.logout > li > a:hover {
+  background: none !important;
+}
+
+/* line 655, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.extended.logout > li > a:hover i {
+  color: #50c8ea;
+}
+
+/* line 659, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.extended.logout > li > a i {
+  font-size: 17px;
+}
+
+/* line 663, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.dropdown-menu.extended.logout > li > a > i {
+  display: block;
+}
+
+/* line 667, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.top-nav ul.top-menu > li > a {
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  padding: 6px;
+  background: none;
+  margin-right: 0;
+}
+
+/* line 675, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.top-nav ul.top-menu > li {
+  margin-left: 10px;
+}
+
+/* line 679, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.top-nav ul.top-menu > li > a:hover, .top-nav ul.top-menu > li > a:focus {
+  border: 1px solid #F1F2F7;
+  background: #F1F2F7;
+}
+
+/* line 685, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.top-nav .dropdown-menu.extended.logout {
+  top: 50px;
+}
+
+/* line 689, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.top-nav .nav .caret {
+  border-bottom-color: #A4AABA;
+  border-top-color: #A4AABA;
+}
+
+/* line 693, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.top-nav ul.top-menu > li > a:hover .caret {
+  border-bottom-color: #000;
+  border-top-color: #000;
+}
+
+/* line 698, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.log-arrow-up {
+  background: url(/images/img/arrow-up.png) no-repeat;
+  width: 20px;
+  height: 11px;
+  position: absolute;
+  right: 20px;
+  top: -10px;
+}
+
+/*----*/
+/* line 709, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.notify-arrow {
+  border-style: solid;
+  border-width: 0 9px 9px;
+  height: 0;
+  margin-top: 0;
+  opacity: 0;
+  position: absolute;
+  left: 7px;
+  top: -18px;
+  transition: all 0.25s ease 0s;
+  width: 0;
+  z-index: 10;
+  margin-top: 10px;
+  opacity: 1;
+}
+
+/* line 725, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.notify-arrow-yellow {
+  border-color: transparent transparent #FCB322;
+  border-bottom-color: #FCB322 !important;
+  border-top-color: #FCB322 !important;
+}
+
+/* line 730, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.notify-arrow-green {
+  border-color: transparent transparent #68dff0;
+  border-bottom-color: #68dff0 !important;
+  border-top-color: #68dff0 !important;
+}
+
+/*--sidebar toggle---*/
+/* line 740, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.sidebar-toggle-box {
+  float: left;
+  padding-right: 15px;
+  margin-top: 20px;
+  color: #000;
+}
+
+/* line 747, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.sidebar-toggle-box .fa-bars {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+}
+
+/* line 754, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.sidebar-closed > #sidebar > ul {
+  display: none;
+}
+
+/* line 758, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.sidebar-closed #main-content {
+  margin-left: 0px;
+}
+
+/* line 762, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.sidebar-closed #sidebar {
+  margin-left: -180px;
+}
+
+/* Dash Side */
+/* line 769, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ds {
+  background: #ffffff;
+  padding-top: 20px;
+}
+
+/* line 774, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ds h4 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* line 779, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ds h3 {
+  color: #ffffff;
+  font-size: 16px;
+  padding: 0 10px;
+  line-height: 60px;
+  height: 60px;
+  margin: 0;
+  background: #ff865c;
+  text-align: center;
+}
+
+/* line 790, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ds i {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* line 795, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ds .desc {
+  border-bottom: 1px solid #eaeaea;
+  display: inline-block;
+  padding: 15px 0;
+  width: 100%;
+}
+
+/* line 802, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ds .desc:hover {
+  background: #f2f2f2;
+}
+
+/* line 806, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ds .thumb {
+  width: 30px;
+  margin: 0 10px 0 20px;
+  display: block;
+  float: left;
+}
+
+/* line 813, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ds .details {
+  width: 170px;
+  float: left;
+}
+
+/* line 818, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ds > .desc p {
+  font-size: 11px;
+}
+
+/* line 822, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ds p > muted {
+  font-size: 9px;
+  text-transform: uppercase;
+  font-style: italic;
+  color: #666666;
+}
+
+/* line 829, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ds a {
+  color: #68dff0;
+}
+
+/* LINE ICONS CONFIGURATION */
+/* line 835, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.mtbox {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+/* line 840, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.box1 {
+  padding: 15px;
+  text-align: center;
+  color: #989898;
+  border-bottom: 1px solid #989898;
+}
+
+/* line 847, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.box1 span {
+  font-size: 50px;
+}
+
+/* line 852, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.box1 h3 {
+  text-align: center;
+}
+
+/* line 856, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.box0:hover .box1 {
+  border-bottom: 1px solid #ffffff;
+}
+
+/* line 860, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.box0 p {
+  text-align: center;
+  font-size: 12px;
+  color: #f2f2f2;
+}
+
+/* line 866, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.box0:hover p {
+  color: #ff865c;
+}
+
+/* line 870, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.box0:hover {
+  background: #ffffff;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* MAIN CHART CONFIGURATION */
+/* line 876, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.main-chart {
+  padding-top: 20px;
+}
+
+/* line 883, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.border-head h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  padding-bottom: 5px;
+  font-weight: normal;
+  font-size: 18px;
+  display: inline-block;
+  width: 100%;
+  font-weight: 700;
+  color: #989898;
+}
+
+/* line 896, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.custom-bar-chart {
+  height: 290px;
+  margin-top: 20px;
+  margin-left: 20px;
+  position: relative;
+  border-bottom: 1px solid #c9cdd7;
+}
+
+/* line 904, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.custom-bar-chart .bar {
+  height: 100%;
+  position: relative;
+  width: 6%;
+  margin: 0px 4%;
+  float: left;
+  text-align: center;
+  z-index: 10;
+}
+
+/* line 914, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.custom-bar-chart .bar .title {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* line 922, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.custom-bar-chart .bar .value {
+  position: absolute;
+  bottom: 0;
+  background: #ff865c;
+  color: #68dff0;
+  width: 100%;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+/* line 940, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.custom-bar-chart .bar .value:hover {
+  background: #2f2f2f;
+  color: #fff;
+}
+
+/* line 945, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.y-axis {
+  color: #555555;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  font-size: 11px;
+}
+
+/* line 953, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.y-axis li {
+  border-top: 1px dashed #dbdce0;
+  display: block;
+  height: 58px;
+  width: 100%;
+}
+
+/* line 960, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.y-axis li:last-child {
+  border-top: none;
+}
+
+/* line 964, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.y-axis li span {
+  display: block;
+  margin: -10px 0 0 -60px;
+  padding: 0 10px;
+  width: 40px;
+}
+
+/*Donut Chart Main Page Conf*/
+/* line 973, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.donut-main {
+  display: block;
+  text-align: center;
+}
+
+/* line 978, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.donut-main h4 {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* *************************************************************************************
+PANELS CONFIGURATIONS
+*************************************************************************************** */
+/*Panel Size*/
+/* line 989, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.pn {
+  height: 250px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* line 994, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.pn:hover {
+  box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+/*Grey Panel*/
+/* line 1001, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.grey-panel {
+  text-align: center;
+  background: #dfdfe1;
+}
+
+/* line 1005, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.grey-panel .grey-header {
+  background: #ccd1d9;
+  padding: 3px;
+  margin-bottom: 15px;
+}
+
+/* line 1010, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.grey-panel h5 {
+  font-weight: 200;
+  margin-top: 10px;
+}
+
+/* line 1014, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.grey-panel p {
+  margin-left: 5px;
+}
+
+/* Specific Conf for Donut Charts*/
+/* line 1018, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.donut-chart p {
+  margin-top: 5px;
+  font-weight: 700;
+  margin-left: 15px;
+}
+
+/* line 1023, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.donut-chart h2 {
+  font-weight: 900;
+  color: #FF6B6B;
+  font-size: 38px;
+}
+
+/* Dark Blue*/
+/* line 1031, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.darkblue-panel {
+  text-align: center;
+  background: #444c57;
+}
+
+/* line 1035, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.darkblue-panel .darkblue-header {
+  background: transparent;
+  padding: 3px;
+  margin-bottom: 15px;
+}
+
+/* line 1040, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.darkblue-panel h1 {
+  color: #f2f2f2;
+}
+
+/* line 1043, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.darkblue-panel h5 {
+  font-weight: 200;
+  margin-top: 10px;
+  color: white;
+}
+
+/* line 1048, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.darkblue-panel footer {
+  color: white;
+}
+
+/* line 1051, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.darkblue-panel footer h5 {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: 700;
+}
+
+/*Green Panel*/
+/* line 1058, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.green-panel {
+  text-align: center;
+  background: #68dff0;
+}
+
+/* line 1062, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.green-panel .green-header {
+  background: #43b1a9;
+  padding: 3px;
+  margin-bottom: 15px;
+}
+
+/* line 1067, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.green-panel h5 {
+  color: white;
+  font-weight: 200;
+  margin-top: 10px;
+}
+
+/* line 1072, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.green-panel h3 {
+  color: white;
+  font-weight: 100;
+}
+
+/* line 1076, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.green-panel p {
+  color: white;
+}
+
+/*White Panel */
+/* line 1081, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.white-panel {
+  text-align: center;
+  background: #ffffff;
+  color: #ccd1d9;
+}
+
+/* line 1087, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.white-panel p {
+  margin-top: 5px;
+  font-weight: 700;
+  margin-left: 15px;
+}
+
+/* line 1092, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.white-panel .white-header {
+  background: #f4f4f4;
+  padding: 3px;
+  margin-bottom: 15px;
+  color: #c6c6c6;
+}
+
+/* line 1098, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.white-panel .small {
+  font-size: 10px;
+  color: #ccd1d9;
+}
+
+/* line 1103, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.white-panel i {
+  color: #68dff0;
+  padding-right: 4px;
+  font-size: 14px;
+}
+
+/*STOCK CARD Panel*/
+/* line 1110, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.card {
+  background: white;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1em;
+  height: 250px;
+}
+
+/* line 1116, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.stock .stock-chart {
+  background: #00c5de;
+}
+
+/* line 1119, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.stock .stock-chart #chart {
+  height: 10.7em;
+  background: url(http://i.imgbox.com/abmuNQx2) center bottom no-repeat;
+}
+
+/* line 1123, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.stock .current-price {
+  background: #1d2122;
+  padding: 10px;
+}
+
+/* line 1127, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.stock .current-price .info abbr {
+  display: block;
+  color: #f8f8f8;
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 0.18em;
+}
+
+/* line 1134, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.stock .current-price .changes {
+  text-align: right;
+}
+
+/* line 1137, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.stock .changes .up {
+  color: #4fd98b;
+}
+
+/* line 1140, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.stock .current-price .changes .value {
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+/* line 1144, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.stock .summary {
+  color: #2f2f2f;
+  display: block;
+  background: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+}
+
+/* line 1151, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.stock .summary strong {
+  font-weight: 900;
+  font-size: 14px;
+}
+
+/*Content Panel*/
+/* line 1157, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.content-panel {
+  background: #ffffff;
+  box-shadow: 0px 3px 2px #aab2bd;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+/* line 1163, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.content-panel h4 {
+  margin-left: 10px;
+}
+
+/*WEATHER PANELS*/
+/* Weather 1 */
+/* line 1170, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.weather {
+  background: url(/assets/img/weather.jpg) no-repeat center top;
+  text-align: center;
+  background-position: center center;
+}
+
+/* line 1175, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.weather i {
+  color: white;
+  margin-top: 45px;
+}
+
+/* line 1179, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.weather h2 {
+  color: white;
+  font-weight: 900;
+}
+
+/* line 1183, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.weather h4 {
+  color: white;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+/* Weather 2 */
+/* line 1190, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.weather-2 {
+  background: #e9f0f4;
+}
+
+/* line 1193, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.weather-2 .weather-2-header {
+  background: #54bae6;
+  padding-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* line 1198, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.weather-2 .weather-2-header p {
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* line 1203, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.weather-2 .weather-2-header p small {
+  font-size: 10px;
+}
+
+/* line 1206, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.weather-2 .data {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: #272b34;
+}
+
+/* line 1211, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.weather-2 .data h5 {
+  margin-top: 0px;
+  font-weight: lighter;
+}
+
+/* line 1215, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.weather-2 .data h1 {
+  margin-top: 2px;
+}
+
+/* Weather 3 */
+/* line 1220, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.weather-3 {
+  background: #ffcf00;
+}
+
+/* line 1224, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.weather-3 i {
+  color: white;
+  margin-top: 30px;
+  font-size: 70px;
+}
+
+/* line 1229, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.weather-3 h1 {
+  margin-top: 10px;
+  color: white;
+  font-weight: 900;
+}
+
+/* line 1234, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.weather-3 .info {
+  background: #f2f2f2;
+}
+
+/* line 1237, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.weather-3 .info i {
+  font-size: 15px;
+  color: #c2c2c2;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+/* line 1243, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.weather-3 .info h3 {
+  font-weight: 900;
+  margin-bottom: 0px;
+}
+
+/* line 1247, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.weather-3 .info p {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 16px;
+  color: #c2c2c2;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/*Twitter Panel*/
+/* line 1258, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.twitter-panel {
+  background: #4fc1e9;
+  text-align: center;
+}
+
+/* line 1262, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.twitter-panel i {
+  color: white;
+  margin-top: 40px;
+}
+
+/* line 1266, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.twitter-panel p {
+  color: #f5f5f5;
+  margin: 10px;
+}
+
+/* line 1270, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.twitter-panel .user {
+  color: white;
+  font-weight: 900;
+}
+
+/* Contest Panel*/
+/* line 1277, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.contest-panel {
+  /*adapt background to image-url since this is a placeholder*/
+  background: url(/assets/img/contest.jpg) no-repeat center top;
+  text-align: center;
+  background-position: center center;
+}
+
+/* line 1283, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.contest-panel i {
+  color: white;
+  margin-top: 35px;
+}
+
+/* line 1287, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.contest-panel p {
+  margin: 5px;
+  color: white;
+}
+
+/* Product Panel */
+/* line 1293, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.product-panel {
+  background: #dadad2;
+  text-align: center;
+  padding-top: 50px;
+  height: 100%;
+}
+
+/* Product Panel 2*/
+/* line 1301, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.product-panel-2 {
+  background: #dadad2;
+  text-align: center;
+}
+
+/* line 1305, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.product-panel-2 .badge {
+  position: absolute;
+  top: 20px;
+  left: 35px;
+}
+
+/* line 1310, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.badge-hot {
+  background: #ed5565;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  border-radius: 100%;
+}
+
+/* Soptify Panel */
+/* line 1322, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#spotify {
+  background: url(/assets/img/lorde.jpg) no-repeat center top;
+  margin-top: -15px;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 220px;
+  width: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 1338, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#spotify .btn-clear-g {
+  top: 15%;
+  right: 10px;
+  position: absolute;
+  margin-top: 5px;
+}
+
+/* line 1344, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#spotify .sp-title {
+  bottom: 15%;
+  left: 25px;
+  position: absolute;
+  color: #efefef;
+}
+
+/* line 1350, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#spotify .sp-title h3 {
+  font-weight: 900;
+}
+
+/* line 1353, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#spotify .play {
+  bottom: 18%;
+  right: 25px;
+  position: absolute;
+  color: #efefef;
+  font-size: 20px;
+}
+
+/* line 1360, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.followers {
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+/* BLOG PANEL */
+/* line 1366, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#blog-bg {
+  background: url(/assets/img/blog-bg.jpg) no-repeat center top;
+  margin-top: -15px;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 150px;
+  width: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 1382, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#blog-bg .badge {
+  position: absolute;
+  top: 20px;
+  left: 35px;
+}
+
+/* line 1387, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.badge-popular {
+  background: #3498db;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+  border-radius: 100%;
+}
+
+/* line 1397, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.blog-title {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 100px;
+  padding: 6px;
+  color: white;
+  font-weight: 700;
+  position: absolute;
+  display: block;
+  width: 120px;
+}
+
+/* line 1407, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.blog-text {
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+/* Calendar Configuration */
+/* line 1415, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#calendar {
+  color: white;
+  padding: 0px !important;
+}
+
+/* line 1419, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.calendar-month-header {
+  background: #43b1a9;
+}
+
+/* TODO PANEL */
+/* line 1424, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.steps {
+  display: block;
+}
+
+/* line 1427, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.steps input[type=checkbox] {
+  display: none;
+}
+
+/* line 1430, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.steps input[type=submit] {
+  background: #f1783c;
+  border: none;
+  padding: 0px;
+  margin: 0 auto;
+  width: 100%;
+  height: 55px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 11px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+/* line 1445, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.steps input[type=submit]:hover {
+  background: #8fde9c;
+}
+
+/* line 1448, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.steps label {
+  background: #393D40;
+  height: 65px;
+  line-height: 65px;
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #44494e;
+  color: #889199;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-indent: 52px;
+  cursor: pointer;
+  transition: all 0.7s ease;
+  margin: 0px;
+}
+
+/* line 1465, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.steps label:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  display: block;
+  position: absolute;
+  margin: 26px 0px 0px 18px;
+  border-radius: 100%;
+  transition: border 0.7s ease;
+}
+
+/* line 1475, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.steps label:hover {
+  background: #2B2E30;
+  color: #46b7e5;
+}
+
+/* line 1479, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.steps label:hover:before {
+  border: 1px solid #46b7e5;
+}
+
+/* line 1484, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#op1:checked ~ label[for=op1]:before,
+#op2:checked ~ label[for=op2]:before,
+#op3:checked ~ label[for=op3]:before {
+  border: 2px solid #96c93c;
+  background: url(/images/ta:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGFJREFUeNpinHLMhgEHKADia0xQThIQs6JJ9gPxZhYQAcS6QHwDiI8hSYJAC0gBPxDLAvFcIJ6JJJkDxFNBVtgBcQ8Qa6BLghgwN4A4a9ElQYAFSj8C4mwg3o8sCQIAAQYA78QTYqnPZuEAAAAASUVORK5CYII=) no-repeat center center;
+}
+
+/* PROFILE PANELS */
+/* Profile 01*/
+/* line 1491, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#profile-01 {
+  background: url(/assets/img/profile-01.jpg) no-repeat center top;
+  margin-top: -15px;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 150px;
+  width: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 1507, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#profile-01 h3 {
+  color: white;
+  padding-top: 50px;
+  margin: 0px;
+  text-align: center;
+}
+
+/* line 1513, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#profile-01 h6 {
+  color: white;
+  text-align: center;
+  margin-bottom: 0px;
+  font-weight: 900;
+}
+
+/* line 1519, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.profile-01 {
+  background: #68dff0;
+  height: 50px;
+}
+
+/* line 1523, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.profile-01:hover {
+  background: #2f2f2f;
+  -webkit-transition: background-color 0.6s;
+  -moz-transition: background-color 0.6s;
+  -o-transition: background-color 0.6s;
+  transition: background-color 0.6s;
+  cursor: pointer;
+}
+
+/* line 1531, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.profile-01 p {
+  color: white;
+  padding-top: 15px;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+/* Profile 02*/
+/* line 1539, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#profile-02 {
+  background: url(/assets/img/profile-02.jpg) no-repeat center top;
+  margin-top: -15px;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 200px;
+  width: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 1555, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#profile-02 .user {
+  padding-top: 40px;
+  text-align: center;
+}
+
+/* line 1559, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#profile-02 h4 {
+  color: white;
+  margin: 0px;
+  padding-top: 8px;
+}
+
+/* line 1564, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.pr2-social a {
+  color: #cdcdcd;
+}
+
+/* line 1567, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.pr2-social a:hover {
+  color: #68dff0;
+}
+
+/* line 1570, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.pr2-social i {
+  margin-top: 15px;
+  margin-right: 12px;
+  font-size: 20px;
+}
+
+/*spark line*/
+/* line 1578, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.chart {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 1583, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.chart .heading {
+  text-align: left;
+}
+
+/* line 1586, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.chart .heading span {
+  display: block;
+}
+
+/* line 1589, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.panel.green-chart .chart-tittle {
+  font-size: 16px;
+  padding: 15px;
+  display: inline-block;
+  font-weight: normal;
+  background: #99c262;
+  width: 100%;
+  -webkit-border-radius: 0px 0px 4px 4px;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* line 1599, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#barchart {
+  margin-bottom: -15px;
+  display: inline-block;
+}
+
+/* line 1603, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.panel.green-chart .chart-tittle .value {
+  float: right;
+  color: #c0f080;
+}
+
+/* line 1607, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.panel.green-chart {
+  background: #a9d96c;
+  color: #fff;
+}
+
+/* line 1611, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.panel.terques-chart {
+  background: transparent;
+  color: #797979;
+}
+
+/* line 1615, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.panel.terques-chart .chart-tittle .value {
+  float: right;
+  color: #fff;
+}
+
+/* line 1619, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.panel.terques-chart .chart-tittle .value a {
+  color: #2f2f2f;
+  font-size: 12px;
+}
+
+/* line 1623, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.panel.terques-chart .chart-tittle .value a:hover, .panel.terques-chart .chart-tittle .value a.active {
+  color: #68dff0;
+  font-size: 12px;
+}
+
+/* line 1627, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.panel.terques-chart .chart-tittle {
+  font-size: 16px;
+  padding: 15px;
+  display: inline-block;
+  font-weight: normal;
+  background: #39b7ac;
+  width: 100%;
+  -webkit-border-radius: 0px 0px 4px 4px;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* line 1637, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.inline-block {
+  display: inline-block;
+}
+
+/* showcase background */
+/* line 1642, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.showback {
+  background: #ffffff;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 3px 2px #aab2bd;
+}
+
+/* Calendar Events - Calendar.html*/
+/* line 1652, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.external-event {
+  cursor: move;
+  display: inline-block !important;
+  margin-bottom: 7px !important;
+  margin-right: 7px !important;
+  padding: 10px;
+}
+
+/* line 1660, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.drop-after {
+  padding-top: 15px;
+  margin-top: 15px;
+  border-top: 1px solid #ccc;
+}
+
+/* line 1666, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.fc-state-default, .fc-state-default .fc-button-inner {
+  background: #f2f2f2;
+}
+
+/* line 1670, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.fc-state-active .fc-button-inner {
+  background: #FFFFFF;
+}
+
+/* Gallery Configuration */
+/* line 1675, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.photo-wrapper {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-color: #68dff0;
+  -webkit-transition: background-color 0.4s;
+  -moz-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+
+/* line 1685, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.project .overlay {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+/* line 1698, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.project:hover .photo-wrapper {
+  background-color: #68dff0;
+  background-image: url(/assets/img/zoom.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: relative;
+}
+
+/* line 1709, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.project:hover .photo {
+  opacity: 10;
+  filter: alpha(opacity=4000);
+  opacity: 0.1;
+  filter: alpha(opacity=40);
+}
+
+/* line 1715, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.project:hover .overlay {
+  opacity: 100;
+  filter: alpha(opacity=10000);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+/* EZ Checklist */
+/* line 1725, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ez-checkbox {
+  margin-right: 5px;
+}
+
+/* line 1729, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ez-checkbox, .ez-radio {
+  height: 20px;
+  width: 20px;
+}
+
+/* line 1734, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.brand-highlight {
+  background: #fffbcc !important;
+}
+
+/* FORMS CONFIGURATION */
+/* line 1740, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.form-panel {
+  background: #ffffff;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0px 3px 2px #aab2bd;
+  text-align: left;
+}
+
+/* line 1748, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+label {
+  font-weight: 400;
+}
+
+/* line 1752, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.form-horizontal.style-form .form-group {
+  border-bottom: 1px solid #eff2f7;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+/* line 1758, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.round-form {
+  border-radius: 500px;
+  -webkit-border-radius: 500px;
+}
+
+@media (min-width: 768px) {
+  /* line 1764, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+  .form-horizontal .control-label {
+    text-align: left;
+  }
+}
+/* line 1769, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#focusedInput {
+  border: 1px solid #ed5565;
+  box-shadow: none;
+}
+
+/* line 1774, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.add-on {
+  float: right;
+  margin-top: -37px;
+  padding: 3px;
+  text-align: center;
+}
+
+/* line 1781, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.add-on .btn {
+  height: 34px;
+}
+
+/* TOGGLE CONFIGURATION */
+/* line 1786, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.has-switch {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1.231;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 80px;
+  -webkit-mask: url(/assets/img/mask.png) 0 0 no-repeat;
+  mask: url(/assets/img/mask.png) 0 0 no-repeat;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* line 1804, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.has-switch.deactivate {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  cursor: default !important;
+}
+
+/* line 1810, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.has-switch.deactivate label,
+.has-switch.deactivate span {
+  cursor: default !important;
+}
+
+/* line 1813, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.has-switch > div {
+  width: 162%;
+  position: relative;
+  top: 0;
+}
+
+/* line 1818, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.has-switch > div.switch-animate {
+  -webkit-transition: left 0.25s ease-out;
+  -moz-transition: left 0.25s ease-out;
+  -o-transition: left 0.25s ease-out;
+  transition: left 0.25s ease-out;
+  -webkit-backface-visibility: hidden;
+}
+
+/* line 1825, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.has-switch > div.switch-off {
+  left: -63%;
+}
+
+/* line 1828, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.has-switch > div.switch-off label {
+  background-color: #7f8c9a;
+  border-color: #bdc3c7;
+  -webkit-box-shadow: -1px 0 0 rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: -1px 0 0 rgba(255, 255, 255, 0.5);
+  box-shadow: -1px 0 0 rgba(255, 255, 255, 0.5);
+}
+
+/* line 1835, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.has-switch > div.switch-on {
+  left: 0%;
+}
+
+/* line 1838, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.has-switch > div.switch-on label {
+  background-color: #41cac0;
+}
+
+/* line 1841, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.has-switch input[type=checkbox] {
+  display: none;
+}
+
+/* line 1844, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.has-switch span {
+  cursor: pointer;
+  font-size: 14.994px;
+  font-weight: 700;
+  float: left;
+  height: 29px;
+  line-height: 19px;
+  margin: 0;
+  padding-bottom: 6px;
+  padding-top: 5px;
+  position: relative;
+  text-align: center;
+  width: 50%;
+  z-index: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: 0.25s ease-out;
+  -moz-transition: 0.25s ease-out;
+  -o-transition: 0.25s ease-out;
+  transition: 0.25s ease-out;
+  -webkit-backface-visibility: hidden;
+}
+
+/* line 1867, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.has-switch span.switch-left {
+  border-radius: 30px 0 0 30px;
+  background-color: #2A3542;
+  color: #41cac0;
+  border-left: 1px solid transparent;
+}
+
+/* line 1873, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.has-switch span.switch-right {
+  border-radius: 0 30px 30px 0;
+  background-color: #bdc3c7;
+  color: #ffffff;
+  text-indent: 7px;
+}
+
+/* line 1879, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.has-switch span.switch-right [class*="fui-"] {
+  text-indent: 0;
+}
+
+/* line 1882, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.has-switch label {
+  border: 4px solid #2A3542;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  float: left;
+  height: 29px;
+  margin: 0 -21px 0 -14px;
+  padding: 0;
+  position: relative;
+  vertical-align: middle;
+  width: 29px;
+  z-index: 100;
+  -webkit-transition: 0.25s ease-out;
+  -moz-transition: 0.25s ease-out;
+  -o-transition: 0.25s ease-out;
+  transition: 0.25s ease-out;
+  -webkit-backface-visibility: hidden;
+}
+
+/* line 1900, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.switch-square {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -webkit-mask: url(/assets/img/mask.png) 0 0 no-repeat;
+  mask: url(/assets/img/mask.png) 0 0 no-repeat;
+}
+
+/* line 1906, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.switch-square > div.switch-off label {
+  border-color: #7f8c9a;
+  border-radius: 6px 0 0 6px;
+}
+
+/* line 1910, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.switch-square span.switch-left {
+  border-radius: 6px 0 0 6px;
+}
+
+/* line 1913, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.switch-square span.switch-left [class*="fui-"] {
+  text-indent: -10px;
+}
+
+/* line 1916, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.switch-square span.switch-right {
+  border-radius: 0 6px 6px 0;
+}
+
+/* line 1919, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.switch-square span.switch-right [class*="fui-"] {
+  text-indent: 5px;
+}
+
+/* line 1922, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.switch-square label {
+  border-radius: 0 6px 6px 0;
+  border-color: #41cac0;
+}
+
+/*LOGIN CONFIGURATION PAGE*/
+/* line 1930, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.form-login {
+  max-width: 330px;
+  margin: 100px auto 0;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+/* line 1938, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.form-login h2.form-login-heading {
+  margin: 0;
+  padding: 25px 20px;
+  text-align: center;
+  background: #68dff0;
+  border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/* line 1950, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.login-wrap {
+  padding: 20px;
+}
+
+/* line 1953, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.login-wrap .registration {
+  text-align: center;
+}
+
+/* line 1956, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.login-social-link {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+/*LOCK SCREEN CONF*/
+/* line 1964, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#showtime {
+  width: 100%;
+  color: #fff;
+  font-size: 90px;
+  margin-bottom: 30px;
+  margin-top: 250px;
+  display: inline-block;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* line 1975, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.lock-screen {
+  text-align: center;
+}
+
+/* line 1979, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.lock-screen a {
+  color: white;
+}
+
+/* line 1983, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.lock-screen a:hover {
+  color: #48cfad;
+}
+
+/* line 1987, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.lock-screen i {
+  font-size: 60px;
+}
+
+/* line 1991, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.lock-screen .modal-content {
+  position: relative;
+  background-color: #f2f2f2;
+  background-clip: padding-box;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+/* line 2001, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.btn-facebook {
+  color: #fff;
+  background-color: #5193ea;
+  border-color: #2775e2;
+}
+
+/* line 2010, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook:active,
+.btn-facebook.active,
+.open .dropdown-toggle.btn-facebook {
+  color: #fff;
+  background-color: #2775e2;
+  border-color: #2775e2;
+}
+
+/* line 2016, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.btn-twitter {
+  color: #fff;
+  background-color: #44ccfe;
+  border-color: #2bb4e8;
+}
+
+/* line 2025, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.btn-twitter:hover,
+.btn-twitter:focus,
+.btn-twitter:active,
+.btn-twitter.active,
+.open .dropdown-toggle.btn-twitter {
+  color: #fff;
+  background-color: #2bb4e8;
+  border-color: #2bb4e8;
+}
+
+/*badge*/
+/* line 2033, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.badge.bg-primary {
+  background: #8075c4;
+}
+
+/* line 2037, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.badge.bg-success {
+  background: #a9d86e;
+}
+
+/* line 2041, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.badge.bg-warning {
+  background: #FCB322;
+}
+
+/* line 2045, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.badge.bg-important {
+  background: #ff6c60;
+}
+
+/* line 2049, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.badge.bg-info {
+  background: #41cac0;
+}
+
+/* line 2053, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.badge.bg-inverse {
+  background: #2A3542;
+}
+
+/*easy pie chart*/
+/* line 2059, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.easy-pie-chart {
+  display: inline-block;
+  padding: 30px 0;
+}
+
+/* line 2064, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.chart-info, .chart-info .increase, .chart-info .decrease {
+  display: inline-block;
+}
+
+/* line 2068, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.chart-info {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+/* line 2073, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.chart-position {
+  margin-top: 70px;
+}
+
+/* line 2077, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.chart-info span {
+  margin: 0 3px;
+}
+
+/* line 2081, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.chart-info .increase {
+  background: #ff6c60;
+  width: 10px;
+  height: 10px;
+}
+
+/* line 2087, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.chart-info .decrease {
+  background: #f2f2f2;
+  width: 10px;
+  height: 10px;
+}
+
+/* line 2093, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.panel-footer.revenue-foot {
+  background-color: #e6e7ec;
+  -webkit-border-radius: 0px 0px 4px 4px;
+  border-radius: 0px 0px 4px 4px;
+  border: none;
+  padding: 0;
+  width: 100%;
+  display: inline-block;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* Safari and Chrome */
+  /* line 2105, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+  .panel-footer.revenue-foot {
+    margin-bottom: -4px;
+  }
+}
+/* line 2111, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.panel-footer.revenue-foot ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: inline-flex;
+}
+
+/* line 2118, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.panel-footer.revenue-foot ul li {
+  float: left;
+  width: 33.33%;
+}
+
+/* line 2123, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.panel-footer.revenue-foot ul li.first a:hover, .panel-footer.revenue-foot ul li.first a {
+  -webkit-border-radius: 0px 0px 0px 4px;
+  border-radius: 0px 0px 0px 4px;
+}
+
+/* line 2128, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.panel-footer.revenue-foot ul li.last a:hover, .panel-footer.revenue-foot ul li.last a {
+  -webkit-border-radius: 0px 0px 4px 0px;
+  border-radius: 0px 0px 4px 0px;
+  border-right: none;
+}
+
+/* line 2135, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.panel-footer.revenue-foot ul li a {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 15px;
+  text-align: center;
+  border-right: 1px solid #d5d8df;
+  color: #797979;
+}
+
+/* line 2144, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.panel-footer.revenue-foot ul li a:hover, .panel-footer.revenue-foot ul li.active a {
+  background: #fff;
+  position: relative;
+}
+
+/* line 2149, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.panel-footer.revenue-foot ul li a i {
+  color: #c6cad5;
+  display: block;
+  font-size: 16px;
+}
+
+/* line 2154, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.panel-footer.revenue-foot ul li a:hover i, .panel-footer.revenue-foot ul li.active a i {
+  color: #ff6c60;
+  display: block;
+  font-size: 16px;
+}
+
+/*flot chart*/
+/* line 2162, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.flot-chart .chart, .flot-chart .pie, .flot-chart .bars {
+  height: 300px;
+}
+
+/*todolist*/
+/* line 2167, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#sortable {
+  list-style-type: none;
+  margin: 0 0 20px 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 2173, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#sortable li {
+  padding-left: 3em;
+  font-size: 12px;
+}
+
+/* line 2177, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#sortable li i {
+  position: absolute;
+  left: 6px;
+  padding: 4px 10px 0 10px;
+  cursor: pointer;
+}
+
+/* line 2184, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+#sortable li input[type=checkbox] {
+  margin-top: 0;
+}
+
+/* line 2188, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ui-sortable > li {
+  padding: 15px 0 15px 35px !important;
+  position: relative;
+  background: #f5f6f8;
+  margin-bottom: 2px;
+  border-bottom: none !important;
+}
+
+/* line 2196, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ui-sortable li.list-primary {
+  border-left: 3px solid #41CAC0;
+}
+
+/* line 2200, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ui-sortable li.list-success {
+  border-left: 3px solid #78CD51;
+}
+
+/* line 2204, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ui-sortable li.list-danger {
+  border-left: 3px solid #FF6C60;
+}
+
+/* line 2208, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ui-sortable li.list-warning {
+  border-left: 3px solid #F1C500;
+}
+
+/* line 2212, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ui-sortable li.list-info {
+  border-left: 3px solid #58C9F3;
+}
+
+/* line 2216, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.ui-sortable li.list-inverse {
+  border-left: 3px solid #BEC3C7;
+}
+
+/*footer*/
+/* line 2221, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.site-footer {
+  background: #fff;
+  color: #fff;
+  padding: 10px 0;
+}
+
+/* line 2228, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.go-top {
+  margin-right: 1%;
+  float: right;
+  background: rgba(255, 255, 255, 0.5);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+/* line 2238, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.go-top i {
+  color: #2A3542;
+}
+
+/* line 2242, /home/christoph/Documenten/kratos/app/assets/stylesheets/style.css.scss */
+.site-min-height {
+  min-height: 900px;
+}
