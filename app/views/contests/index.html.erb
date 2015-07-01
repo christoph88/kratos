@@ -4,7 +4,7 @@
 
   <% contest.each do |contest| %>
     
-    <%= link_to contest do %>
+    <%= link_to contest_submissions_path(contest.id) do %>
     <div class="col-lg-4 col-md-4 col-sm-4 mb">
       <!-- CONTEST PANEL -->
       <div class="contest-panel pn">
