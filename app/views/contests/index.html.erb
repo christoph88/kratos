@@ -1,3 +1,5 @@
+<p>Get ripped and challenge your friends with one of these contests.
+Not finding what you are looking for? <%= link_to 'Then create your own contest!', new_contest_path %></p>
 <% @contests.each_slice(3) do |contest| %>
 
   <div class="row">
@@ -25,4 +27,4 @@
 
 <br>
 
-<%= link_to 'New Contest', new_contest_path %>
+<%= link_to 'Create contest', new_contest_path %>

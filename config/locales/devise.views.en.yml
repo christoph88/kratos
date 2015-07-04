@@ -31,7 +31,7 @@ en:
     registrations:
       edit:
         are_you_sure: "Are you sure?"
-        cancel_my_account: "Cancel my account"
+        cancel_my_account: "Cancel your account"
         leave_blank_if_you_don_t_want_to_change_it: "leave blank if you dont want to change it"
         currently_waiting_confirmation_for_email: "Currently waiting confirmation for: %{email}"
         title: "Edit %{resource}"
