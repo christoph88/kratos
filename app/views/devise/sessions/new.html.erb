@@ -1,17 +1,33 @@
 <% @title = t('.sign_in', :default => "Sign in") %>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+<div class="row mt">
+  <div class="col-lg-12">
+    <div class="form-panel">
+      <h4 class="mb"><i class="fa fa-angle-right"></i> <%= @title %></h4>
+      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { class: "form-horizontal style-form" }) do |f| %>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+        <div class="form-group">
+          <%= f.label :email, class: "col-sm-2 col-sm-2 control-label" %>
+          <div class="col-sm-10">
+            <%= f.email_field :email, class: "form-control" %>
+          </div>
+        </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+        <div class="form-group">
+          <%= f.label :password, class: "col-sm-2 col-sm-2 control-label" %>
+          <div class="col-sm-10">
+            <%= f.password_field :password, class: "form-control" %>
+          </div>
+        </div>
 
-  <div><%= f.submit t('.sign_in', :default => "Sign in") %></div>
-<% end %>
+        <% if devise_mapping.rememberable? -%>
+          <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+        <% end -%>
 
-<%= render "devise/shared/links" %>
+        <div><%= f.submit t('.sign_in', :default => "Sign in") %></div>
+      <% end %>
+
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>

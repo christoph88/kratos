@@ -1,18 +1,39 @@
 <% @title = t('.sign_up', :default => "Sign up") %>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<div class="row mt">
+  <div class="col-lg-12">
+    <div class="form-panel">
+      <h4 class="mb"><i class="fa fa-angle-right"></i> <%= @title %></h4>
+      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { class: "form-horizontal style-form" }) do |f| %>
+        <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+        <div class="form-group">
+          <%= f.label :email, class: "col-sm-2 col-sm-2 control-label" %>
+          <div class="col-sm-10">
+            <%= f.email_field :email, class: "form-control" %>
+          </div>
+        </div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+        <div class="form-group">
+          <%= f.label :password, class: "col-sm-2 col-sm-2 control-label" %>
+          <div class="col-sm-10">
+            <%= f.password_field :password, class: "form-control" %>
+          </div>
+        </div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+        <div class="form-group">
+          <%= f.label :password_confirmation, class: "col-sm-2 col-sm-2 control-label" %>
+          <div class="col-sm-10">
+            <%= f.password_field :password_confirmation, class: "form-control" %>
+          </div>
+        </div>
 
-  <div><%= f.submit t('.sign_up', :default => "Sign up") %></div>
-<% end %>
+        <div>
+          <%= f.submit t('.sign_up', :default => "Sign up") %>
+        </div>
+      <% end %>
 
-<%= render "devise/shared/links" %>
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>
