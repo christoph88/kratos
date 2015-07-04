@@ -14,6 +14,8 @@ class SubmissionsController < ApplicationController
     @title = t('submissions.index.title')
 
     @submissions = @contest.submissions
+    @podium_submissions = @submissions.first(3)
+    @rest_submissions = @submissions.drop(3)
     respond_with(@submissions)
   end
 

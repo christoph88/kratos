@@ -967,6 +967,59 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     width: 40px;
 }
 
+/* Submissions index */
+
+.subm {
+	padding-top: 20px;
+}
+
+.subm i {
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.subm i.fa-angle-right {
+	font-size: 24px;
+	line-height: 24px;
+}
+
+.subm .desc {
+	border-bottom: 1px solid #eaeaea;
+	display: inline-block;
+	padding: 15px 0;
+	width: 100%;
+}
+
+.subm .desc:hover {
+	background: #f2f2f2;
+}
+
+.subm .thumb {
+	width: 30px;
+	margin: 0 10px 0 20px;
+	display: block;
+	float: left;
+}
+
+.subm .details {
+	width: 170px;
+	float: left;
+}
+
+.subm > .desc p {
+	font-size: 11px;
+}
+
+.subm p > muted {
+	font-size: 9px;
+	text-transform: uppercase;
+	font-style: italic;
+	color: #666666
+}
+
+.subm a {
+	color: #68dff0;
+}
 
 /*Donut Chart Main Page Conf*/
 .donut-main {
@@ -1285,6 +1338,23 @@ PANELS CONFIGURATIONS
 }
 .contest-panel p {
 	margin: 5px;
+	color: white;
+}
+
+/* Submission Panel*/
+.submission-panel {
+  /*adapt background to image-url since this is a placeholder*/
+	background: image-url("img/contest.jpg") no-repeat center top;
+	text-align: center;
+	background-position: center center;
+}
+.submission-panel i {
+	color: white;
+	margin-top: 50px;
+}
+.submission-panel p {
+	margin: 15px;
+  font-size: 20px;
 	color: white;
 }
 
