@@ -15,7 +15,7 @@ class SubmissionsController < ApplicationController
 
     @submissions = @contest.submissions
     @podium_submissions = @submissions.first(3)
-    @rest_submissions = @submissions.drop(3)
+    @other_submissions = @submissions.drop(3)
     respond_with(@submissions)
   end
 
@@ -45,7 +45,7 @@ class SubmissionsController < ApplicationController
     @submission = @contest.submissions.new(submission_params)
     @submission.user_id = current_user.id
     @submission.save
-    respond_with(@submission)
+    respond_with(@contest)
   end
 
   def update
