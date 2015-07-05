@@ -45,7 +45,7 @@ class SubmissionsController < ApplicationController
     @submission = @contest.submissions.new(submission_params)
     @submission.user_id = current_user.id
     @submission.save
-    respond_with(@contest)
+    respond_with(@submission, location: contest_submissions_path(@contest.id))
   end
 
   def update
