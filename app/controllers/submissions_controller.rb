@@ -11,7 +11,7 @@ class SubmissionsController < ApplicationController
   respond_to :html
 
   def index
-    @title = t('submissions.index.title')
+    @title = @contest.name
 
     @submissions = @contest.submissions
     @podium_submissions = @submissions.first(3)

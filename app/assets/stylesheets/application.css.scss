@@ -11,9 +11,9 @@
 * file per style scope.
 *
 *= require bootstrap-sass
-*= require_self
 *= require style
 *= require style-responsive
+*= require_self
 */
 
 //->Prelang (ui_framework:twitter_bootstrap)
