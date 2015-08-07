@@ -9,20 +9,18 @@
                     <span class="sr-only">Toggle navigation</span>
                     <span class="fa fa-bars"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">
+                <%= link_to root_path, class: "navbar-brand" do %>
                     <%= image_tag("logo1-default.png", id: "logo-header" , alt: "Logo") %>
-                </a>
+                <% end %>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
                 <div class="container">
                     <ul class="nav navbar-nav">
-                        <!-- Leaderboard -->
+                        <!-- Leaderboards -->
                         <li class="dropdown mega-menu-fullwidth">
-                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                                Leaderboard
-                            </a>
+                            <%= link_to "Leaderboards", contests_path, class: "dropdown-toggle", data: {:toggle => "dropdown"} %>
                             <ul class="dropdown-menu">
                                 <li>
                                     <div class="mega-menu-content disable-icons">
@@ -113,18 +111,18 @@
                                 </li>
                             </ul>
                         </li>
-                        <!-- End Leaderboard -->
+                        <!-- End Leaderboards -->
 
                         <!-- Teams -->
-                        <li><a href="#">Teams</a></li>
+                        <li><%= link_to "Teams", test_path %></li>
                         <!-- End Teams -->
 
                         <!-- Following -->
-                        <li><a href="#">Following</a></li>
+                        <li><%= link_to "Following", test_path %></li>
                         <!-- End Following -->
 
                         <!-- Profile -->
-                        <li><a href="#">Profile</a></li>
+                        <li><%= link_to_if(user_signed_in?, "Profile", edit_user_registration_path) %></li>
                         <!-- End Profile -->
 
                         <!-- Search Block -->
