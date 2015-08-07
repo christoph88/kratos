@@ -9,8 +9,6 @@ Rails.application.config.assets.version = '1.0'
 
 # Self added assets should be precompiled
 Rails.application.config.assets.precompile += %w( style.css )
-Rails.application.config.assets.precompile += %w( style-responsive.css )
-Rails.application.config.assets.precompile += %w( table-responsive.css )
 
 Rails.application.config.assets.precompile += %w( submissions.css )
 Rails.application.config.assets.precompile += %w( submissions.js )
@@ -20,3 +18,5 @@ Rails.application.config.assets.precompile += %w( contests.js )
 
 Rails.application.config.assets.precompile += %w( landings.css )
 Rails.application.config.assets.precompile += %w( landings.js )
+
+Rails.application.config.assets.precompile += %w( init.js )

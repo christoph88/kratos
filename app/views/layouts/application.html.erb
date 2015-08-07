@@ -1,52 +1,70 @@
 <!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <html>
+
 <head>
-<title><%= title %></title>
+  <title><%= title %></title>
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto:400,300,700|Open+Sans:700" %>
-<%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" %>
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-<%= stylesheet_link_tag params[:controller] %>
-<%= csrf_meta_tags %>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag params[:controller] %>
+  <%= csrf_meta_tags %>
+
+  <!-- Web Fonts -->
+  <%= stylesheet_link_tag "//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin" %>
+  <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" %>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- CSS Header and Footer -->
+  <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="assets/plugins/animate.css">
 </head>
-<body>
-<%= render partial: "elements/tagmanager" %>
 
-<section id="container" >
+<body class="header-fixed">
+  <%= render partial: "elements/tagmanager" %>
 
-  <%= render partial: "elements/navbar" %>
+  <div class="wrapper">
 
-  <%= render partial: "elements/sidebar" %>
+  <%= render partial: "elements/header" %>
+  <%= render partial: "elements/breadcrumbs" unless current_page?(root_url) %>
 
-  <!--main content start-->
-  <section id="main-content">
-    <section class="wrapper site-min-height">
-      <h3><i class="fa fa-angle-right"></i> <%= pagetitle %></h3>
-      <hr>
-      <div class="row mt">
-        <div class="col-lg-12">
+  <!--=== Content ===-->
+  <div class="container content height-500">
+    <%= pagetitle %>
 
-          <%= bootstrap_flash %>
+    <%= bootstrap_flash %>
 
-          <%= yield %>
-
-        </div>
-      </div>
-    </section><!-- /wrapper -->
-  </section><!-- /MAIN CONTENT -->
-  <!--main content end-->
+    <%= yield %>
+  </div>
+  <!--=== End Content ===-->
 
   <%= render partial: "elements/footer" %>
 
-  <!-- /section#container -->
-</section>
+  </div><!--/wrapper-->
 
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag params[:controller] %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag params[:controller] %>
 
+  <%= javascript_include_tag 'init', 'data-turbolinks-track' => true %>
+
+  <!--[if lt IE 9]>
+      <script src="assets/plugins/respond.js"></script>
+      <script src="assets/plugins/html5shiv.js"></script>
+      <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+  <![endif]-->
 </body>
+
 </html>
