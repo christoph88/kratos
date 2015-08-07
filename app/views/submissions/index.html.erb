@@ -44,21 +44,26 @@
 
 </div>
 
-<div class="row-fluid">
-<% @other_submissions.each do |submission| %>
-  <div class="kratos-rank" style="display: inline;">
+<div class="row-fluid ranking">
+  <% @other_submissions.each do |submission| %>
+
     <div class="ranknr"><%= @other_submissions.index(submission) + 3 %> | </div>
-    <%= image_tag("img/ui-sherman.jpg", class: "img-circle", width: "40px", style: "display: inline-block;") %>
-    <div style="display:inline-block;">
+
+    <%= image_tag("img/ui-sherman.jpg", class: "img-circle") %>
+
+    <div class="ranktext" style="display:inline-block;">
       <%= link_to submission.user.username, submission %>
       Team Shred<br>
       15min ago
       <%= submission.weight.to_s + "kg x " + submission.reps.to_s %>
       TEST: <%= current_user.id == submission.user.id ? "YES" : "NO" %>
     </div>
-  </div>
+
   <% end %>
 </div>
-                
-<%= link_to 'New Submission', new_contest_submission_path %>
-<%= link_to 'Back', contests_path %>
+
+
+<div class="row-fluid btn-toolbar">
+  <%= link_to 'New Submission', new_contest_submission_path, class: "btn btn-success btn-sm pull-left" %>
+  <%= link_to 'Back', contests_path , class: "btn btn-default btn-sm pull-left", role: "button" %>
+</div>

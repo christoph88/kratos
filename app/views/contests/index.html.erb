@@ -1,5 +1,12 @@
-<p>Get ripped and challenge your friends with one of these contests.
-Not finding what you are looking for? <%= link_to 'Then create your own contest!', new_contest_path %></p>
+<div class="jumbotron">
+  <div class="container">
+    <h1>Get ripped...</h1>
+    <p>and challenge your friends with one of these contests!</p>
+    <p><%= link_to 'Create contest', new_contest_path, class: "btn btn-primary btn-lg" ,role:"button" %></p>
+  </div>
+</div>
+
+
 <% @contests.each_slice(3) do |contest| %>
 
   <div class="row">
@@ -14,7 +21,7 @@ Not finding what you are looking for? <%= link_to 'Then create your own contest!
         <p><%= contest.name %><br/>
         <%= contest.description %>
         </p>
-        <p><i class="fa fa-user"></i> 18 | <i class="fa fa-heart"></i> 49</p>
+        <p><i class="fa fa-user"></i> <%= contest.submissions.count %> | <i class="fa fa-heart"></i> <%= contest.votes_for.size %></p>
         <p><%= contest.admin_name %></p>
       </div>
     </div><!-- /col-md-4 -->
