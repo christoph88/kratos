@@ -1,9 +1,77 @@
-<footer class="site-footer">
-  <div class="text-center">
-    2015 - Kratos
-    <%= link_to request.url + "#", class: "go-top" do %>
-      <i class="fa fa-angle-up"></i>
-    <% end %>
-    <%= render partial: "elements/devhelp" if Rails.env.development? %>
-  </div>
-</footer>
+<!--=== Footer v2 ===-->
+<div id="footer-v2" class="footer-v2">
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- About -->
+                <div class="col-md-3 md-margin-bottom-40">
+                    <%= link_to root_path do %>
+                        <%= image_tag("logo1-default.png", id: "logo-footer", class: "footer-logo", alt: "Logo") %>
+                    <% end %>
+                    <p class="margin-bottom-20"><%= t('elements.footer.description-text') %></p>
+
+                </div>
+                <!-- End About -->
+
+                <!-- Link List -->
+                <div class="col-md-3 md-margin-bottom-40">
+                  <div class="headline"><h2 class="heading-sm"><%= t('elements.footer.useful-links') %></h2></div>
+                    <ul class="list-unstyled link-list">
+                        <li><a href="#">About us</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Portfolio</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Latest jobs</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Community</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Contact us</a><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                </div>
+                <!-- End Link List -->
+
+                <!-- Latest Tweets -->
+                <div class="col-md-3 md-margin-bottom-40">
+                    <div class="latest-tweets">
+                      <div class="headline"><h2 class="heading-sm"><%= t('elements.footer.latest-tweets') %></h2></div>
+                        <div class="latest-tweets-inner">
+                            <i class="fa fa-twitter"></i>
+                            <p>
+                                <a href="#">@htmlstream</a>
+                                At vero seos etodela ccusamus et
+                                <a href="#">http://t.co/sBav7dm</a>
+                                <small class="twitter-time">2 hours ago</small>
+                            </p>
+                        </div>
+                        <div class="latest-tweets-inner">
+                            <i class="fa fa-twitter"></i>
+                            <p>
+                                <a href="#">@htmlstream</a>
+                                At vero seos etodela ccusamus et
+                                <a href="#">http://t.co/sBav7dm</a>
+                                <small class="twitter-time">4 hours ago</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Latest Tweets -->
+
+                <!-- Address -->
+                <div class="col-md-3 md-margin-bottom-40">
+                  <div class="headline"><h2 class="heading-sm"><%= t('elements.footer.contact-us') %></h2></div>
+                    <address class="md-margin-bottom-40">
+                        <i class="fa fa-home"></i>25, Lorem Lis Street, California, US <br />
+                        <i class="fa fa-phone"></i>Phone: 800 123 3456 <br />
+                        <i class="fa fa-globe"></i>Website: <a href="#">www.htmlstream.com</a> <br />
+                        <i class="fa fa-envelope"></i>Email: <a href="mailto:info@anybiz.com">info@anybiz.com</a>
+                    </address>
+                </div>
+                <!-- End Address -->
+            </div>
+        </div>
+    </div><!--/footer-->
+
+        <div class="copyright">
+            <div class="container">
+                <p class="text-center">2015 &copy; All Rights Reserved. Unify Theme by <a target="_blank" href="https://twitter.com/htmlstream">Htmlstream</a></p>
+                <%= render partial: "elements/devhelp" %>
+            </div>
+        </div><!--/copyright-->
+</div>
+<!--=== End Footer v2 ===-->

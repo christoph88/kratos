@@ -21,3 +21,13 @@
 
 en:
   elements:
+    header:
+      leaderboards: "leaderboards"
+      teams: "teams"
+      following: "following"
+      profile: "profile"
+    footer:
+      description-text: "Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals."
+      useful-links: "Useful Links"
+      latest-tweets: "Latest Tweets"
+      contact-us: "Contact Us"

@@ -5,13 +5,11 @@
 <html>
 
 <head>
-  <title><%= title %></title>
+  <% set_meta_tags site: t('general.brand_name'), title: title, reverse: true %>
+  <%= display_meta_tags %>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <meta name="description" content="">
-  <meta name="author" content="">
 
   <link rel="shortcut icon" href="favicon.ico">
 
@@ -23,14 +21,6 @@
   <%= stylesheet_link_tag "//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin" %>
   <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" %>
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="favicon.ico">
-
-  <!-- CSS Header and Footer -->
-  <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
-
-  <!-- CSS Implementing Plugins -->
-  <link rel="stylesheet" href="assets/plugins/animate.css">
 </head>
 
 <body class="header-fixed">
@@ -38,20 +28,20 @@
 
   <div class="wrapper">
 
-  <%= render partial: "elements/header" %>
-  <%= render partial: "elements/breadcrumbs" unless current_page?(root_url) %>
+    <%= render partial: "elements/header" %>
+    <%= render partial: "elements/breadcrumbs" unless current_page?(root_url) %>
 
-  <!--=== Content ===-->
-  <div class="container content height-500">
-    <%= pagetitle %>
+    <!--=== Content ===-->
+    <div class="container content height-500">
+      <%= pagetitle %>
 
-    <%= bootstrap_flash %>
+      <%= bootstrap_flash %>
 
-    <%= yield %>
-  </div>
-  <!--=== End Content ===-->
+      <%= yield %>
+    </div>
+    <!--=== End Content ===-->
 
-  <%= render partial: "elements/footer" %>
+    <%= render partial: "elements/footer" %>
 
   </div><!--/wrapper-->
 

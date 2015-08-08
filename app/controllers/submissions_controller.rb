@@ -12,6 +12,10 @@ class SubmissionsController < ApplicationController
 
   def index
     @title = @contest.name
+    #set_meta_tags keywords:     %w[],
+                  #description:  ""
+    #set_meta_tags keywords:     %w[],
+                  #description:  ""
 
     @submissions = @contest.submissions
     @podium_submissions = @submissions.first(3)
@@ -21,6 +25,8 @@ class SubmissionsController < ApplicationController
 
   def show
     @title = t('submissions.show.title')
+    #set_meta_tags keywords:     %w[],
+                  #description:  ""
     
     @contest = @submission.contest_id
     respond_with(@submission)
@@ -28,6 +34,8 @@ class SubmissionsController < ApplicationController
 
   def new
     @title = t('submissions.new.title')
+    #set_meta_tags keywords:     %w[],
+                  #description:  ""
 
     @submission = @contest.submissions.new
     respond_with(@submission)
@@ -35,12 +43,17 @@ class SubmissionsController < ApplicationController
 
   def edit
     @title = t('submissions.edit.title')
+    #set_meta_tags keywords:     %w[],
+                  #description:  ""
+
     @contestid = @submission.contest
 
   end
 
   def create
     @title = t('submissions.create.title')
+    #set_meta_tags keywords:     %w[],
+                  #description:  ""
 
     @submission = @contest.submissions.new(submission_params)
     @submission.user_id = current_user.id
@@ -50,6 +63,8 @@ class SubmissionsController < ApplicationController
 
   def update
     @title = t('submissions.update.title')
+    #set_meta_tags keywords:     %w[],
+                  #description:  ""
 
     @submission.update(submission_params)
     respond_with(@submission)
@@ -57,6 +72,8 @@ class SubmissionsController < ApplicationController
 
   def destroy
     @title = t('submissions.destroy.title')
+    #set_meta_tags keywords:     %w[],
+                  #description:  ""
 
     @contest = Contest.find_by_id(@submission.contest_id)
     @submission.destroy

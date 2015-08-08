@@ -10,6 +10,8 @@ class ContestsController < ApplicationController
 
   def index
     @title = t('contests.index.title')
+    #set_meta_tags keywords:     %w[],
+                  #description:  ""
 
     @contests = Contest.all
     respond_with(@contests)
@@ -17,12 +19,16 @@ class ContestsController < ApplicationController
 
   def show
     @title = t('contests.show.title')
+    #set_meta_tags keywords:     %w[],
+                  #description:  ""
 
     respond_with(@contest)
   end
 
   def new
     @title = t('contests.new.title')
+    #set_meta_tags keywords:     %w[],
+                  #description:  ""
 
     @contest = current_user.contests.new
     respond_with(@contest)
@@ -30,11 +36,15 @@ class ContestsController < ApplicationController
 
   def edit
     @title = t('contests.edit.title')
+    #set_meta_tags keywords:     %w[],
+                  #description:  ""
 
   end
 
   def create
     @title = t('contests.create.title')
+    #set_meta_tags keywords:     %w[],
+                  #description:  ""
 
     @contest = current_user.contests.new(contest_params)
     @contest.admin_id = current_user.id
@@ -44,6 +54,8 @@ class ContestsController < ApplicationController
 
   def update
     @title = t('contests.update.title')
+    #set_meta_tags keywords:     %w[],
+                  #description:  ""
 
     @contest.update(contest_params)
     respond_with(@contest)
@@ -51,6 +63,8 @@ class ContestsController < ApplicationController
 
   def destroy
     @title = t('contests.destroy.title')
+    #set_meta_tags keywords:     %w[],
+                  #description:  ""
 
     @contest.destroy
     respond_with(@contest)

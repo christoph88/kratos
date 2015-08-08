@@ -3,6 +3,7 @@
   "dependencies": {
     "bootstrap-sass": "latest",
     "jquery": "latest",
+    "jquery-ujs": "latest",
     "jquery-parallax": "latest",
     "simple-line-icons": "latest",
     "respond": "latest",

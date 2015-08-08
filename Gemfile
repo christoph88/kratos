@@ -55,6 +55,7 @@ gem 'acts_as_votable', github: 'ryanto/acts_as_votable'
 gem 'rails_config'
 gem 'tzinfo-data'
 gem 'validates_formatting_of'
+gem 'meta-tags'
 
 group :development do
   gem 'better_errors'

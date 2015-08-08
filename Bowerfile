@@ -4,6 +4,7 @@
 # asset 'bootstrap'
 asset 'bootstrap-sass'
 asset 'jquery'
+asset 'jquery-ujs'
 asset 'jquery-parallax'
 asset 'simple-line-icons'
 asset 'respond'
