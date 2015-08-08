@@ -14,5 +14,7 @@
 //= require jquery-ujs
 //= require turbolinks
 //= require bootstrap-sass
-//= require custom
-//= require app
+//= require unify/app
+//= require unify/back-to-top
+//= require unify/smoothScroll
+//= require unify/custom

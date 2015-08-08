@@ -11,10 +11,10 @@
 * file per style scope.
 *
 *= require bootstrap-sass
-*= require style
-*= require header-v3
-*= require footer-v2
-*= require custom
+*= require unify/style
+*= require unify/header-v3
+*= require unify/footer-v2
+*= require unify/custom
 *= require simple-line-icons
 *= require_self
 */
