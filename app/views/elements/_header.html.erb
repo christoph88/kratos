@@ -114,15 +114,15 @@
                         <!-- End Leaderboards -->
 
                         <!-- Teams -->
-                        <li><%= link_to t('elements.header.teams'), test_path, class: 'active' if params[:controller] == 'landings' %></li>
+                        <li><%= link_to t('elements.header.teams'), test_path, class: ('active' if params[:controller] == 'landings') %></li>
                         <!-- End Teams -->
 
                         <!-- Following -->
-                        <li><%= link_to t('elements.header.following'), user_signed_in? ? test_path : new_user_session_path, class: 'active' if params[:controller] == 'landings' %></li>
+                        <li><%= link_to t('elements.header.following'), user_signed_in? ? test_path : new_user_session_path, class: ('active' if params[:controller] == 'landings') %></li>
                         <!-- End Following -->
 
                         <!-- Profile -->
-                        <li><%= link_to t('elements.header.profile'), user_signed_in? ? edit_user_registration_path : new_user_session_path, class: 'active' if params[:controller] == 'sessions' || params[:controller] == 'registrations' %></li>
+                        <li><%= link_to t('elements.header.profile'), user_signed_in? ? edit_user_registration_path : new_user_session_path, class: ('active' if params[:controller] == 'sessions' || params[:controller] == 'registrations') %></li>
                         <!-- End Profile -->
 
                         <!-- Search Block -->
