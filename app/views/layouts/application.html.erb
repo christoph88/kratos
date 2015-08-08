@@ -9,7 +9,7 @@
   <%= display_meta_tags %>
 
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <%= viewport_meta_tag(:maximum_scale => "1.0") %>
 
   <link rel="shortcut icon" href="favicon.ico">
 
@@ -29,12 +29,9 @@
   <div class="wrapper">
 
     <%= render partial: "elements/header" %>
-    <%= render partial: "elements/breadcrumbs" unless current_page?(root_url) %>
 
     <!--=== Content ===-->
     <div class="container content height-500">
-      <%= pagetitle %>
-
       <%= bootstrap_flash %>
 
       <%= yield %>
