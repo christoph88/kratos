@@ -5,7 +5,6 @@
     "jquery": "latest",
     "jquery-ujs": "latest",
     "jquery-parallax": "latest",
-    "simple-line-icons": "latest",
     "respond": "latest",
     "html5shiv": "latest"
   }
