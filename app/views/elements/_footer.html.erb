@@ -70,7 +70,7 @@
         <div class="copyright">
             <div class="container">
                 <p class="text-center">2015 &copy; All Rights Reserved. Unify Theme by <a target="_blank" href="https://twitter.com/htmlstream">Htmlstream</a></p>
-                <%= render partial: "elements/devhelp" %>
+                <%= render partial: "elements/devhelp" if Rails.env.development? %>
             </div>
         </div><!--/copyright-->
 </div>
