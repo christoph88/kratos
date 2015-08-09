@@ -1,3 +1,33 @@
+<% @contests.each_slice(3) do |contest_slice| %>
+
+  <div class="row">
+
+  <% contest_slice.each do |contest| %>
+    
+    <%= link_to contest_submissions_path(contest.id) do %>
+    <div class="col-lg-4 col-md-4 col-sm-4 mb">
+      <!-- CONTEST PANEL -->
+      <div class="contest-panel pn">
+        <i class="fa fa-trophy fa-4x"></i>
+        <p><%= contest.name %><br/>
+        <%= contest.description %>
+        </p>
+        <p><i class="fa fa-user"></i> <%= contest.submissions.count %> | <i class="fa fa-heart"></i> <%= contest.votes_for.size %></p>
+        <p><%= contest.admin_name %></p>
+      </div>
+    </div><!-- /col-md-4 -->
+    <% end %>
+
+  <% end %>
+
+  </div><! --/END 1ST ROW OF PANELS -->
+<% end %>
+
+<br>
+
+<!-- START NEW STUFF -->
+
+<%= link_to 'Create contest', new_contest_path %>
 <% content_for :dynamic_stylesheets do %>
   <%= stylesheet_link_tag "unify/blog_masonry_3col.css" %>
 <%end%>
