@@ -8,15 +8,12 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 
 # Self added assets should be precompiled
-Rails.application.config.assets.precompile += %w( style.css )
+Rails.application.config.assets.precompile += %w( unify/blog_masonry_3col.css )
+Rails.application.config.assets.precompile += %w( unify/blog-masonry.js )
+Rails.application.config.assets.precompile += %w( unify/jquery.masonry.min.js )
 
-Rails.application.config.assets.precompile += %w( submissions.css )
-Rails.application.config.assets.precompile += %w( submissions.js )
-
-Rails.application.config.assets.precompile += %w( contests.css )
-Rails.application.config.assets.precompile += %w( contests.js )
-
-Rails.application.config.assets.precompile += %w( landings.css )
-Rails.application.config.assets.precompile += %w( landings.js )
+%w(submissions contests landings).each do |controller|
+  Rails.application.config.assets.precompile += ["#{controller}.js", "#{controller}.css"]
+end
 
 Rails.application.config.assets.precompile += %w( init.js )

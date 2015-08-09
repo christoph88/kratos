@@ -15,6 +15,7 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag params[:controller] %>
+  <%= yield :dynamic_stylesheets %>
   <%= csrf_meta_tags %>
 
   <!-- Web Fonts -->
@@ -30,19 +31,16 @@
 
     <%= render partial: "elements/header" %>
 
-    <!--=== Content ===-->
-    <div class="container content height-500">
-      <%= bootstrap_flash %>
+    <%= bootstrap_flash %>
 
-      <%= yield %>
-    </div>
-    <!--=== End Content ===-->
+    <%= yield %>
 
     <%= render partial: "elements/footer" %>
 
   </div><!--/wrapper-->
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= yield :dynamic_javascripts %>
   <%= javascript_include_tag params[:controller] %>
 
   <%= javascript_include_tag 'init', 'data-turbolinks-track' => true %>
@@ -52,7 +50,6 @@
       <script src="assets/plugins/html5shiv.js"></script>
       <script src="assets/plugins/placeholder-IE-fixes.js"></script>
   <![endif]-->
-  <div id="topcontrol" title="Scroll Back to Top"></div>
 
 </body>
 

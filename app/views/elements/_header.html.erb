@@ -20,7 +20,7 @@
                     <ul class="nav navbar-nav">
                         <!-- Leaderboards -->
                         <li class="dropdown mega-menu-fullwidth<%= " active" if params[:controller] == "contests" %>">
-                            <%= link_to t('elements.header.leaderboards'), contests_path, class: "dropdown-toggle", data: {:toggle => "dropdown"} %>
+                            <%= link_to t('elements.header.leaderboards.button'), contests_path, class: "dropdown-toggle", data: {:toggle => "dropdown"} %>
                             <ul class="dropdown-menu">
                                 <li>
                                     <div class="mega-menu-content disable-icons">
@@ -28,7 +28,7 @@
                                             <div class="row equal-height">
                                                 <div class="col-md-3 equal-height-in">
                                                     <ul class="list-unstyled equal-height-list">
-                                                        <li><h3>Typography &amp; Components</h3></li>
+                                                    <li><h3><%= link_to t('elements.header.leaderboards.latest.button'), contests_path %></h3></li>
 
                                                         <!-- Typography -->
                                                         <li><a href="shortcode_typo_general.html"><i class="fa fa-sort-alpha-asc"></i> General Typography</a></li>
@@ -41,17 +41,11 @@
                                                         <li><a href="shortcode_typo_grid.html"><i class="fa fa-align-justify"></i> Grid Layouts</a></li>
                                                         <!-- End Typography -->
 
-                                                        <!-- Components -->
-                                                        <li><a href="shortcode_compo_messages.html"><i class="fa fa-comment"></i> Alerts &amp; Messages</a></li>
-                                                        <li><a href="shortcode_compo_labels.html"><i class="fa fa-tags"></i> Labels &amp; Badges</a></li>
-                                                        <li><a href="shortcode_compo_media.html"><i class="fa fa-volume-down"></i> Audio/Videos &amp; Images</a></li>
-                                                        <li><a href="shortcode_compo_pagination.html"><i class="fa fa-arrows-h"></i> Paginations</a></li>
-                                                        <!-- End Components -->
                                                     </ul>
                                                 </div>
                                                 <div class="col-md-3 equal-height-in">
                                                     <ul class="list-unstyled equal-height-list">
-                                                        <li><h3>Buttons &amp; Icons</h3></li>
+                                                        <li><h3><%= link_to t('elements.header.leaderboards.top-lists.button'), contests_path %></h3></li>
 
                                                         <!-- Buttons -->
                                                         <li><a href="shortcode_btn_general.html"><i class="fa fa-flask"></i> General Buttons</a></li>
@@ -69,7 +63,7 @@
                                                 </div>
                                                 <div class="col-md-3 equal-height-in">
                                                     <ul class="list-unstyled equal-height-list">
-                                                        <li><h3>Common elements</h3></li>
+                                                        <li><h3><%=  link_to t('elements.header.leaderboards.trending.button'), contests_path %></h3></li>
 
                                                         <!-- Common Elements -->
                                                         <li><a href="shortcode_thumbnails.html"><i class="fa fa-image"></i> Thumbnails</a></li>
@@ -87,7 +81,7 @@
                                                 </div>
                                                 <div class="col-md-3 equal-height-in">
                                                     <ul class="list-unstyled equal-height-list">
-                                                        <li><h3>Forms &amp; Infographics</h3></li>
+                                                        <li><h3><%=  link_to t('elements.header.leaderboards.participated.button'), contests_path %></h3></li>
 
                                                         <!-- Forms -->
                                                         <li><a href="shortcode_form_general.html"><i class="fa fa-bars"></i> Common Bootstrap Forms</a></li>

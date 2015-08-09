@@ -22,7 +22,16 @@
 en:
   elements:
     header:
-      leaderboards: "leaderboards"
+      leaderboards:
+        button: "leaderboards"
+        latest:
+          button: "latest"
+        top-lists:
+          button: "top lists"
+        trending:
+          button: "trending"
+        participated:
+          button: "participated"
       teams: "teams"
       following: "following"
       profile: "profile"
