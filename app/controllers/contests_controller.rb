@@ -10,8 +10,8 @@ class ContestsController < ApplicationController
 
   def index
     @title = t('contests.index.title')
-    #set_meta_tags keywords:     %w[],
-                  #description:  ""
+    set_meta_tags keywords:     %w[leaderboard contest win],
+                  description:  "View all the #{Settings.appname} leaderboards now!"
 
     @contests = Contest.all
     respond_with(@contests)
