@@ -22,17 +22,17 @@
 en:
   contests:
     index:
-      title: "Show all contests"
+      title: "Show all leaderboards"
     show:
-      title: "View a particular contest"
+      title: "View a particular leaderboard"
     new:
-      title: "Create a new contest"
+      title: "Create a new leaderboard"
     edit:
-      title: "Edit a contest"
+      title: "Edit a leaderboard"
     create:
-      title: "Create a new contest"
+      title: "Create a new leaderboard"
     update:
-      title: "Edit a contest"
+      title: "Edit a leaderboard"
     destroy:
-      title: "Delete a contest"
+      title: "Delete a leaderboard"
                   

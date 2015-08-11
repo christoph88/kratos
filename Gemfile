@@ -48,14 +48,21 @@ gem 'bundler'
 gem 'devise', github: 'plataformatec/devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+# omniauthauthentication
 gem 'omniauth'
+# facebook authentication
 gem 'omniauth-facebook'
 gem 'binding_of_caller'
+# easy liking, up- and downvoting
 gem 'acts_as_votable', github: 'ryanto/acts_as_votable'
+# create a general rails config file
 gem 'rails_config'
 gem 'tzinfo-data'
 gem 'validates_formatting_of'
+# easily set metadata
 gem 'meta-tags'
+# natural language date/time parser
+gem 'chronic'
 
 group :development do
   gem 'better_errors'

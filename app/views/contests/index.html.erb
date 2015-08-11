@@ -12,7 +12,7 @@
 <div class="blog_masonry_3col">
     <div class="container content grid-boxes">
 
-        <% @contests.each do |contest| %>
+        <% @contests.each.with_index do |contest, index| %>
           <div class="grid-boxes-in">
               <%= link_to contest_submissions_path(contest.id) do %>
                 <%= image_tag "placeholder/1.jpg", class: "img-responsive", alt: image_alt('placeholder/1.jpg') %>
@@ -20,57 +20,41 @@
               <div class="grid-boxes-caption">
                 <h3><%= link_to contest.name, contest_submissions_path(contest.id) %></h3>
                   <ul class="list-inline grid-boxes-news">
-                    <li><span>By</span> <%= link_to User.find_by_id(Contest.find_by_id(contest.id).admin_id).fullname, root_path %></li>
+                    <li><span>By</span> <%= link_to contest.admin_name, root_path %></li>
                       <li>|</li>
-                      <li><i class="fa fa-clock-o"></i> July 06, 2014</li>
+                      <li><i class="fa fa-clock-o"></i> <%= time_ago_in_words(contest.created_at, include_seconds: true) %></li>
                       <li>|</li>
-                      <li><a href="#"><i class="fa fa-comments-o"></i> 06</a></li>
+                      <li><a href="#"><i class="fa fa-users"></i> <%= contest.submissions.count %></a></li>
                   </ul>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                  <h3 class="heading-xs">Project Completeness <span class="pull-right">77%</span></h3>
+                  <p><%= contest.description %></p>
+                  <h3 class="heading-xs">Edit me please <span class="pull-right">70%</span></h3>
                   <div class="progress progress-u progress-xxs">
-                    <div class="progress-bar progress-bar-u" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%">
+                    <div class="progress-bar progress-bar-u" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
                     </div>
                   </div>
                   <ul class="list-inline blog-info-v2">
                     <li>
-                    <strong>12%</strong>
-                    <span>Funded</span>
+                    <strong><%= contest.submissions.sum(:reps) %> reps</strong>
+                    <span>done</span>
                     </li>
                     <li>
-                    <strong>17%</strong>
-                    <span>Pludged</span>
-                    </li>
-                    <li>
-                    <strong>25</strong>
-                    <span>days to go</span>
+                    <strong><%= contest.tonnage %> kg</strong>
+                    <span>lifted</span>
                     </li>
                   </ul>
-                  <div class="project-share">
-                    <ul class="list-inline comment-list-v2 pull-left">
-                      <li><i class="fa fa-eye"></i> <a href="#">25</a></li>
-                      <li><i class="fa fa-comments"></i> <a href="#">32</a></li>
-                      <li><i class="fa fa-retweet"></i> <a href="#">77</a></li>
-                    </ul>    
-                    <ul class="list-inline star-vote pull-right">
-                      <li><i class="color-green fa fa-star"></i></li>
-                      <li><i class="color-green fa fa-star"></i></li>
-                      <li><i class="color-green fa fa-star"></i></li>
-                      <li><i class="color-green fa fa-star-half-o"></i></li>
-                      <li><i class="color-green fa fa-star-o"></i></li>
-                    </ul>
-                  </div>
               </div>
           </div>
-        <% end %>
 
-        <div class="grid-boxes-in grid-boxes-qoute">
-            <div class="grid-boxes-caption grid-boxes-quote bg-color-sea">
-                <p>If you can design one thing you can design everything. Just Believe It</p>
-                <span>- Htmlstream -</span>
+          <% if (index % 3) == 0 %>
+            <div class="grid-boxes-in grid-boxes-qoute">
+                <div class="grid-boxes-caption grid-boxes-quote bg-color-sea">
+                    <p>If you can design one thing you can design everything. Just Believe It</p>
+                    <span>- Htmlstream -</span>
+                </div>
             </div>
-        </div>
+          <% end %>
 
+        <% end %>
 
 
     </div><!--/container-->

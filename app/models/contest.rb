@@ -11,4 +11,8 @@ class Contest < ActiveRecord::Base
     User.find_by_id(self.admin_id).username
   end
 
+  def tonnage
+    self.submissions.sum(:weight) * self.submissions.sum(:reps)
+  end
+
 end
