@@ -1,69 +1,126 @@
-<div class="row">
-  <div class="col-lg-4">
-    <h3><i class="fa fa-angle-right"></i> Top 3</h3>
-  </div>
-</div>
+<% content_for :dynamic_stylesheets do %>
+  <%= stylesheet_link_tag "unify/profile.css" %>
+<%end%>
 
-<% @podium_submissions.each_slice(3) do |submission| %>
+<% content_for :dynamic_javascripts do %>
+  <%= javascript_include_tag "unify/blog-masonry.js" %>
+  <%= javascript_include_tag "unify/jquery.masonry.min.js" %>
+<%end%>
 
+
+<!--=== Profile ===-->
+<div class="container content profile">
   <div class="row">
+        <!--Left Sidebar-->
+        <div class="col-md-3 md-margin-bottom-40">
 
-  <% submission.each do |submission| %>
-    
-    <%= link_to submission_path(submission.id) do %>
-    <div class="col-lg-4 col-md-4 col-sm-4 mb">
-      <!-- submission PANEL -->
-      <div class="submission-panel pn">
-        <i class="fa fa-trophy fa-5x"></i>
-        <p><%= submission.user.username %><br/>
-        <%= submission.weight.to_s + " kg x " + submission.reps.to_s %>
-        </p>
-      </div>
-    </div><!-- /col-md-4 -->
-    <% end %>
+            <div class="panel-heading-v2 overflow-h">
+                <h2 class="heading-xs pull-left"><i class="fa fa-bar-chart-o"></i> Task Progress</h2>
+                <a href="#"><i class="fa fa-cog pull-right"></i></a>
+            </div>
+            <h3 class="heading-xs">Web Design <span class="pull-right">92%</span></h3>
+            <div class="progress progress-u progress-xxs">
+                <div style="width: 92%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="92" role="progressbar" class="progress-bar progress-bar-u">
+                </div>
+            </div>
+            <h3 class="heading-xs">Unify Project <span class="pull-right">85%</span></h3>
+            <div class="progress progress-u progress-xxs">
+                <div style="width: 85%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="85" role="progressbar" class="progress-bar progress-bar-blue">
+                </div>
+            </div>
+            <h3 class="heading-xs">Sony Corporation <span class="pull-right">64%</span></h3>
+            <div class="progress progress-u progress-xxs margin-bottom-40">
+                <div style="width: 64%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="64" role="progressbar" class="progress-bar progress-bar-dark">
+                </div>
+            </div>
 
-  <% end %>
+            <hr>
 
-  </div><! --/END ROW OF PANELS -->
-<% end %>
+            <!--Notification-->
+            <div class="panel-heading-v2 overflow-h">
+                <h2 class="heading-xs pull-left"><i class="fa fa-bell-o"></i> Notification</h2>
+                <a href="#"><i class="fa fa-cog pull-right"></i></a>
+            </div>
+            <ul class="list-unstyled mCustomScrollbar margin-bottom-20" data-mcs-theme="minimal-dark">
+                <li class="notification">
+                    <i class="icon-custom icon-sm rounded-x icon-bg-red icon-line icon-envelope"></i>
+                    <div class="overflow-h">
+                        <span><strong>Albert Heller</strong> has sent you email.</span>
+                        <small>Two minutes ago</small>
+                    </div>
+                </li>
+                <li class="notification">
+                    <img class="rounded-x" src="assets/img/testimonials/img5.jpg" alt="">
+                    <div class="overflow-h">
+                        <span><strong>Taylor Lee</strong> started following you.</span>
+                        <small>Today 18:25 pm</small>
+                    </div>
+                </li>
+                <li class="notification">
+                    <i class="icon-custom icon-sm rounded-x icon-bg-yellow icon-line fa fa-bolt"></i>
+                    <div class="overflow-h">
+                        <span><strong>Natasha Kolnikova</strong> accepted your invitation.</span>
+                        <small>Yesterday 1:07 pm</small>
+                    </div>
+                </li>
+                <li class="notification">
+                    <img class="rounded-x" src="assets/img/testimonials/img1.jpg" alt="">
+                    <div class="overflow-h">
+                        <span><strong>Mikel Andrews</strong> commented on your Timeline.</span>
+                        <small>23/12 11:01 am</small>
+                    </div>
+                </li>
+                <li class="notification">
+                    <i class="icon-custom icon-sm rounded-x icon-bg-blue icon-line fa fa-comments"></i>
+                    <div class="overflow-h">
+                        <span><strong>Bruno Js.</strong> added you to group chating.</span>
+                        <small>Yesterday 1:07 pm</small>
+                    </div>
+                </li>
+                <li class="notification">
+                    <img class="rounded-x" src="assets/img/testimonials/img6.jpg" alt="">
+                    <div class="overflow-h">
+                        <span><strong>Taylor Lee</strong> changed profile picture.</span>
+                        <small>23/12 15:15 pm</small>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--End Left Sidebar-->
 
-<div class="row">
-  <div class="col-lg-4">
-    <h3><i class="fa fa-angle-right"></i> Description</h3>
-  </div>
+        <!-- Profile Content -->
+        <div class="col-md-9">
+            <div class="profile-body margin-bottom-20">
+                <!--Profile Blog-->
+                <% @submissions.each_slice(2).with_index do |submissions_slice, slice_index| %>
+                  <div class="row margin-bottom-20">
+                    <% submissions_slice.each.with_index do |submission, index| %>
+                    <% rank = slice_index + 1 + slice_index + index %>
+                      <div class="col-sm-6<%= " sm-margin-bottom-20" if index == 0 %>">
+                          <div class="profile-blog">
+                              <%= image_tag("placeholder/1.jpg", class: "rounded-x", alt: image_alt('placeholder/jpg')) %>
+                              <div class="name-location">
+                                  <strong>Mikel Andrews</strong>
+                                  <span><i class="fa fa-map-marker"></i><a href="#">California,</a> <a href="#">US</a></span>
+                              </div>
+                              <div class="clearfix margin-bottom-20"></div>
+                              <p>Donec non dignissim eros. Mauris faucibus turpis volutpat sagittis rhoncus. Pellentesque et rhoncus sapien, sed ullamcorper justo.</p>
+                              <hr>
+                              <ul class="list-inline share-list">
+                                  <li<%= ' class="top-rank"' if rank < 3 %>><i class="fa fa-trophy"></i><strong>Rank: <%= rank %></strong></li>
+                                  <li><i class="fa fa-trophy"></i>54 Followers</li>
+                                  <li><i class="fa fa-repeat"></i>Share</li>
+                              </ul>
+                          </div>
+                      </div>
+                    <% end %>
+
+                  </div><!--/end row-->
+                <% end %>
+                  <!--End Profile Blog-->
+            </div>
+        </div>
+        <!-- End Profile Content -->
+    </div><!--/end row-->
 </div>
-
-<div class="row-fluid">
-  <%= @contest.description %>
-</div>
-
-<div class="row">
-  <div class="col-lg-4">
-    <h3><i class="fa fa-angle-right"></i> Complete ranking</h3>
-  </div>
-
-</div>
-
-<div class="row-fluid ranking">
-  <% @other_submissions.each do |submission| %>
-
-    <div class="ranknr"><%= @other_submissions.index(submission) + 3 %> | </div>
-
-    <%= image_tag("img/ui-sherman.jpg", class: "img-circle") %>
-
-    <div class="ranktext" style="display:inline-block;">
-      <%= link_to submission.user.username, submission %>
-      Team Shred<br>
-      15min ago
-      <%= submission.weight.to_s + "kg x " + submission.reps.to_s %>
-      TEST: <%= current_user.id == submission.user.id ? "YES" : "NO" %>
-    </div>
-
-  <% end %>
-</div>
-
-
-<div class="row-fluid btn-toolbar">
-  <%= link_to 'New Submission', new_contest_submission_path, class: "btn btn-success btn-sm pull-left" %>
-  <%= link_to 'Back', contests_path , class: "btn btn-default btn-sm pull-left", role: "button" %>
-</div>
+<!--=== End Profile ===-->

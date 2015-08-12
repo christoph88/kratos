@@ -12,14 +12,10 @@ class SubmissionsController < ApplicationController
 
   def index
     @title = @contest.name
-    #set_meta_tags keywords:     %w[],
-                  #description:  ""
-    #set_meta_tags keywords:     %w[],
-                  #description:  ""
+    set_meta_tags keywords:     %w[rankings winners leaderboard],
+                  description:  "View the leaderboard of the #{@contest.name} challenge."
 
     @submissions = @contest.submissions
-    @podium_submissions = @submissions.first(3)
-    @other_submissions = @submissions.drop(3)
     respond_with(@submissions)
   end
 
