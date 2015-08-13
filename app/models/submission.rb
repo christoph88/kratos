@@ -15,4 +15,8 @@ class Submission < ActiveRecord::Base
   def calculate_tonnage
     self.tonnage = self.weight * self.reps
   end
+
+  def weight_unit
+    self.pounds? ? "Lbs." : "Kg."
+  end
 end
