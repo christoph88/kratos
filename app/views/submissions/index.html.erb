@@ -104,7 +104,7 @@
                                   <span><i class="fa fa-map-marker"></i><%= time_ago_in_words(submission.created_at, include_seconds: true) %></span>
                               </div>
                               <div class="clearfix margin-bottom-20"></div>
-                              <p><%= submission.user.bio %></p>
+                              <p><%= submission.user.bio + " " + submission.tonnage.to_s %></p>
                               <hr>
                               <ul class="list-inline share-list">
                                   <li<%= ' class="top-rank"' if rank < 3 %>><i class="fa fa-trophy"></i><strong>Rank: <%= rank %></strong></li>

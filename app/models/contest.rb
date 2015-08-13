@@ -12,7 +12,7 @@ class Contest < ActiveRecord::Base
   end
 
   def tonnage
-    self.submissions.sum(:weight) * self.submissions.sum(:reps)
+    self.submissions.sum(:tonnage)
   end
 
 end

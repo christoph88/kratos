@@ -3,6 +3,8 @@ class Submission < ActiveRecord::Base
   belongs_to :contest
 
   validates :user_id, presence: true
+  validates :reps, presence: true
+  validates :weight, presence: true
 
   before_save :calculate_tonnage
 

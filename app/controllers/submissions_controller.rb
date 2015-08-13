@@ -15,7 +15,7 @@ class SubmissionsController < ApplicationController
     set_meta_tags keywords:     %w[rankings winners leaderboard],
                   description:  "View the leaderboard of the #{@contest.name} challenge."
 
-    @submissions = @contest.submissions
+    @submissions = @contest.submissions.order(tonnage: :desc)
     respond_with(@submissions)
   end
 
