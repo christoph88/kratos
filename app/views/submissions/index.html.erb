@@ -100,16 +100,16 @@
                           <div class="profile-blog">
                               <%= image_tag("placeholder/1.jpg", class: "rounded-x", alt: image_alt('placeholder/jpg')) %>
                               <div class="name-location">
-                                  <strong>Mikel Andrews</strong>
-                                  <span><i class="fa fa-map-marker"></i><a href="#">California,</a> <a href="#">US</a></span>
+                                  <strong><%= submission.user.username %></strong>
+                                  <span><i class="fa fa-map-marker"></i><%= time_ago_in_words(submission.created_at, include_seconds: true) %></span>
                               </div>
                               <div class="clearfix margin-bottom-20"></div>
-                              <p>Donec non dignissim eros. Mauris faucibus turpis volutpat sagittis rhoncus. Pellentesque et rhoncus sapien, sed ullamcorper justo.</p>
+                              <p><%= submission.user.bio %></p>
                               <hr>
                               <ul class="list-inline share-list">
                                   <li<%= ' class="top-rank"' if rank < 3 %>><i class="fa fa-trophy"></i><strong>Rank: <%= rank %></strong></li>
-                                  <li><i class="fa fa-trophy"></i>54 Followers</li>
-                                  <li><i class="fa fa-repeat"></i>Share</li>
+                                  <li><i class="fa fa-trophy"></i>Weight: <%= submission.weight %> kg</li>
+                                  <li><i class="fa fa-repeat"></i>Reps: <%= submission.reps %> </li>
                               </ul>
                           </div>
                       </div>
