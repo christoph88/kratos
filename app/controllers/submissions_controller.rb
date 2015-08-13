@@ -1,5 +1,5 @@
 class SubmissionsController < ApplicationController
-  before_action :set_submission, only: [:show, :edit, :update, :destroy]
+  before_action :set_submission, only: [:show, :update, :destroy]
   before_action :set_contest, only: [:index, :new, :create]
 
   # the current user can only edit, update or destroy if the id of the pin matches the id the user is linked with.
@@ -35,15 +35,6 @@ class SubmissionsController < ApplicationController
 
     @submission = @contest.submissions.new
     respond_with(@submission)
-  end
-
-  def edit
-    @title = t('submissions.edit.title')
-    #set_meta_tags keywords:     %w[],
-                  #description:  ""
-
-    @contestid = @submission.contest
-
   end
 
   def create
