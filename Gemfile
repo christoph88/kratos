@@ -6,8 +6,6 @@ ruby "2.1.5"
 gem 'rails', '4.1.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
-# Gems for Heroku
-gem 'rails_12factor'
 # Use puma webserver
 gem 'puma'
 # Use SCSS for stylesheets
@@ -63,6 +61,9 @@ gem 'validates_formatting_of'
 gem 'meta-tags'
 # natural language date/time parser
 gem 'chronic'
+
+# Gems for Heroku
+gem 'rails_12factor', group: :production
 
 group :development do
   gem 'better_errors'

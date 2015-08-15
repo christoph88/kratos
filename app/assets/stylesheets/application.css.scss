@@ -11,6 +11,10 @@
 * file per style scope.
 *
 *= require bootstrap-sass
+*= require unify/ie8
+*= require unify/blocks
+*= require unify/plugins
+*= require unify/app
 *= require unify/style
 *= require unify/header-v3
 *= require unify/footer-v2
