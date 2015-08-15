@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require unify/jquery-migrate.min
 //= require jquery-ujs
 //= require turbolinks
 //= require bootstrap-sass
