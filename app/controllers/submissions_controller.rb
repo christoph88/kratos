@@ -15,7 +15,8 @@ class SubmissionsController < ApplicationController
     set_meta_tags keywords:     %w[rankings winners leaderboard],
                   description:  "View the leaderboard of the #{@contest.name} challenge."
 
-    @submissions = @contest.submissions.order(tonnage: :desc)
+    #@submissions = @contest.submissions.group(:user_id).order(tonnage: :desc)
+    @submissions = @contest.submissions.find_by_sql(IO.read('app/models/sql/submissions_index.sql'))
     respond_with(@submissions)
   end
 
