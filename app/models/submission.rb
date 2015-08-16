@@ -2,11 +2,10 @@ class Submission < ActiveRecord::Base
   belongs_to :user
   belongs_to :contest
 
-  validates :user_id, presence: true
-  validates :reps, presence: true
-  validates :weight, presence: true
+  validates_presence_of :user_id, :reps, :weight
+  validates_uniqueness_of :tonnage, scope: [:user_id, :contest_id]
 
-  before_save :calculate_tonnage
+  before_validation :calculate_tonnage
 
   def user_name
     User.find_by_id(self.user_id).username

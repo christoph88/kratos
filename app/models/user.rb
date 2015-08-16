@@ -8,8 +8,8 @@ class User < ActiveRecord::Base
   has_many :submissions
   has_many :contests, through: :submissions
 
-  validates :username, presence: true, uniqueness: true
-  validates :email, presence: true, uniqueness: true
+  validates_presence_of :username, :email
+  validates_uniqueness_of :username, :email
 
   def fullname
     "#{self.firstname} #{self.name}"

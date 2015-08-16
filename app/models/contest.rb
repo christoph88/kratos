@@ -2,8 +2,7 @@ class Contest < ActiveRecord::Base
   has_many :submissions
   has_many :users, through: :submissions
 
-  validates :name, presence: true
-  validates :admin_id, presence: true
+  validates_presence_of :name, :admin_id
 
   acts_as_votable
 
