@@ -1,1 +1,5 @@
 /* Add here all your css styles (customizations) */
+
+.profile .profile-blog.current_user {
+	border-left: 5px solid #72c02c;
+}
