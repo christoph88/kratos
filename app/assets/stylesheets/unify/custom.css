@@ -1,5 +1,11 @@
 /* Add here all your css styles (customizations) */
 
+/* Disable resizing of brand image on fixed navbar */
+.header-fixed .header-v3.header-fixed-shrink .navbar-brand img {
+	width: 60px;
+}
+
+/* Mark current user on the submission index page */
 .profile .profile-blog.current_user {
 	border-left: 5px solid #72c02c;
 }
