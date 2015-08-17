@@ -1,25 +1,45 @@
-<!--=== Header v3 ===-->
-<div class="header-v3 header-sticky">
+<!--=== Header v6 ===-->
+<div class="header-v6 header-classic-white header-sticky">
     <!-- Navbar -->
-    <div class="navbar navbar-default mega-menu" role="navigation">
-        <div class="container">
+    <div class="navbar mega-menu" role="navigation">
+        <div class="container container-space">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
+            <div class="menu-container">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="fa fa-bars"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
-                <%= link_to root_path, class: "navbar-brand" do %>
-                    <%= image_tag("logo.png", size: "60x40", id: "logo-header" , alt: "Logo") %>
-                <% end %>
+
+                <!-- Navbar Brand -->
+                <div class="navbar-brand">
+                    <%= link_to root_path do %>
+                        <%= image_tag("logo.png", size: "60x40", id: "shrink-logo" , alt: "Logo") %>
+                    <% end %>
+                </div>
+                <!-- ENd Navbar Brand -->
+
+                <!-- Header Inner Right -->
+                <div class="header-inner-right">
+                    <ul class="menu-icons-list">
+                        <li class="menu-icons">
+                            <i class="menu-icons-style search search-close search-btn fa fa-search"></i>
+                            <div class="search-open">
+                                <input type="text" class="animated fadeIn form-control" placeholder="Start searching ...">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Header Inner Right -->
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
-                <div class="container">
+            <div class="collapse navbar-collapse navbar-responsive-collapse">
+                <div class="menu-container">
                     <ul class="nav navbar-nav">
                         <!-- Leaderboards -->
-                        <li class="dropdown mega-menu-fullwidth<%= " active" if params[:controller] == "contests" %>">
+                        <li class="dropdown mega-menu-fullwidth <%= " active" if params[:controller] == 'contests' %>">
                             <%= link_to t('elements.header.leaderboards.button'), contests_path, class: "dropdown-toggle", data: {:toggle => "dropdown"} %>
                             <ul class="dropdown-menu">
                                 <li>
@@ -28,7 +48,13 @@
                                             <div class="row equal-height">
                                                 <div class="col-md-3 equal-height-in">
                                                     <ul class="list-unstyled equal-height-list">
-                                                    <li><h3><%= link_to t('elements.header.leaderboards.latest.button'), contests_path %></h3></li>
+                                                      <li>
+                                                      <%= link_to contests_path do %>
+                                                        <h3>
+                                                        <%= t('elements.header.leaderboards.latest.button') %>
+                                                        </h3>
+                                                      <% end %> 
+                                                      </li>
 
                                                         <!-- Typography -->
                                                         <li><a href="shortcode_typo_general.html"><i class="fa fa-sort-alpha-asc"></i> General Typography</a></li>
@@ -41,11 +67,23 @@
                                                         <li><a href="shortcode_typo_grid.html"><i class="fa fa-align-justify"></i> Grid Layouts</a></li>
                                                         <!-- End Typography -->
 
+                                                        <!-- Components -->
+                                                        <li><a href="shortcode_compo_messages.html"><i class="fa fa-comment"></i> Alerts &amp; Messages</a></li>
+                                                        <li><a href="shortcode_compo_labels.html"><i class="fa fa-tags"></i> Labels &amp; Badges</a></li>
+                                                        <li><a href="shortcode_compo_media.html"><i class="fa fa-volume-down"></i> Audio/Videos &amp; Images</a></li>
+                                                        <li><a href="shortcode_compo_pagination.html"><i class="fa fa-arrows-h"></i> Paginations</a></li>
+                                                        <!-- End Components -->
                                                     </ul>
                                                 </div>
                                                 <div class="col-md-3 equal-height-in">
                                                     <ul class="list-unstyled equal-height-list">
-                                                        <li><h3><%= link_to t('elements.header.leaderboards.top-lists.button'), contests_path %></h3></li>
+                                                        <li>
+                                                      <%= link_to contests_path do %>
+                                                        <h3>
+                                                        <%= t('elements.header.leaderboards.top-list.button') %>
+                                                        </h3>
+                                                      <% end %> 
+                                                      </li>
 
                                                         <!-- Buttons -->
                                                         <li><a href="shortcode_btn_general.html"><i class="fa fa-flask"></i> General Buttons</a></li>
@@ -63,7 +101,13 @@
                                                 </div>
                                                 <div class="col-md-3 equal-height-in">
                                                     <ul class="list-unstyled equal-height-list">
-                                                        <li><h3><%=  link_to t('elements.header.leaderboards.trending.button'), contests_path %></h3></li>
+                                                        <li>
+                                                      <%= link_to contests_path do %>
+                                                        <h3>
+                                                        <%= t('elements.header.leaderboards.trending.button') %>
+                                                        </h3>
+                                                      <% end %> 
+                                                      </li>
 
                                                         <!-- Common Elements -->
                                                         <li><a href="shortcode_thumbnails.html"><i class="fa fa-image"></i> Thumbnails</a></li>
@@ -81,7 +125,13 @@
                                                 </div>
                                                 <div class="col-md-3 equal-height-in">
                                                     <ul class="list-unstyled equal-height-list">
-                                                        <li><h3><%=  link_to t('elements.header.leaderboards.participated.button'), contests_path %></h3></li>
+                                                        <li>
+                                                      <%= link_to contests_path do %>
+                                                        <h3>
+                                                        <%= t('elements.header.leaderboards.participated.button') %>
+                                                        </h3>
+                                                      <% end %> 
+                                                      </li>
 
                                                         <!-- Forms -->
                                                         <li><a href="shortcode_form_general.html"><i class="fa fa-bars"></i> Common Bootstrap Forms</a></li>
@@ -106,44 +156,30 @@
                             </ul>
                         </li>
                         <!-- End Leaderboards -->
-
                         <!-- Teams -->
-                        <li><%= link_to t('elements.header.teams'), test_path, class: ('active' if params[:controller] == 'landings') %></li>
+                        <%= content_tag(:li, (link_to t('elements.header.teams'), test_path), class: ('active' if params[:controller] == 'landings')) %>
                         <!-- End Teams -->
 
                         <!-- Following -->
-                        <li><%= link_to t('elements.header.following'), user_signed_in? ? test_path : new_user_session_path, class: ('active' if params[:controller] == 'landings') %></li>
+                        <%= content_tag(:li, (link_to t('elements.header.following'), test_path), class: ('active' if params[:controller] == 'landings')) %>
                         <!-- End Following -->
 
                         <!-- Profile -->
-                        <li><%= link_to t('elements.header.profile'), user_signed_in? ? edit_user_registration_path : new_user_session_path, class: ('active' if params[:controller] == 'sessions' || params[:controller] == 'registrations') %></li>
+                        <%= content_tag(:li, (link_to t('elements.header.profile'), user_signed_in? ? edit_user_registration_path : new_user_session_path), class: ('active' if params[:controller] == 'users/registrations')) %>
                         <!-- End Profile -->
-
-                        <!-- Search Block -->
-                        <li>
-                            <i class="search fa fa-search search-btn"></i>
-                            <div class="search-open">
-                                <div class="input-group animated fadeInDown">
-                                    <input type="text" class="form-control" placeholder="Search">
-                                    <span class="input-group-btn">
-                                        <button class="btn-u" type="button">Go</button>
-                                    </span>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- End Search Block -->
                     </ul>
-
-                </div><!--/end container-->
+                </div>
             </div><!--/navbar-collapse-->
         </div>
     </div>
     <!-- End Navbar -->
 </div>
-<!--=== End Header v3 ===-->
+<!--=== End Header v6 ===-->
+<% unless current_page?(root_path) %>
 <!--=== Breadcrumbs ===-->
 <div class="breadcrumbs">
     <div class="container">
       <h1 class="pull-left"><%= title %></h1>
     </div><!--/container-->
 </div><!--/breadcrumbs-->
+<% end %>
