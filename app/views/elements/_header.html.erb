@@ -39,6 +39,9 @@
                 <div class="menu-container">
                     <ul class="nav navbar-nav">
                         <!-- Leaderboards -->
+                        <!-- Home -->
+                        <%= content_tag(:li, (link_to t('elements.header.home'), root_path), class: ('active' if current_page?(root_path))) %>
+                        <!-- End Home -->
                         <li class="dropdown mega-menu-fullwidth <%= " active" if params[:controller] == 'contests' %>">
                             <%= link_to t('elements.header.leaderboards.button'), contests_path, class: "dropdown-toggle", data: {:toggle => "dropdown"} %>
                             <ul class="dropdown-menu">
@@ -157,11 +160,11 @@
                         </li>
                         <!-- End Leaderboards -->
                         <!-- Teams -->
-                        <%= content_tag(:li, (link_to t('elements.header.teams'), test_path), class: ('active' if params[:controller] == 'landings')) %>
+                        <%= content_tag(:li, (link_to t('elements.header.teams'), test_path), class: ('active' if current_page?(test_path))) %>
                         <!-- End Teams -->
 
                         <!-- Following -->
-                        <%= content_tag(:li, (link_to t('elements.header.following'), test_path), class: ('active' if params[:controller] == 'landings')) %>
+                        <%= content_tag(:li, (link_to t('elements.header.following'), test_path), class: ('active' if current_page?(test_path))) %>
                         <!-- End Following -->
 
                         <!-- Profile -->
