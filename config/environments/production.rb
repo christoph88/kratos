@@ -81,5 +81,22 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { :host => 'https://kratosapp.herokuapp.com/' }
+  # add default url for devise
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
+  
+  Rails.application.routes.default_url_options[:host] = Settings.live == 1 ? Settings.production_url : Settings.staging_url
+  
+  config.action_mailer.smtp_settings = {
+    address:               "smtp.mandrillapp.com",
+    port:                  587,# ports 587 and 2525 are also supported with STARTTLS
+    enable_starttls_auto:  true, # detects and uses STARTTLS
+    user_name:             ENV["MANDRILL_USERNAME"],
+    password:              ENV["MANDRILL_PASSWORD"], # SMTP password is any valid API key
+    authentication:        'login', # Mandrill supports 'plain' or 'login'
+    domain:                Settings.live == 1 ? Settings.production_domain : Settings.staging_domain # your domain to identify your server when connecting
+  }
 end

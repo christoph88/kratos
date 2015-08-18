@@ -1,1 +1,10 @@
+# set this to 1 to enable production server settings
+live: 0 
+
+# general settings
 appname: "Kratos"
+staging_url: "kratosapp-staging.herokuapp.com"
+production_url: 
+staging_domain: "heroku.com"
+production_domain: 
+mail: "info@kratosapp.com"
