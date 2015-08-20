@@ -9,14 +9,16 @@ Rails.application.config.assets.version = '1.0'
 
 # Self added assets should be precompiled
 # Default theme css
+
 %w(eot svg ttf woff woff2).each do |font|
   Rails.application.config.assets.precompile += ["font-awesome/fonts/fontawesome-webfont.#{font}"]
 end
-Rails.application.config.assets.precompile += ["font-awesome/fonts/fontAwesome.oft"]
+  Rails.application.config.assets.precompile += ["font-awesome/fonts/fontAwesome.otf"]
 
 %w(eot woff ttf).each do |font|
   Rails.application.config.assets.precompile += ["simple-line-icons/fonts/Simple-Line-Icons.#{font}"]
 end
+
 # contests#index
 Rails.application.config.assets.precompile += %w( unify/blog_masonry_3col.css )
 Rails.application.config.assets.precompile += %w( unify/blog-masonry.js )
