@@ -2,10 +2,14 @@
   "name": "dsl-generated dependencies",
   "dependencies": {
     "bootstrap-sass": "latest",
+    "font-awesome": "latest",
+    "animate-sass": "latest",
     "jquery": "latest",
     "jquery-ujs": "latest",
     "jquery-parallax": "latest",
+    "jquery-masonry": "latest",
     "respond": "latest",
-    "html5shiv": "latest"
+    "html5shiv": "latest",
+    "simple-line-icons": "latest"
   }
 }

@@ -10,6 +10,7 @@
 * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
 * file per style scope.
 *
+*= require font-awesome/scss/font-awesome.scss
 *= require bootstrap-sass
 *= require unify/ie8
 *= require unify/blocks
@@ -18,7 +19,8 @@
 *= require unify/style
 *= require unify/header-v6
 *= require unify/footer-v2
-*= require unify/animate
+*= require animate-sass
+*= require simple-line-icons/css/simple-line-icons.css.erb
 *= require unify/custom
 *= require_self
 */

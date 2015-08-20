@@ -3,8 +3,17 @@
 
 # asset 'bootstrap'
 asset 'bootstrap-sass'
+asset 'font-awesome' do 
+  main_files [
+      "less/font-awesome.less",
+      "scss/font-awesome.scss"
+    ]
+  end
+asset 'animate-sass'
 asset 'jquery'
 asset 'jquery-ujs'
 asset 'jquery-parallax'
+asset 'jquery-masonry'
 asset 'respond'
 asset 'html5shiv'
+asset 'simple-line-icons'
