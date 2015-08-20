@@ -5,6 +5,11 @@
  * Author: @htmlstream
  * Website: http://htmlstream.com
 */
+/*Import Global Compulsory CSS Files*/
+@import "ie8";
+@import "blocks";
+@import "plugins";
+@import "app";
 
 body { 
    color: #333; 
