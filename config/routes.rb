@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get '/robots.txt' => 'home#robots'
+
   shallow do
     resources :contests do
       resources :submissions, except: :edit
