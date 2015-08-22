@@ -15,9 +15,9 @@
 <div class="bg-image-v1 parallaxBg">
     <div class="container">
         <div class="headline-center headline-light">
-            <h2>Unify is a clean and fully responsive incredible template</h2>
-            <p>Integer odio ligula, tincidunt id volutpat et, imperdiet eget mi. Quisque laoreet porttitor turpis sed <a href="#">fermentum</a>. Nullam sodales blandit nisi, tristique tempor nunc hendrerit at. Sed posuere mollis orci</p><br>
-            <button type="button" class="btn-u btn-brd btn-brd-hover btn-u-light">Download Now</button>
+          <h2><%= t("landings.index.parallax.title") %></h2>
+            <p><%= t("landings.index.parallax.paragraph") %></p><br>
+            <button type="button" class="btn-u btn-brd btn-brd-hover btn-u-light"><%= t("landings.index.parallax.button") %></button>
         </div><!--/end Headline Center-->
     </div>
 </div>
@@ -28,10 +28,10 @@
     <div class="container">
         <div class="call-action-v1-box">
             <div class="call-action-v1-in">
-                <p>Unify creative technology company providing key digital services and focused on helping our clients to build a successful business on web and mobile.</p>
+                <p><%= t("landings.index.call_to_action.paragraph") %></p>
             </div>
             <div class="call-action-v1-in inner-btn page-scroll">
-                <a href="#portfolio" class="btn-u btn-brd btn-brd-hover btn-u-dark btn-u-block">REGISTER TODAY</a>
+                <a href="#portfolio" class="btn-u btn-brd btn-brd-hover btn-u-dark btn-u-block"><%= t("landings.index.call_to_action.button") %></a>
             </div>
         </div>
     </div>
@@ -41,8 +41,8 @@
 <!--=== Carallax Counter v1 ===-->
 <div class="parallax-counter-v1 parallaxBg" style="background-position: 50% 20px;">
     <div class="container">
-        <h2 class="title-v2 title-light title-center">SOME FACTS AND SERVICES</h2>
-        <p class="space-xlg-hor text-center color-light">If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.</p>
+        <h2 class="title-v2 title-light title-center"><%= t("landings.index.counter.title") %></h2>
+        <p class="space-xlg-hor text-center color-light"><%= t("landings.index.counter.paragraph") %></p>
 
         <div class="margin-bottom-40"></div>
 
@@ -50,25 +50,25 @@
             <div class="col-sm-3 col-xs-6">
                 <div class="counters">
                     <span class="counter">10629</span>
-                    <h4>Users</h4>
+                    <h4><%= t("landings.index.counter.block1") %></h4>
                 </div>
             </div>
             <div class="col-sm-3 col-xs-6">
                 <div class="counters">
                     <span class="counter">277</span>
-                    <h4>Projects</h4>
+                    <h4><%= t("landings.index.counter.block2") %></h4>
                 </div>
             </div>
             <div class="col-sm-3 col-xs-6">
                 <div class="counters">
                     <span class="counter">78</span>
-                    <h4>Team Members</h4>
+                    <h4><%= t("landings.index.counter.block3") %></h4>
                 </div>
             </div>
             <div class="col-sm-3 col-xs-6">
                 <div class="counters">
                     <span class="counter">109</span>
-                    <h4>Awards</h4>
+                    <h4><%= t("landings.index.counter.block4") %></h4>
                 </div>
             </div>
         </div>
@@ -79,8 +79,8 @@
 <!--=== Service Blcoks ===-->
 <div class="container content-md">
     <div class="text-center margin-bottom-50">
-        <h2 class="title-v2 title-center">OUR SERVICES</h2>
-        <p class="space-lg-hor">If you are going to use a <span class="color-green">passage of Lorem Ipsum</span>, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making <span class="color-green">this the first</span> true generator on the Internet.</p>
+        <h2 class="title-v2 title-center"><%= t("landings.index.service.title") %></h2>
+        <p class="space-lg-hor"><%= t("landings.index.service.paragraph") %></p>
     </div>
 
     <!-- Service Blcoks -->
@@ -88,45 +88,45 @@
         <div class="col-md-4 col-sm-6 md-margin-bottom-40">
             <div class="service-block service-block-default no-margin-bottom">
                 <i class="icon-lg rounded-x icon icon-badge"></i>
-                <h2 class="heading-sm">Web Design &amp; Development</h2>
-                <p>Donec id elit non mi porta gravida at eget metus id elit mi egetine. Fusce dapibus</p>
+                <h2 class="heading-sm"><%= t("landings.index.service.block1.title") %></h2>
+                <p><%= t("landings.index.service.block1.paragraph") %></p>
                 <ul class="list-unstyled">
-                    <li>Responsive Web Desgin</li>
-                    <li>E-commerce</li>
-                    <li>App &amp; Icon Design</li>
-                    <li>Logo &amp; Brand Design</li>
-                    <li>Mobile Development</li>
-                    <li>UI/UX Design</li>
+                    <li><%= t("landings.index.service.block1.li1") %></li>
+                    <li><%= t("landings.index.service.block1.li2") %></li>
+                    <li><%= t("landings.index.service.block1.li3") %></li>
+                    <li><%= t("landings.index.service.block1.li4") %></li>
+                    <li><%= t("landings.index.service.block1.li5") %></li>
+                    <li><%= t("landings.index.service.block1.li6") %></li>
                 </ul>
             </div>
         </div>
         <div class="col-md-4 col-sm-6 md-margin-bottom-40">
             <div class="service-block service-block-default no-margin-bottom">
                 <i class="icon-lg rounded-x icon-line icon-trophy"></i>
-                <h2 class="heading-sm">Marketing &amp; Cunsulting</h2>
-                <p>Donec id elit non mi porta gravida at eget metus id elit mi egetine usce dapibus elit nondapibus</p>
+                <h2 class="heading-sm"><%= t("landings.index.service.block2.title") %></h2>
+                <p><%= t("landings.index.service.block2.paragraph") %></p>
                 <ul class="list-unstyled">
-                    <li>Analysis &amp; Consulting</li>
-                    <li>Email Marketing</li>
-                    <li>App &amp; Icon Design</li>
-                    <li>Responsive Web Desgin</li>
-                    <li>Social Networking</li>
-                    <li>Documentation</li>
+                    <li><%= t("landings.index.service.block2.li1") %></li>
+                    <li><%= t("landings.index.service.block2.li2") %></li>
+                    <li><%= t("landings.index.service.block2.li3") %></li>
+                    <li><%= t("landings.index.service.block2.li4") %></li>
+                    <li><%= t("landings.index.service.block2.li5") %></li>
+                    <li><%= t("landings.index.service.block2.li6") %></li>
                 </ul>
             </div>
         </div>
         <div class="col-md-4 col-sm-12">
             <div class="service-block service-block-default no-margin-bottom">
                 <i class="icon-lg rounded-x icon-line icon-layers"></i>
-                <h2 class="heading-sm">SEO &amp; Advertising</h2>
-                <p>Donec id elit non mi porta gravida at eget metus id elit mi egetine. Fusce dapibus</p>
+                <h2 class="heading-sm"><%= t("landings.index.service.block3.title") %></h2>
+                <p><%= t("landings.index.service.block3.paragraph") %></p>
                 <ul class="list-unstyled">
-                    <li>Display Advertising</li>
-                    <li>App &amp; Icon Design</li>
-                    <li>Analysis &amp; Consulting</li>
-                    <li>Google AdSense</li>
-                    <li>Social Media</li>
-                    <li>Google/Bing Analysis</li>
+                    <li><%= t("landings.index.service.block3.li1") %></li>
+                    <li><%= t("landings.index.service.block3.li2") %></li>
+                    <li><%= t("landings.index.service.block3.li3") %></li>
+                    <li><%= t("landings.index.service.block3.li4") %></li>
+                    <li><%= t("landings.index.service.block3.li5") %></li>
+                    <li><%= t("landings.index.service.block3.li6") %></li>
                 </ul>
             </div>
         </div>
@@ -139,8 +139,8 @@
 <div class="parallax-quote parallaxBg" style="background-position: 50% 22px;">
     <div class="container">
         <div class="parallax-quote-in">
-            <p>If you can design one thing <span class="color-green">you can design</span> everything. <br> Just Believe It.</p>
-            <small>- HtmlStream -</small>
+            <p><%= t("landings.index.parallax_quote.paragraph") %></p>
+            <small>- <%= t("landings.index.parallax_quote.autor") %>-</small>
         </div>
     </div>
 </div>
@@ -150,9 +150,8 @@
 <div class="bg-color-light">
     <div class="container content-sm">
         <div class="headline-center margin-bottom-60">
-            <h2>WHAT PEOPLE SAY</h2>
-            <p>Phasellus vitae ipsum ex. Etiam eu vestibulum ante. <br>
-            Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipiscing elit. Morbi libero libero, imperdiet fringilla </p>
+            <h2><%= t("landings.index.testimonials.title") %></h2>
+            <p><%= t("landings.index.testimonials.paragraph") %></p>
         </div>
 
         <!-- Testimonials Wrap -->
@@ -162,9 +161,9 @@
                     <div class="testimonials-info rounded-bottom">
                         <img class="rounded-x" src="assets/img/testimonials/img5.jpg" alt="">
                         <div class="testimonials-desc">
-                            <p>Donec quis lorem sit amet nibh tempor porttitor non eu justo. Fusce iaculis scelerisque nibh at rhoncus. Aliquam blandit.</p>
-                            <strong>Evan Bohringer</strong>
-                            <span>Web Developer</span>
+                            <p><%= t("landings.index.testimonials.testimonial1.paragraph") %></p>
+                            <strong><%= t("landings.index.testimonials.testimonial1.autor") %></strong>
+                            <span><%= t("landings.index.testimonials.testimonial1.whois") %></span>
                         </div>
                     </div>
                 </div>
@@ -172,9 +171,9 @@
                     <div class="testimonials-info rounded-bottom">
                         <img class="rounded-x" src="assets/img/testimonials/img6.jpg" alt="">
                         <div class="testimonials-desc">
-                            <p>Donec quis lorem sit amet nibh tempor porttitor non eu justo. Fusce iaculis scelerisque nibh at rhoncus. Aliquam blandit.</p>
-                            <strong>Sara Lisbon</strong>
-                            <span>Designer</span>
+                            <p><%= t("landings.index.testimonials.testimonial2.paragraph") %></p>
+                            <strong><%= t("landings.index.testimonials.testimonial2.autor") %></strong>
+                            <span><%= t("landings.index.testimonials.testimonial2.whois") %></span>
                         </div>
                     </div>
                 </div>
@@ -185,9 +184,9 @@
                     <div class="testimonials-info rounded-bottom">
                         <img class="rounded-x" src="assets/img/testimonials/img3.jpg" alt="">
                         <div class="testimonials-desc">
-                            <p>Donec quis lorem sit amet nibh tempor porttitor non eu justo. Fusce iaculis scelerisque nibh at rhoncus. Aliquam blandit.</p>
-                            <strong>Alice Williams</strong>
-                            <span>Web Developer</span>
+                            <p><%= t("landings.index.testimonials.testimonial3.paragraph") %></p>
+                            <strong><%= t("landings.index.testimonials.testimonial3.autor") %></strong>
+                            <span><%= t("landings.index.testimonials.testimonial3.whois") %></span>
                         </div>
                     </div>
                 </div>
@@ -195,9 +194,9 @@
                     <div class="testimonials-info rounded-bottom">
                         <img class="rounded-x" src="assets/img/testimonials/img2.jpg" alt="">
                         <div class="testimonials-desc">
-                            <p>Donec quis lorem sit amet nibh tempor porttitor non eu justo. Fusce iaculis scelerisque nibh at rhoncus. Aliquam blandit.</p>
-                            <strong>Jane Wearne</strong>
-                            <span>Technical Direector</span>
+                            <p><%= t("landings.index.testimonials.testimonial4.paragraph") %></p>
+                            <strong><%= t("landings.index.testimonials.testimonial4.autor") %></strong>
+                            <span><%= t("landings.index.testimonials.testimonial4.whois") %></span>
                         </div>
                     </div>
                 </div>
