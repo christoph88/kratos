@@ -8,21 +8,18 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 
 # Self added assets should be precompiled
-# Default theme css
 
+# Default 
 %w(eot woff ttf).each do |font|
   Rails.application.config.assets.precompile += ["simple-line-icons/fonts/Simple-Line-Icons.#{font}"]
 end
+Rails.application.config.assets.precompile += %w( unify/init.js )
 
 # contests#index
-Rails.application.config.assets.precompile += %w( unify/blog_masonry_3col.css )
-Rails.application.config.assets.precompile += %w( unify/blog-masonry.js )
-Rails.application.config.assets.precompile += %w( unify/jquery.masonry.min.js )
+Rails.application.config.assets.precompile += %w( masonry/blog_masonry_3col.css )
+Rails.application.config.assets.precompile += %w( masonry/blog-masonry.js )
+Rails.application.config.assets.precompile += %w( masonry/jquery.masonry.min.js )
 # submissions#index
-Rails.application.config.assets.precompile += %w( unify/profile.css )
+Rails.application.config.assets.precompile += %w( pages/profile.css )
 # landings#index
-Rails.application.config.assets.precompile += %w( unify/page_one.css )
-
-%w(submissions contests landings).each do |controller|
-  Rails.application.config.assets.precompile += ["#{controller}.js", "#{controller}.css"]
-end
+Rails.application.config.assets.precompile += %w( pages/page_one.css )

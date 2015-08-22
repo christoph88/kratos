@@ -18,4 +18,5 @@
 //= require unify/app
 //= require unify/back-to-top
 //= require unify/smoothScroll
+//= require unify/placeholder-IE-fixes
 //= require unify/custom

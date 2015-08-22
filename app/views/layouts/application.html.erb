@@ -19,7 +19,6 @@
 
   <!-- Stylesheets -->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag params[:controller] , 'data-turbolinks-track' => true%>
   <%= yield :dynamic_stylesheets %>
 
 
@@ -42,13 +41,8 @@
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= yield :dynamic_javascripts %>
-  <%= javascript_include_tag params[:controller], 'data-turbolinks-track' => true %>
 
-  <script type="text/javascript">
-jQuery(document).ready(function() {
-    App.init();
-    });
-  </script>
+  <%= javascript_include_tag 'unify/init', 'data-turbolinks-track' => true %>
 
   <!--[if lt IE 9]>
       <script src="assets/plugins/respond.js"></script>
