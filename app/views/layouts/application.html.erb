@@ -42,7 +42,12 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= yield :dynamic_javascripts %>
 
-  <%= javascript_include_tag 'unify/init', 'data-turbolinks-track' => true %>
+  <% if current_page?(root_path) then %>
+    <%= javascript_include_tag 'init/init_homepage', 'data-turbolinks-track' => true %>
+  <% else %>
+    <%= javascript_include_tag 'init/init', 'data-turbolinks-track' => true %>
+  <% end %>
+
 
   <!--[if lt IE 9]>
       <script src="assets/plugins/respond.js"></script>

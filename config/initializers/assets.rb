@@ -13,13 +13,15 @@ Rails.application.config.assets.version = '1.0'
 %w(eot woff ttf).each do |font|
   Rails.application.config.assets.precompile += ["simple-line-icons/fonts/Simple-Line-Icons.#{font}"]
 end
-Rails.application.config.assets.precompile += %w( unify/init.js )
+Rails.application.config.assets.precompile += %w( init/init.js )
 
+# landings#index
+Rails.application.config.assets.precompile += %w( pages/page_one.css )
+Rails.application.config.assets.precompile += %w( jquery-parallax/jquery.parallax.js )
+Rails.application.config.assets.precompile += %w( init/init_homepage.js )
 # contests#index
 Rails.application.config.assets.precompile += %w( masonry/blog_masonry_3col.css )
 Rails.application.config.assets.precompile += %w( masonry/blog-masonry.js )
 Rails.application.config.assets.precompile += %w( masonry/jquery.masonry.min.js )
 # submissions#index
 Rails.application.config.assets.precompile += %w( pages/profile.css )
-# landings#index
-Rails.application.config.assets.precompile += %w( pages/page_one.css )
