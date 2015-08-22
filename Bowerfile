@@ -17,3 +17,8 @@ asset 'jquery-masonry'
 asset 'respond'
 asset 'html5shiv'
 asset 'simple-line-icons'
+asset 'counter-up' do
+  main_files [
+      "jquery.counterup.min.js"
+    ]
+  end

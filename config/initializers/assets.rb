@@ -17,7 +17,12 @@ Rails.application.config.assets.precompile += %w( init/init.js )
 
 # landings#index
 Rails.application.config.assets.precompile += %w( pages/page_one.css )
+Rails.application.config.assets.precompile += %w( owl.carousel/owl.carousel.css )
 Rails.application.config.assets.precompile += %w( jquery-parallax/jquery.parallax.js )
+Rails.application.config.assets.precompile += %w( counter/waypoints.js )
+Rails.application.config.assets.precompile += %w( counter/jquery.counterup.min.js )
+Rails.application.config.assets.precompile += %w( owl.carousel/owl.carousel.js )
+Rails.application.config.assets.precompile += %w( owl.carousel/owl-carousel.js )
 Rails.application.config.assets.precompile += %w( init/init_homepage.js )
 # contests#index
 Rails.application.config.assets.precompile += %w( masonry/blog_masonry_3col.css )

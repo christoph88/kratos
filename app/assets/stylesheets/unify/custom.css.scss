@@ -5,7 +5,7 @@
 	width: 60px;
 }
 
-/* Set parallax homepage image */
+/* Set landings/index parallax megatron */
 .bg-image-v1 {
   width: 100%;
   height: auto;
@@ -22,6 +22,57 @@
   content: " ";
   position: absolute;
   background: rgba(0,0,0,0.5);
+}
+
+/* Set landings/index parallax counter */
+.parallax-counter-v1 {
+  padding: 60px 0;
+  background: image-url("patterns/5.png") repeat fixed;
+}
+
+.parallax-counter-v1 .counters {
+  color: #fff;
+  padding: 15px 0 10px;
+  border: solid 1px #555;
+}
+
+.parallax-counter-v1 h4 {
+  color: #eee;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.parallax-counter-v1 span.counter {
+  font-size: 42px;
+  line-height: 48px;
+}
+/* Set landings/index parallax quote */
+.parallax-quote {
+  color: #fff;
+  padding: 100px 0;
+  position: relative;
+  text-align: center;
+  background: image-url("homepage/logo-parallax.png") 50% 0 repeat fixed;
+}
+
+.parallax-quote:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  content: " ";
+  position: absolute;
+  background: rgba(0,0,0,0.8);
+}
+
+.parallax-quote:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  content: " ";
+  position: absolute;
+  background: image-url("patterns/gridtile.png") repeat;
 }
 
 /* Mark current user on the submission index page */

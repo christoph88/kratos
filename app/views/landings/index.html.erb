@@ -1,9 +1,14 @@
 <% content_for :dynamic_stylesheets do %>
+  <%= stylesheet_link_tag "owl.carousel/owl.carousel.css", 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag "pages/page_one.css", 'data-turbolinks-track' => true %>
 <%end%>
 
 <% content_for :dynamic_javascripts do %>
   <%= javascript_include_tag "jquery-parallax/jquery.parallax.js", 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "counter/waypoints.js", 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "counter-up/jquery.counterup.min.js", 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "owl.carousel/owl.carousel.js", 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "owl.carousel/owl-carousel.js", 'data-turbolinks-track' => true %>
 <%end%>
 
 <!-- Parallax Section -->
@@ -33,33 +38,43 @@
 </div>
 <!--=== End Call To Action ===-->
 
-<!-- About Info -->
-<div class="container content-md">
-    <div class="row">
-        <div class="col-md-6">
-            <h2 class="title-v2">WE ARE UNIFY</h2>
-            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-            <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures.</p><br>
-            <a href="#" class="btn-u btn-brd btn-brd-hover btn-u-dark">Read More</a>
-            <a href="#" class="btn-u">View Our Work</a>
-        </div>
-        <div class="col-md-6">
-            <img class="img-responsive" src="assets/img/mockup/mockup1.png" alt="">
-        </div>
-    </div>
-</div>
-<!-- End About Info -->
-
-<!--=== Parallax Quote ===-->
-<div class="parallax-quote parallaxBg" style="background-position: 50% 22px;">
+<!--=== Carallax Counter v1 ===-->
+<div class="parallax-counter-v1 parallaxBg" style="background-position: 50% 20px;">
     <div class="container">
-        <div class="parallax-quote-in">
-            <p>If you can design one thing <span class="color-green">you can design</span> everything. <br> Just Believe It.</p>
-            <small>- HtmlStream -</small>
+        <h2 class="title-v2 title-light title-center">SOME FACTS AND SERVICES</h2>
+        <p class="space-xlg-hor text-center color-light">If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.</p>
+
+        <div class="margin-bottom-40"></div>
+
+        <div class="row margin-bottom-10">
+            <div class="col-sm-3 col-xs-6">
+                <div class="counters">
+                    <span class="counter">10629</span>
+                    <h4>Users</h4>
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <div class="counters">
+                    <span class="counter">277</span>
+                    <h4>Projects</h4>
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <div class="counters">
+                    <span class="counter">78</span>
+                    <h4>Team Members</h4>
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <div class="counters">
+                    <span class="counter">109</span>
+                    <h4>Awards</h4>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<!--=== End Parallax Quote ===-->
+<!--=== End Carallax Counter v1 ===-->
 
 <!--=== Service Blcoks ===-->
 <div class="container content-md">
@@ -120,100 +135,16 @@
 </div>
 <!--=== End Service Blcoks ===-->
 
-<!--=== Carallax Counter v1 ===-->
-<div class="parallax-counter-v1 parallaxBg" style="background-position: 50% 20px;">
+<!--=== Parallax Quote ===-->
+<div class="parallax-quote parallaxBg" style="background-position: 50% 22px;">
     <div class="container">
-        <h2 class="title-v2 title-light title-center">SOME FACTS AND SERVICES</h2>
-        <p class="space-xlg-hor text-center color-light">If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.</p>
-
-        <div class="margin-bottom-40"></div>
-
-        <div class="row margin-bottom-10">
-            <div class="col-sm-3 col-xs-6">
-                <div class="counters">
-                    <span class="counter">10629</span>
-                    <h4>Users</h4>
-                </div>
-            </div>
-            <div class="col-sm-3 col-xs-6">
-                <div class="counters">
-                    <span class="counter">277</span>
-                    <h4>Projects</h4>
-                </div>
-            </div>
-            <div class="col-sm-3 col-xs-6">
-                <div class="counters">
-                    <span class="counter">78</span>
-                    <h4>Team Members</h4>
-                </div>
-            </div>
-            <div class="col-sm-3 col-xs-6">
-                <div class="counters">
-                    <span class="counter">109</span>
-                    <h4>Awards</h4>
-                </div>
-            </div>
+        <div class="parallax-quote-in">
+            <p>If you can design one thing <span class="color-green">you can design</span> everything. <br> Just Believe It.</p>
+            <small>- HtmlStream -</small>
         </div>
     </div>
 </div>
-<!--=== End Carallax Counter v1 ===-->
-
-<!--=== Team v4 ===-->
-<div class="container content-sm">
-    <div class="headline-center margin-bottom-60">
-        <h2>MEET OUR TEAM</h2>
-        <p>Phasellus vitae ipsum ex. Etiam eu vestibulum ante. <br>
-        Lorem ipsum <strong>dolor</strong> sit amet, consectetur adipiscing elit. Morbi libero libero, imperdiet fringilla </p>
-    </div>
-
-    <div class="row team-v4">
-        <div class="col-md-3 col-sm-6 md-margin-bottom-50">
-            <img class="img-responsive" src="assets/img/team/img15-md.jpg" alt="">
-            <span>Daniel Wearne</span>
-            <small>- Technica Director -</small>
-            <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit, sed a nulla non</p>
-            <ul class="list-inline team-social-v4">
-                <li><a href="#"><i class="rounded-x fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="rounded-x fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="rounded-x fa fa-linkedin"></i></a></li>
-            </ul>
-        </div>
-        <div class="col-md-3 col-sm-6 md-margin-bottom-50">
-            <img class="img-responsive" src="assets/img/team/img31-md.jpg" alt="">
-            <span>Sara Lisbon</span>
-            <small>- UI Designer -</small>
-            <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit, sed a nulla non</p>
-            <ul class="list-inline team-social-v4">
-                <li><a href="#"><i class="rounded-x fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="rounded-x fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="rounded-x fa fa-linkedin"></i></a></li>
-            </ul>
-        </div>
-        <div class="col-md-3 col-sm-6 sm-margin-bottom-50">
-            <img class="img-responsive" src="assets/img/team/img18-md.jpg" alt="">
-            <span>John Doe</span>
-            <small>- Backend Developer -</small>
-            <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit, sed a nulla non</p>
-            <ul class="list-inline team-social-v4">
-                <li><a href="#"><i class="rounded-x fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="rounded-x fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="rounded-x fa fa-linkedin"></i></a></li>
-            </ul>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <img class="img-responsive" src="assets/img/team/img37-md.jpg" alt="">
-            <span>Alice Williams</span>
-            <small>- Customer Support -</small>
-            <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit, sed a nulla non</p>
-            <ul class="list-inline team-social-v4">
-                <li><a href="#"><i class="rounded-x fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="rounded-x fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="rounded-x fa fa-linkedin"></i></a></li>
-            </ul>
-        </div>
-    </div><!--/end row-->
-</div>
-<!--=== End Team v4 ===-->
+<!--=== End Parallax Quote ===-->
 
 <!--=== Testimonials v6 ===-->
 <div class="bg-color-light">
@@ -281,31 +212,31 @@
 <div class="container content-sm">
     <div class="owl-clients-v1">
         <div class="item">
-            <img src="assets/img/clients4/1.png" alt="">
+          <%= image_tag("logo-big.png", alt: image_alt("logo-big.png")) %>
         </div>
         <div class="item">
-            <img src="assets/img/clients4/2.png" alt="">
+          <%= image_tag("logo-big.png", alt: image_alt("logo-big.png")) %>
         </div>
         <div class="item">
-            <img src="assets/img/clients4/3.png" alt="">
+          <%= image_tag("logo-big.png", alt: image_alt("logo-big.png")) %>
         </div>
         <div class="item">
-            <img src="assets/img/clients4/4.png" alt="">
+          <%= image_tag("logo-big.png", alt: image_alt("logo-big.png")) %>
         </div>
         <div class="item">
-            <img src="assets/img/clients4/5.png" alt="">
+          <%= image_tag("logo-big.png", alt: image_alt("logo-big.png")) %>
         </div>
         <div class="item">
-            <img src="assets/img/clients4/6.png" alt="">
+          <%= image_tag("logo-big.png", alt: image_alt("logo-big.png")) %>
         </div>
         <div class="item">
-            <img src="assets/img/clients4/7.png" alt="">
+          <%= image_tag("logo-big.png", alt: image_alt("logo-big.png")) %>
         </div>
         <div class="item">
-            <img src="assets/img/clients4/8.png" alt="">
+          <%= image_tag("logo-big.png", alt: image_alt("logo-big.png")) %>
         </div>
         <div class="item">
-            <img src="assets/img/clients4/9.png" alt="">
+          <%= image_tag("logo-big.png", alt: image_alt("logo-big.png")) %>
         </div>
     </div>
 </div>

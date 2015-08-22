@@ -10,6 +10,7 @@
     "jquery-masonry": "latest",
     "respond": "latest",
     "html5shiv": "latest",
-    "simple-line-icons": "latest"
+    "simple-line-icons": "latest",
+    "counter-up": "latest"
   }
 }
