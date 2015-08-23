@@ -39,10 +39,11 @@ en:
         update: "Update"
         unhappy: "Unhappy"
       new:
+        title: "bierrrrrrr"
         sign_up: "Sign up"
     sessions:
       new:
-        sign_in: "Sign in"
+        sign_in: "Login"
     shared:
       links:
         back: "Back"

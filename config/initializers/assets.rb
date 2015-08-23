@@ -10,11 +10,16 @@ Rails.application.config.assets.version = '1.0'
 # Self added assets should be precompiled
 
 # Default 
+Rails.application.config.assets.precompile += %w( init/init.js )
+Rails.application.config.assets.precompile += %w( ifie9.js )
+
 %w(eot woff ttf).each do |font|
   Rails.application.config.assets.precompile += ["simple-line-icons/fonts/Simple-Line-Icons.#{font}"]
 end
-Rails.application.config.assets.precompile += %w( init/init.js )
-Rails.application.config.assets.precompile += %w( ifie9.js )
+
+# devise>sessions
+Rails.application.config.assets.precompile += %w( pages/page_log_reg_v1.css )
+Rails.application.config.assets.precompile += %w( unify/brand-buttons-inversed.css )
 
 # landings#index
 Rails.application.config.assets.precompile += %w( owl.carousel/owl.carousel.css )
