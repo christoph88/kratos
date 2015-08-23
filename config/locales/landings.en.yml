@@ -23,5 +23,72 @@ en:
   landings:
     index: 
       title: "Home"
+      parallax:
+          title: "Kratos"
+          paragraph: "Get ripped, compete and show them who's the boss!"
+          button: "Huh, what?"
+      counter:
+          title: "The numbers"
+          paragraph: "Kratos is growing rapidly! A lot of new users and counting."
+          block1: "Users"
+          block2: "Leaderboards"
+          block3: "Teams"
+          block4: "Submissions"
+      service:
+          title: "Who are we?"
+          paragraph: "Kratos motivates you to train! A little competition never hurt anyone and it keeps you on the edge of your seat. Compete with friends or foes, you can even join as a team and battle it out in the gym."
+          block1:
+            title: "Reach your goals"
+            paragraph: "Peer pressure can make you do crazy things."
+            li1: "Get ripped"
+            li2: "Get big"
+            li3: "Become fit"
+            li4: "Impress people"
+            li5:
+            li6:
+          block2:
+            title: "Leaderboards"
+            paragraph: "Different kind of competitions are possible"
+            li1: "1 rep max"
+            li2: "weight x reps (tonnage)"
+            li3: "max reps"
+            li4: "fastest time"
+            li5: "longest time"
+            li6:
+          block3:
+            title: "In the pipeline"
+            paragraph: "We want to make Kratos better. Following things are in the pipeline and suggestions are welcome!"
+            li1: "Comments"
+            li2: "Proof within submissions (optional)"
+            li3: "Social sharing"
+            li4: "Badges"
+            li5: "Rewarded competitions"
+            li6:
+      parallax_quote:
+          paragraph: "\"Intensity builds immensity\""
+          autor: "Kevin Levrone"
+      call_to_action:
+          paragraph: "Kratos doesn't cost you anything and we keep your data safe and private."
+          button: "Join now"
+      testimonials:
+          title: "What people say"
+          paragraph: "Check our testimonials to see what people are saying..."
+          testimonial1:
+            paragraph: "Best thing since sliced bread!"
+            autor: "Richard" 
+            whois: "The man"
+          testimonial2:
+            paragraph: "The daily pullup challenge got me that nice V-shape, it motivates me to see my name high in the rankings."
+            autor: "Brandon"
+            whois: "Bodybuilder"
+          testimonial3:
+            paragraph: "We own a crossfit gym and it's easy for our members to check there WOD times online. This keeps them coming back."
+            autor: "Cliff"
+            whois: "Gym owner"
+          testimonial4:
+            paragraph: "Kratos helped me loose weight."
+            autor: "Amy"
+            whois: "Fit chick"
     test: 
       title: "Testpage."
+
