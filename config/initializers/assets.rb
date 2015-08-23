@@ -14,6 +14,7 @@ Rails.application.config.assets.version = '1.0'
   Rails.application.config.assets.precompile += ["simple-line-icons/fonts/Simple-Line-Icons.#{font}"]
 end
 Rails.application.config.assets.precompile += %w( init/init.js )
+Rails.application.config.assets.precompile += %w( ifie9.js )
 
 # landings#index
 Rails.application.config.assets.precompile += %w( owl.carousel/owl.carousel.css )
