@@ -8,14 +8,14 @@
                     <%= link_to root_path do %>
                         <%= image_tag("logo.png", id: "logo-footer", class: "footer-logo", alt: "Logo") %>
                     <% end %>
-                    <p class="margin-bottom-20"><%= t('elements.footer.description-text') %></p>
+                    <p class="margin-bottom-20"><%= t('.description-text') %></p>
 
                 </div>
                 <!-- End About -->
 
                 <!-- Link List -->
                 <div class="col-md-3 md-margin-bottom-40">
-                  <div class="headline"><h2 class="heading-sm"><%= t('elements.footer.useful-links') %></h2></div>
+                  <div class="headline"><h2 class="heading-sm"><%= t('.useful-links') %></h2></div>
                     <ul class="list-unstyled link-list">
                         <li><a href="#">About us</a><i class="fa fa-angle-right"></i></li>
                         <li><a href="#">Portfolio</a><i class="fa fa-angle-right"></i></li>
@@ -29,7 +29,7 @@
                 <!-- Latest Tweets -->
                 <div class="col-md-3 md-margin-bottom-40">
                     <div class="latest-tweets">
-                      <div class="headline"><h2 class="heading-sm"><%= t('elements.footer.latest-tweets') %></h2></div>
+                      <div class="headline"><h2 class="heading-sm"><%= t('.latest-tweets') %></h2></div>
                         <div class="latest-tweets-inner">
                             <i class="fa fa-twitter"></i>
                             <p>
@@ -54,7 +54,7 @@
 
                 <!-- Address -->
                 <div class="col-md-3 md-margin-bottom-40">
-                  <div class="headline"><h2 class="heading-sm"><%= t('elements.footer.contact-us') %></h2></div>
+                  <div class="headline"><h2 class="heading-sm"><%= t('.contact-us') %></h2></div>
                     <address class="md-margin-bottom-40">
                         <i class="fa fa-home"></i>25, Lorem Lis Street, California, US <br />
                         <i class="fa fa-phone"></i>Phone: 800 123 3456 <br />
@@ -69,7 +69,7 @@
 
         <div class="copyright">
             <div class="container">
-                <p class="text-center"><%= raw t('elements.footer.copyright') %></p>
+                <p class="text-center"><%= raw t('.copyright') %></p>
                 <%= render partial: "elements/devhelp" if Rails.env.development? %>
             </div>
         </div><!--/copyright-->
