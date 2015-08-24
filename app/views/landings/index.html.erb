@@ -38,42 +38,33 @@
                 <h2 class="heading-sm"><%= t(".service.block1.title") %></h2>
                 <p><%= t(".service.block1.paragraph") %></p>
                 <ul class="list-unstyled">
-                    <li><%= t(".service.block1.li1") %></li>
-                    <li><%= t(".service.block1.li2") %></li>
-                    <li><%= t(".service.block1.li3") %></li>
-                    <li><%= t(".service.block1.li4") %></li>
-                    <li><%= t(".service.block1.li5") %></li>
-                    <li><%= t(".service.block1.li6") %></li>
+                  <% t(".service.block1.list").each do |key, translation| %>
+                    <li><%= translation %></li>
+                  <% end %>
                 </ul>
             </div>
         </div>
         <div class="col-md-4 col-sm-6 md-margin-bottom-40">
             <div class="service-block service-block-default no-margin-bottom">
                 <i class="icon-lg rounded-x icon-line icon-trophy"></i>
-                <h2 class="heading-sm"><%= t(".service.block2.title") %></h2>
+                <h2 class="heading-sm"><%= t(".service.block1.title") %></h2>
                 <p><%= t(".service.block2.paragraph") %></p>
                 <ul class="list-unstyled">
-                    <li><%= t(".service.block2.li1") %></li>
-                    <li><%= t(".service.block2.li2") %></li>
-                    <li><%= t(".service.block2.li3") %></li>
-                    <li><%= t(".service.block2.li4") %></li>
-                    <li><%= t(".service.block2.li5") %></li>
-                    <li><%= t(".service.block2.li6") %></li>
+                  <% t(".service.block2.list").each do |key, translation| %>
+                    <li><%= translation %></li>
+                  <% end %>
                 </ul>
             </div>
         </div>
         <div class="col-md-4 col-sm-12">
             <div class="service-block service-block-default no-margin-bottom">
                 <i class="icon-lg rounded-x icon-line icon-layers"></i>
-                <h2 class="heading-sm"><%= t(".service.block3.title") %></h2>
-                <p><%= t(".service.block3.paragraph") %></p>
+                <h2 class="heading-sm"><%= t(".service.block2.title") %></h2>
+                <p><%= t(".service.block1.paragraph") %></p>
                 <ul class="list-unstyled">
-                    <li><%= t(".service.block3.li1") %></li>
-                    <li><%= t(".service.block3.li2") %></li>
-                    <li><%= t(".service.block3.li3") %></li>
-                    <li><%= t(".service.block3.li4") %></li>
-                    <li><%= t(".service.block3.li5") %></li>
-                    <li><%= t(".service.block3.li6") %></li>
+                  <% t(".service.block2.list").each do |key, translation| %>
+                    <li><%= translation %></li>
+                  <% end %>
                 </ul>
             </div>
         </div>

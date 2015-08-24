@@ -40,30 +40,29 @@ en:
           block1:
             title: "Reach your goals"
             paragraph: "Peer pressure can make you do crazy things."
-            li1: "Get ripped"
-            li2: "Get big"
-            li3: "Become fit"
-            li4: "Impress people"
-            li5:
-            li6:
+            list:
+              1: "Get ripped"
+              2: "Get big"
+              3: "Become fit"
+              4: "Impress people"
           block2:
             title: "Leaderboards"
             paragraph: "Different kind of competitions are possible"
-            li1: "1 rep max"
-            li2: "weight x reps (tonnage)"
-            li3: "max reps"
-            li4: "fastest time"
-            li5: "longest time"
-            li6:
+            list:
+              1: "1 rep max"
+              2: "weight x reps (tonnage)"
+              3: "max reps"
+              4: "fastest time"
+              5: "longest time"
           block3:
             title: "In the pipeline"
             paragraph: "We want to make Kratos better. Following things are in the pipeline and suggestions are welcome!"
-            li1: "Comments"
-            li2: "Proof within submissions (optional)"
-            li3: "Social sharing"
-            li4: "Badges"
-            li5: "Rewarded competitions"
-            li6:
+            list:
+              1: "Comments"
+              2: "Proof within submissions (optional)"
+              3: "Social sharing"
+              4: "Badges"
+              5: "Rewarded competitions"
       parallax_quote:
           paragraph: "\"Intensity builds immensity\""
           autor: "Kevin Levrone"
