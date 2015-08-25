@@ -9,6 +9,16 @@
   <%= javascript_include_tag "counter-up/jquery.counterup.min.js", 'data-turbolinks-track' => true %>
   <%= javascript_include_tag "owl.carousel/owl.carousel.js", 'data-turbolinks-track' => true %>
   <%= javascript_include_tag "owl.carousel/owl-carousel.js", 'data-turbolinks-track' => true %>
+  <script type="text/javascript">
+      $(document).ready(function (){
+          $(".btn-u").click(function (){
+                  $('html, body').animate({
+                      scrollTop: $("#service").offset().top
+                  }, 2000);
+          });
+      });
+    </script>
+  </script>
 <%end%>
 
 <!-- Parallax Section -->
@@ -17,14 +27,14 @@
         <div class="headline-center headline-light">
           <h2><%= t(".parallax.title") %></h2>
             <p><%= t(".parallax.paragraph") %></p><br>
-            <button type="button" class="btn-u btn-brd btn-brd-hover btn-u-light"><%= t(".parallax.button") %></button>
+            <%= link_to t(".parallax.button"), "#", class: "btn btn-u btn-brd btn-brd-hover btn-u-light" %>
         </div><!--/end Headline Center-->
     </div>
 </div>
 <!-- End Parallax Section -->
 
 <!--=== Service Blcoks ===-->
-<div class="container content-md">
+<div id="service" class="container content-md">
     <div class="text-center margin-bottom-50">
         <h2 class="title-v2 title-center"><%= t(".service.title") %></h2>
         <p class="space-lg-hor"><%= t(".service.paragraph") %></p>
