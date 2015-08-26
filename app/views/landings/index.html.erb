@@ -11,10 +11,10 @@
   <%= javascript_include_tag "owl.carousel/owl-carousel.js", 'data-turbolinks-track' => true %>
   <script type="text/javascript">
       $(document).ready(function (){
-          $(".btn-u").click(function (){
+          $("#what").click(function (){
                   $('html, body').animate({
                       scrollTop: $("#service").offset().top
-                  }, 2000);
+                  }, 600);
           });
       });
     </script>
@@ -27,7 +27,7 @@
         <div class="headline-center headline-light">
           <h2><%= t(".parallax.title") %></h2>
             <p><%= t(".parallax.paragraph") %></p><br>
-            <%= link_to t(".parallax.button"), "#", class: "btn btn-u btn-brd btn-brd-hover btn-u-light" %>
+            <%= link_to t(".parallax.button"), "#", id: "what", class: "btn btn-u btn-brd btn-brd-hover btn-u-light" %>
         </div><!--/end Headline Center-->
     </div>
 </div>
@@ -57,7 +57,7 @@
         <div class="col-md-4 col-sm-6 md-margin-bottom-40">
             <div class="service-block service-block-default no-margin-bottom">
                 <i class="icon-lg rounded-x icon-line icon-trophy"></i>
-                <h2 class="heading-sm"><%= t(".service.block1.title") %></h2>
+                <h2 class="heading-sm"><%= t(".service.block2.title") %></h2>
                 <p><%= t(".service.block2.paragraph") %></p>
                 <ul class="list-unstyled">
                   <% t(".service.block2.list").each do |key, translation| %>
@@ -69,10 +69,10 @@
         <div class="col-md-4 col-sm-12">
             <div class="service-block service-block-default no-margin-bottom">
                 <i class="icon-lg rounded-x icon-line icon-layers"></i>
-                <h2 class="heading-sm"><%= t(".service.block2.title") %></h2>
-                <p><%= t(".service.block1.paragraph") %></p>
+                <h2 class="heading-sm"><%= t(".service.block3.title") %></h2>
+                <p><%= t(".service.block3.paragraph") %></p>
                 <ul class="list-unstyled">
-                  <% t(".service.block2.list").each do |key, translation| %>
+                  <% t(".service.block3.list").each do |key, translation| %>
                     <li><%= translation %></li>
                   <% end %>
                 </ul>
@@ -128,8 +128,8 @@
             <div class="call-action-v1-in">
                 <p><%= t(".call_to_action.paragraph") %></p>
             </div>
-            <div class="call-action-v1-in inner-btn page-scroll">
-                <a href="#portfolio" class="btn-u btn-brd btn-brd-hover btn-u-dark btn-u-block"><%= t(".call_to_action.button") %></a>
+            <div class="call-action-v1-in inner-btn">
+              <%= link_to t(".call_to_action.button"), "#", class: "btn-u btn-brd btn-brd-hover btn-u-dark btn-u-block" %>
             </div>
         </div>
     </div>
