@@ -36,7 +36,7 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   # add default url for devise
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => ENV["DEFAULT_URL"] }
   
   config.action_mailer.delivery_method = :smtp
   
@@ -47,6 +47,6 @@ Rails.application.configure do
     user_name:             ENV["MANDRILL_USERNAME"],
     password:              ENV["MANDRILL_PASSWORD"], # SMTP password is any valid API key
     authentication:        'login', # Mandrill supports 'plain' or 'login'
-    domain:                'localhost' # your domain to identify your server when connecting
+    domain:                ENV["DEFAULT_DOMAIN"] # your domain to identify your server when connecting
   }
 end

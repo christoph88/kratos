@@ -1,6 +1,7 @@
 class LandingsController < ApplicationController
-  def robots                                                                                                                                      
-    robots = File.read(Rails.root + "config/robots/#{ENV["STAGING"]? "staging" : Rails.env}.txt")
+  def robots
+    filename = Rails.env.production? ? 'production' : 'development'
+    robots = File.read(Rails.root + "config/robots/#{filename}.txt")
     render :text => robots, :layout => false, :content_type => "text/plain"
   end
 

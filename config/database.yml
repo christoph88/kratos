@@ -85,9 +85,14 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+#
+# Heroku databases
+staging:
+  <<: *default
+  database: kratos_staging
+  # heroku does this automatically
+
 production:
   <<: *default
   database: kratos_production
   # heroku does this automatically
-  # username: kratos
-  # password: <%= ENV['KRATOS_DATABASE_PASSWORD'] %>
