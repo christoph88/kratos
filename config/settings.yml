@@ -1,3 +1,9 @@
 # general settings
 appname: "Kratos"
 mail: "info@kratosapp.com"
+
+# owner data
+owner: "Christoph Geypen"
+  firstname: "Christoph"
+  lastname: "Geypen"
+  mail: "geypenchristoph@gmail.com"
