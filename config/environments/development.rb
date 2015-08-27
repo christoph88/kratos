@@ -49,4 +49,5 @@ Rails.application.configure do
     authentication:        'login', # Mandrill supports 'plain' or 'login'
     domain:                ENV["DEFAULT_DOMAIN"] # your domain to identify your server when connecting
   }
+
 end
