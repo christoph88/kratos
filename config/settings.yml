@@ -4,6 +4,4 @@ mail: "info@kratosapp.com"
 
 # owner data
 owner: "Christoph Geypen"
-  firstname: "Christoph"
-  lastname: "Geypen"
-  mail: "geypenchristoph@gmail.com"
+ownermail: "geypenchristoph@gmail.com"
