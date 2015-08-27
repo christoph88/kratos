@@ -83,8 +83,7 @@ Rails.application.configure do
 
   # add default url for devise
   config.action_mailer.default_url_options = { 
-    host:  ENV["DEFAULT_URL"],
-    port:  3000
+    host:  ENV["DEFAULT_URL"]
   }
 
   config.action_mailer.delivery_method = :smtp
