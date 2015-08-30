@@ -35,6 +35,8 @@ en:
       teams: "teams"
       following: "following"
       profile: "profile"
+      log_out: "log out"
+      sign_up: "register"
     footer:
       description-text: "Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals."
       useful-links: "Useful Links"
