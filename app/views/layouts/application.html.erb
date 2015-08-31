@@ -33,6 +33,8 @@
 
     <%= bootstrap_flash %>
 
+    <%= render partial: "elements/devhelp" if Rails.env.development? %>
+
     <%= yield %>
 
     <%= render partial: "elements/footer" %>

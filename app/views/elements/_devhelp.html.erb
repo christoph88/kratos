@@ -1,31 +1,34 @@
-<p>&nbsp;</p>
-<%= debug(params) if Rails.env.development? %>
-<p><%= link_to "Root path", defined?(root_path) ? root_path : "#" %></p>
-<% if defined?(Devise) %>
-  <% if user_signed_in? %>
+<div class="collapse" id="collapseExample">
+  <div class="container well">
+    <%= debug(params) if Rails.env.development? %>
+    <p><%= link_to "Root path", defined?(root_path) ? root_path : "#" %></p>
+    <% if defined?(Devise) %>
+      <% if user_signed_in? %>
 
-  <p><%= link_to "Edit Account", edit_user_registration_path %></p>
-  <p><%= link_to "Sign Out", destroy_user_session_path, method: :delete %><%= link_to "Sign out stackexchange", destroy_user_session_path, :method => :delete %></p>
+      <p><%= link_to "Edit Account", edit_user_registration_path %></p>
+      <p><%= link_to "Sign Out", destroy_user_session_path, method: :delete %><%= link_to "Sign out stackexchange", destroy_user_session_path, :method => :delete %></p>
 
-<% else %>
+    <% else %>
 
-  <p><%= link_to "Login", new_user_session_path %></p>
-<p><%= link_to "Sign Up", new_user_registration_path %></p>
+      <p><%= link_to "Login", new_user_session_path %></p>
+    <p><%= link_to "Sign Up", new_user_registration_path %></p>
 
-<% end %>
+    <% end %>
 
-<% end %>
+    <% end %>
 
-<p><%= link_to "Testpage", test_path %></p>
-<p><%= link_to "Contests", defined?(contests_path) ? contests_path : "#" %></p>
-<p><%= link_to "Submissions", defined?(submissions_path) ? submissions_path : "#" %></p>
+    <p><%= link_to "Testpage", test_path %></p>
+    <p><%= link_to "Contests", defined?(contests_path) ? contests_path : "#" %></p>
+    <p><%= link_to "Submissions", defined?(submissions_path) ? submissions_path : "#" %></p>
 
-<p>Vartest:<br />
-<% if defined?(Devise) %>
-  <% if user_signed_in? %>
-  <%=t "controller.correct_user" %><br />
-<%= if current_user.id then "=> #{current_user.id}" end %>
-<% end %>
-          <% end %>
-</p>
-<p> <%= Settings.mail %></p>
+    <p>Vartest:<br />
+    <% if defined?(Devise) %>
+      <% if user_signed_in? %>
+      <%=t "controller.correct_user" %><br />
+    <%= if current_user.id then "=> #{current_user.id}" end %>
+    <% end %>
+              <% end %>
+    </p>
+    <p> <%= Settings.mail %></p>
+  </div>
+</div>
