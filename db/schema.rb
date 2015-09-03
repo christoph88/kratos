@@ -11,22 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150813173520) do
+ActiveRecord::Schema.define(version: 20150813171012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "add_contest_type_to_contests", force: true do |t|
-    t.integer  "contest_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "add_pounds_to_users", force: true do |t|
-    t.boolean  "pounds"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "contests", force: true do |t|
     t.string   "name"
