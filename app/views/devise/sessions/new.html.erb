@@ -14,11 +14,11 @@
 
                 <div class="input-group margin-bottom-20">
                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                    <%= f.email_field :username, class: "form-control", placeholder: t('.emailplaceholder') %>
+                    <%= f.text_field :login, class: "form-control", placeholder: t('.loginplaceholder') %>
                 </div>
                 <div class="input-group margin-bottom-20">
                     <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                    <%= f.password_field :email, class: "form-control", placeholder: t('.passwordplaceholder') %>
+                    <%= f.password_field :password, class: "form-control", placeholder: t('.passwordplaceholder') %>
                 </div>
 
                 <div class="row">

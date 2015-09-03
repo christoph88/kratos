@@ -49,7 +49,7 @@ en:
     sessions:
       new:
         heading: "Login to your account"
-        emailplaceholder: "E-mail"
+        loginplaceholder: "E-mail or username"
         passwordplaceholder: "Password"
         remembersignin: "Stay signed in"
         sign_in: "Login"
