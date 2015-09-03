@@ -39,7 +39,12 @@ en:
         update: "Update"
         unhappy: "Unhappy"
       new:
-        title: "bierrrrrrr"
+        paragraph: "Already Signed Up? Click %{href} to login your account."
+        paragraph_link: "sign in"
+        username: "Username"
+        email: "Email Address"
+        password: "Password"
+        confirm_password: "Confirm password"
         sign_up: "Sign up"
     sessions:
       new:

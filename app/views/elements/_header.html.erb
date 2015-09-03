@@ -168,7 +168,7 @@
                         <!-- End Following -->
 
                         <!-- Profile -->
-                        <%= content_tag(:li, (link_to t('.profile'), user_signed_in? ? edit_user_registration_path : new_user_session_path), class: ('active' if params[:controller] == 'users/registrations')) %>
+                        <%= content_tag(:li, (link_to t('.profile'), user_signed_in? ? edit_user_registration_path : new_user_registration_path), class: ('active' if params[:controller] == 'users/registrations')) %>
                         <!-- End Profile -->
                     </ul>
                 </div>
