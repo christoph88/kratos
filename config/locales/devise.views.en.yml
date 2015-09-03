@@ -54,11 +54,11 @@ en:
         remembersignin: "Stay signed in"
         sign_in: "Login"
         donthaveh: "Don't have an account?"
-        donthavep: "If you do not have an account you can "
-        donthavea: "create one."
+        donthavep: "If you do not have an account you can %{href}"
+        donthavep_link: "create one."
         forgoth: "Forgot your password?"
-        forgotp: "No worries, you can easily "
-        forgot_your_password: "reset your password."
+        forgotp: "No worries, you can easily %{href}"
+        forgotp_link: "reset your password."
     shared:
       links:
         back: "Back"
