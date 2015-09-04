@@ -27,6 +27,8 @@ en:
       edit:
         change_your_password: "Change your password"
         new_password: "New password"
+        passwordplaceholder: "Password"
+        password_confirmationplaceholder: "Confirm password"
         confirm_new_password: "Confirm new password"
         change_my_password: "Change my password"
     registrations:
