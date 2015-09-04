@@ -21,6 +21,7 @@ en:
         message: "Your account has been locked due to an excessive amount of unsuccessful sign in attempts."
     passwords:
       new:
+        emailplaceholder: "Email"
         forgot_your_password: "Forgot your password?"
         send_me_reset_password_instructions: "Send me reset password instructions"
       edit:
