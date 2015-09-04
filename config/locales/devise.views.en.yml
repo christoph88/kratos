@@ -33,6 +33,7 @@ en:
         change_my_password: "Change my password"
     registrations:
       edit:
+        paragraph: "Change your settings."
         are_you_sure: "Are you sure?"
         cancel_my_account: "Cancel your account"
         leave_blank_if_you_don_t_want_to_change_it: "leave blank if you dont want to change it"

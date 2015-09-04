@@ -1,110 +1,73 @@
+<% content_for :dynamic_stylesheets do %>
+  <%= stylesheet_link_tag "pages/page_log_reg_v1.css", 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag "unify/brand-buttons-inversed.css", 'data-turbolinks-track' => true %>
+<%end%>
 <% @title = t('.title', :resource => resource_class.model_name.human , :default => "Edit #{resource_name.to_s.humanize}") %>
 
-<div class="row mt">
-  <div class="col-lg-12">
-    <div class="form-panel">
-      <h4 class="mb"><i class="fa fa-angle-right"></i> Logout</h4>
-      <p><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></p>
+<!--=== Content Part ===-->
+<div class="container content">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, class: "reg-page" }) do |f| %>
+                <div class="reg-header">
+                    <h2><%= @title %></h2>
+                    <p><%= raw t(".paragraph", href: link_to(t(".paragraph_link"), new_user_session_path)) %></p>
+                </div>
+
+                  <%= devise_error_messages! %>
+
+                  <label><%= t(".username") %> <span class="color-red">*</span></label>
+                  <%= f.text_field :username, class: "form-control margin-bottom-20" %>
+
+                  <label><%= t(".firstname") %> <span class="color-red">*</span></label>
+                  <%= f.text_field :firstname, class: "form-control margin-bottom-20" %>
+
+                  <label><%= t(".name") %> <span class="color-red">*</span></label>
+                  <%= f.text_field :name, class: "form-control margin-bottom-20" %>
+
+                  <label><%= t(".email") %> <span class="color-red">*</span></label>
+                  <%= f.email_field :email, class: "form-control margin-bottom-20" %>
+
+                  <label><%= t(".birthdate") %> <span class="color-red">*</span></label>
+                  <%= f.date_field :birthdate, class: "form-control margin-bottom-20" %>
+
+                  <label><%= t(".bio") %> <span class="color-red">*</span></label>
+                  <%= f.text_area :bio, class: "form-control margin-bottom-20" %>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label><%= t(".password") %> <span class="color-red">*</span></label>
+                        <%= f.password_field :password, class: "form-control margin-bottom-20" %>
+                        <span class="help-block"><i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it', :default => "leave blank if you don't want to change it") %>)</i></span>
+                    </div>
+                    <div class="col-sm-6">
+                        <label><%= t(".confirm_password") %> <span class="color-red">*</span></label>
+                        <%= f.password_field :password_confirmation, class: "form-control margin-bottom-20" %>
+                    </div>
+                </div>
+
+                <% unless current_user.provider = "facebook" %>
+
+                <label><%= t(".current_password") %> <span class="color-red">*</span></label>
+                  <%= f.password_field :current_password, class: "form-control margin-bottom-20" %>
+
+                <% end %>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-lg-6 text-left">
+                      <%= link_to "Sign Out", destroy_user_session_path, method: :delete %><br>
+                      <%= t('.unhappy', :default => 'Unhappy') %>? <%= link_to t('.cancel_my_account', :default => "Cancel your account"), registration_path(resource_name), :data => { :confirm => t('.are_you_sure', :default => "Are you sure?") }, :method => :delete %>.
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <%= f.submit t('.update', :default => "Update"), class: "btn-u" %>
+                    </div>
+               </div>
+
+            <% end %>
+        </div>
     </div>
-  </div>
-</div>
+</div><!--/container-->
+<!--=== End Content Part ===-->
 
-<div class="row mt">
-  <div class="col-lg-12">
-    <div class="form-panel">
-      <h4 class="mb"><i class="fa fa-angle-right"></i> <%= @title %></h4>
-      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, class: "form-horizontal style-form" }) do |f| %>
-        <%= devise_error_messages! %>
-
-        <div class="form-group">
-          <%= f.label :username, class: "col-sm-2 col-sm-2 control-label" %>
-          <div class="col-sm-10">
-            <%= f.text_field :username, class: "form-control" %>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :firstname, class: "col-sm-2 col-sm-2 control-label" %>
-          <div class="col-sm-10">
-            <%= f.text_field :firstname, class: "form-control" %>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :name, class: "col-sm-2 col-sm-2 control-label" %>
-          <div class="col-sm-10">
-            <%= f.text_field :name, class: "form-control" %>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :email, class: "col-sm-2 col-sm-2 control-label" %>
-          <div class="col-sm-10">
-            <%= f.email_field :email, class: "form-control" %>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :birthdate, class: "col-sm-2 col-sm-2 control-label" %>
-          <div class="col-sm-10">
-            <%= f.date_field :birthdate, class: "form-control" %>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :bio, class: "col-sm-2 col-sm-2 control-label" %>
-          <div class="col-sm-10">
-            <%= f.text_area :bio, size: "16x8", class: "form-control" %>
-          </div>
-        </div>
-
-        <%- if devise_mapping.confirmable? && resource.pending_reconfirmation? -%>
-          <p>
-            <%= t('.currently_waiting_confirmation_for_email', :email => resource.unconfirmed_email, :default => "Currently waiting confirmation for: %{email}") %>
-          </p>
-        <%- end -%>
-
-        <div class="form-group">
-            <%= f.label :password, class: "col-sm-2 col-sm-2 control-label" %> 
-          <div class="col-sm-10">
-            <%= f.password_field :password, class: "form-control", :autocomplete => "off" %>
-            <span class="help-block"><i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it', :default => "leave blank if you don't want to change it") %>)</i></span>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :password_confirmation, class: "col-sm-2 col-sm-2 control-label" %>
-          <div class="col-sm-10">
-            <%= f.password_field :password_confirmation, class: "form-control" %>
-          </div>
-        </div>
-
-        <% unless current_user.provider = "facebook" %>
-
-          <div class="form-group">
-            <%= f.label :current_password, class: "col-sm-2 col-sm-2 control-label" %> <i>(<%= t('.we_need_your_current_password_to_confirm_your_changes', :default => 'we need your current password to confirm your changes') %>)</i>
-            <div class="col-sm-10">
-              <%= f.password_field :current_password, class: "form-control" %>
-            </div>
-          </div>
-
-        <% end %>
-
-          <div>
-            <%= f.submit t('.update', :default => "Update") %>
-          </div>
-        <% end %>
-
-    </div>
-  </div>
-</div>
-
-<div class="row mt">
-  <div class="col-lg-12">
-    <div class="form-panel">
-      <h4 class="mb"><i class="fa fa-angle-right"></i> <%= t('.cancel_my_account', :default => 'Cancel my account') %></h4>
-
-      <p><%= t('.unhappy', :default => 'Unhappy') %>? <%= link_to t('.cancel_my_account', :default => "Cancel your account"), registration_path(resource_name), :data => { :confirm => t('.are_you_sure', :default => "Are you sure?") }, :method => :delete %>.</p>
-    </div>
-  </div>
-</div>
