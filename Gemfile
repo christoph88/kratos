@@ -61,6 +61,8 @@ gem 'validates_formatting_of'
 gem 'meta-tags'
 # natural language date/time parser
 gem 'chronic'
+# gems needed for user uploaded pictures
+gem "paperclip", "~> 4.3"
 
 # Gems for Heroku
 gem 'rails_12factor', group: :production
