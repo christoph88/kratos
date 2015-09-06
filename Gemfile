@@ -54,7 +54,7 @@ gem 'binding_of_caller'
 # easy liking, up- and downvoting
 gem 'acts_as_votable', github: 'ryanto/acts_as_votable'
 # create a general rails config file
-gem 'rails_config'
+gem 'config', github: 'railsconfig/config'
 gem 'tzinfo-data'
 gem 'validates_formatting_of'
 # easily set metadata
@@ -63,6 +63,7 @@ gem 'meta-tags'
 gem 'chronic'
 # gems needed for user uploaded pictures
 gem "paperclip", "~> 4.3"
+gem 'aws-sdk', '< 2.0'
 
 # Gems for Heroku
 gem 'rails_12factor', group: :production
