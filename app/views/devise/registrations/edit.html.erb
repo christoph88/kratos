@@ -63,7 +63,6 @@
       <div class="row">
         <div class="col-lg-6 text-left">
           <%= link_to "Sign Out", destroy_user_session_path, method: :delete %><br>
-          <%= t('.unhappy', :default => 'Unhappy') %>? <%= link_to t('.cancel_my_account', :default => "Cancel your account"), registration_path(resource_name), :data => { :confirm => t('.are_you_sure', :default => "Are you sure?") }, :method => :delete %>.
         </div>
         <div class="col-lg-6 text-right">
           <%= f.submit t('.update', :default => "Update"), class: "btn-u" %>
