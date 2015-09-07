@@ -29,6 +29,8 @@
     <% end %>
               <% end %>
     </p>
-    <p> <%= current_user.try(:provider) %></p>
+    <p> <%= params %></p>
+    <p> <%= params[:password].present? %></p>
+    <p> <%= !params[:password].present? %></p>
   </div>
 </div>
