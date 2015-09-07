@@ -29,6 +29,6 @@
     <% end %>
               <% end %>
     </p>
-    <p> <%= Settings.mail %></p>
+    <p> <%= current_user.try(:provider) %></p>
   </div>
 </div>

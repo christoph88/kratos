@@ -51,7 +51,7 @@
         </div>
       </div>
 
-      <% unless current_user.provider = "facebook" %>
+      <% unless current_user.provider == "facebook" %>
 
         <label><%= t(".current_password") %> <span class="color-red">*</span></label>
       <%= f.password_field :current_password, class: "form-control margin-bottom-20" %>
