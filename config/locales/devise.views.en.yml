@@ -41,6 +41,7 @@ en:
         title: "Edit %{resource}"
         we_need_your_current_password_to_confirm_your_changes: "we need your current password to confirm your changes"
         update: "Update"
+        kg: "Prefer kg metrics over pounds"
       new:
         paragraph: "Already Signed Up? Click %{href} to login your account."
         paragraph_link: "sign in"
