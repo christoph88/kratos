@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20150906170131) do
     t.integer  "contest_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "pounds"
     t.decimal  "tonnage"
   end
 
