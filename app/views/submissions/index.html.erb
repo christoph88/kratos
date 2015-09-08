@@ -13,8 +13,12 @@
         <div class="col-md-3 md-margin-bottom-40">
 
             <div class="panel-heading-v2 overflow-h">
+            <h2 class="heading-xs pull-left"><i class="fa fa-bar-chart-o"></i> <%= t('.metricsh', default: "Metrics") %></h2>
+            </div>
+            <p><%= raw t(".metricsp", href: link_to(t(".metricsp_link", default: "pounds or kgs!"), edit_user_registration_path), default: "Show in %{href}") %></p>
+
+            <div class="panel-heading-v2 overflow-h">
                 <h2 class="heading-xs pull-left"><i class="fa fa-bar-chart-o"></i> Task Progress</h2>
-                <a href="#"><i class="fa fa-cog pull-right"></i></a>
             </div>
             <h3 class="heading-xs">Web Design <span class="pull-right">92%</span></h3>
             <div class="progress progress-u progress-xxs">
@@ -107,7 +111,7 @@
                               <hr>
                               <ul class="list-inline share-list">
                                   <li<%= ' class="top-rank"' if rank < 3 %>><i class="fa fa-trophy"></i><strong>Rank: <%= rank %></strong></li>
-                                  <li><i class="fa fa-trophy"></i><%= "Weight: #{submission.weight}" %></li>
+                                  <li><i class="fa fa-trophy"></i><%= "Weight: #{submission.converted_weight(current_user)}" %></li>
                                   <li><i class="fa fa-repeat"></i><%= "Reps: #{submission.reps}" %></li>
                               </ul>
                           </div>

@@ -17,6 +17,11 @@
       <%= devise_error_messages! %>
 
 
+      <label><%= t(".kg") %></label>
+      <div class="form-control margin-bottom-20">
+        <%= f.check_box :kg %> <%= f.label :kg, t('.kg') %>
+      </div>
+
       <div class="media">
         <div class="media-body">
           <label><%= f.label :avatar %></label>
@@ -44,11 +49,6 @@
 
       <label><%= t(".bio") %></label>
       <%= f.text_area :bio, class: "form-control margin-bottom-20" %>
-
-      <div class="form-control margin-bottom-20">
-        <%= f.check_box :kg %>
-        <%= f.label :kg, t('.kg') %>
-      </div>
 
       <div class="row">
         <div class="col-sm-6">

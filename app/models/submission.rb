@@ -11,6 +11,23 @@ class Submission < ActiveRecord::Base
     User.find_by_id(self.user_id).username
   end
 
+  def converted_weight(current_user)
+    unless current_user.kg
+      # weight in pounds
+      weight = self.weight
+    else
+      # weight in kgs
+      weight = self.weight * 2.20462262
+    end
+    
+    # drop decimal point if even number
+    if weight % 1 == 0
+      weight.round
+    else
+      weight.round(2)
+    end
+  end
+
   def calculate_tonnage
     self.tonnage = self.weight * self.reps
   end
