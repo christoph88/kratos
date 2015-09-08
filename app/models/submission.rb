@@ -1,3 +1,6 @@
+# NOTES
+# The submission model saves in pounds by default
+
 class Submission < ActiveRecord::Base
   belongs_to :user
   belongs_to :contest
