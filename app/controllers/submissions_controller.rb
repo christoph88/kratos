@@ -19,7 +19,7 @@ class SubmissionsController < ApplicationController
     @creator = @contest.admin_name
     @creation_date = @contest.created_at
 
-    @notifications = Submission.where(contest_id: params[:contest_id]).order(created_at: :desc).limit(5)
+    @notifications = Submission.find_by_sql([IO.read('app/models/sql/submissions_latest.sql'), @contest.id])
 
     @submissions = Submission.find_by_sql([IO.read('app/models/sql/submissions_index.sql'), @contest.id])
     @submissions = @submissions.paginate(page: params[:page], per_page: 10)
