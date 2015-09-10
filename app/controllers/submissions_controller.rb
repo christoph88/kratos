@@ -15,8 +15,13 @@ class SubmissionsController < ApplicationController
     set_meta_tags keywords:     %w[rankings winners leaderboard],
                   description:  "View the leaderboard of the #{@contest.name} challenge."
 
-    @submissions = Submission.find_by_sql([IO.read('app/models/sql/submissions_index.sql'), @contest.id])
+    @description = @contest.description
+    @creator = @contest.admin_name
+    @creation_date = @contest.created_at
 
+    @notifications = Submission.where(contest_id: params[:contest_id]).order(created_at: :desc).limit(5)
+
+    @submissions = Submission.find_by_sql([IO.read('app/models/sql/submissions_index.sql'), @contest.id])
     @submissions = @submissions.paginate(page: params[:page], per_page: 10)
 
     respond_with(@submissions)

@@ -19,5 +19,9 @@ module ApplicationHelper
     end
   end
 
+  def metric
+    current_user.kg? ? " kg" : " lbs"
+  end
+
 # ApplicationHelperEnd
 end
