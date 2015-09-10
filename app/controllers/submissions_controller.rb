@@ -17,6 +17,8 @@ class SubmissionsController < ApplicationController
 
     @submissions = Submission.find_by_sql([IO.read('app/models/sql/submissions_index.sql'), @contest.id])
 
+    @submissions = @submissions.paginate(page: params[:page], per_page: 10)
+
     respond_with(@submissions)
   end
 

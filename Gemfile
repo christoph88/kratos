@@ -64,6 +64,9 @@ gem 'chronic'
 # gems needed for user uploaded pictures
 gem "paperclip", "~> 4.3"
 gem 'aws-sdk', '< 2.0'
+# add pagination
+gem 'will_paginate', '~> 3.0.6'
+gem 'will_paginate-bootstrap'
 
 # Gems for Heroku
 gem 'rails_12factor', group: :production

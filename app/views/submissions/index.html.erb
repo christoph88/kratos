@@ -125,6 +125,9 @@
             </div>
         </div>
         <!-- End Profile Content -->
+        <div class="pagination pull-right">
+          <%= will_paginate @submissions, renderer: BootstrapPagination::Rails %>
+        </div>
     </div><!--/end row-->
 </div>
 <!--=== End Profile ===-->
