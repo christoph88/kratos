@@ -26,7 +26,7 @@ en:
       2: "weight x 1 => 1 rm"
       3: "1 x reps => rep max"
       4: "sum(reps) => cummulative reps"
-      5: "sum(tonnage) => commulative tonnage"
+      5: "sum(tonnage) => cummulative tonnage"
       6: "time => fastest time"
       7: "time => longest time"
     index:

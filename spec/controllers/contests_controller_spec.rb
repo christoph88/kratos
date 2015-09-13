@@ -20,6 +20,10 @@ require 'rails_helper'
 
 RSpec.describe ContestsController, type: :controller do
 
+  before :each do
+    sign_out :user
+  end
+
   # This should return the minimal set of attributes required to create a valid
   # Contest. As you add validations to Contest, be sure to
   # adjust the attributes here as well.

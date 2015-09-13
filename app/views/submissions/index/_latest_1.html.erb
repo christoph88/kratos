@@ -1,0 +1,15 @@
+<!--Notification-->
+<div class="panel-heading-v2 overflow-h">
+    <h2 class="heading-xs pull-left"><i class="fa fa-bell-o"></i> <%= t(".latesth", default: "Latest submissions") %></h2>
+</div>
+<ul class="list-unstyled mCustomScrollbar margin-bottom-20" data-mcs-theme="minimal-dark">
+  <% @notifications.each do |notification| %>
+    <li class="notification">
+        <i class="icon-custom icon-sm rounded-x icon-bg-red icon-line icon-envelope"></i>
+        <div class="overflow-h">
+            <span><strong><%= notification.user_name %></strong> did <%= notification.converted_weight(current_user).to_s + metric %> x <%= notification.reps %> reps</span>
+            <small><%= time_ago_in_words(notification.created_at) %> ago</small>
+        </div>
+    </li>
+  <% end %>
+</ul>

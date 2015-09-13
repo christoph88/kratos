@@ -23,6 +23,19 @@ en:
   submissions:
     index:
       title: "Show all submissions"
+      descriptionh:
+      submith:
+      submitp:
+      submitb:
+      submitm:
+      submitm_link:
+      latest_1:
+        latesth:
+      leaderboard_1:
+        ago:
+        rank:
+        weight:
+        reps:
     show:
       title: "View a particular submission"
     new:
