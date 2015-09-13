@@ -11,10 +11,10 @@ class SubmissionsController < ApplicationController
   respond_to :html
 
   def index
-    @title = "#{@contest.contest_type_tr} #{@contest.name}"
+    @title = "#{@contest.contest_type_tr} => #{@contest.name}"
     set_meta_tags keywords:     %w[rankings winners leaderboard],
                   description:  "View the leaderboard of the #{@contest.name} challenge."
-
+    
     @description = @contest.description
     @creator = @contest.admin_name
     @creation_date = @contest.created_at
@@ -23,6 +23,9 @@ class SubmissionsController < ApplicationController
 
     @submissions = Submission.find_by_sql([IO.read('app/models/sql/submissions_index.sql'), @contest.id])
     @submissions = @submissions.paginate(page: params[:page], per_page: 10)
+
+    # set submission for new submissions
+    @submission = @contest.submissions.new
 
     respond_with(@submissions)
   end
