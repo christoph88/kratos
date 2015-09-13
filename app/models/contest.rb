@@ -14,4 +14,8 @@ class Contest < ActiveRecord::Base
     self.submissions.sum(:tonnage)
   end
 
+  def contest_type_tr
+    I18n.t("contests.contest_type")[self.contest_type]
+  end
+
 end

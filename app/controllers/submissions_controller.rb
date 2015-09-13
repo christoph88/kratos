@@ -11,7 +11,7 @@ class SubmissionsController < ApplicationController
   respond_to :html
 
   def index
-    @title = @contest.name
+    @title = "#{@contest.contest_type_tr} #{@contest.name}"
     set_meta_tags keywords:     %w[rankings winners leaderboard],
                   description:  "View the leaderboard of the #{@contest.name} challenge."
 

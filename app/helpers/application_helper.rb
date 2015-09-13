@@ -2,7 +2,7 @@ module ApplicationHelper
 
   # Return a title on a per-page basis.
   def title
-    base_title = t('general.base_title')
+    base_title = t("general.base_title")
     if @title.nil?
      base_title 
     else
@@ -13,14 +13,14 @@ module ApplicationHelper
   # Return a title on a per-page basis. (visible on page itself)
   def pagetitle
     if @title.nil?
-      t('general.newpage_title')
+      t("general.newpage_title")
     else
       "#{@title}"
     end
   end
 
   def metric
-    current_user.kg? ? " kg" : " lbs"
+    current_user.kg? ? " " + t("general.kg", default: "kg") : " " + t("general.lbs", default: "lbs")
   end
 
 # ApplicationHelperEnd
