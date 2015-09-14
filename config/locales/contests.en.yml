@@ -25,8 +25,8 @@ en:
       1: "weight x reps"
       2: "one rep maximum"
       3: "max reps"
-      4: "total reps over time"
-      5: "total tonnage over time"
+      4: "total cumulative reps over time"
+      5: "total cumulative tonnage over time"
       6: "fastest time"
       7: "longest time"
     contest_short_descr:
