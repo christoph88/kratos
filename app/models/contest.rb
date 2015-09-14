@@ -18,4 +18,8 @@ class Contest < ActiveRecord::Base
     I18n.t("contests.contest_type")[self.contest_type]
   end
 
+  def contest_short_descr
+    I18n.t("contests.contest_short_descr")[self.contest_type]
+  end
+
 end

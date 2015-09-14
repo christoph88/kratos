@@ -5,7 +5,7 @@
       <%= form_for [@contest,@submission] do |f| %>
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel"><%= @title %></h4>
       </div>
       <div class="modal-body">
           <% if @submission.errors.any? %>
@@ -20,21 +20,23 @@
             </div>
           <% end %>
 
-          <div class="field">
-            <%= f.label :reps %><br>
-            <%= f.number_field :reps %>
+          <div class="row">
+            <div class="col-sm-5">
+              <%= f.label :weight %>
+              <%= f.text_field :weight, class: "form-control margin-bottom-20" %>
+            </div>
+            <div class="col-sm-5">
+              <%= f.label :reps %>
+              <%= f.number_field :reps, class: "form-control margin-bottom-20" %>
+            </div>
           </div>
-          <div class="field">
-            <%= f.label :weight %><br>
-            <%= f.text_field :weight %>
-          </div>
+
           <div class="actions">
-            <%= f.submit %>
           </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-u">Save changes</button>
+      <%= f.submit t('.submit', default: "Submit"), class: "btn btn-u" %>
       </div>
     <% end %>
     </div>
