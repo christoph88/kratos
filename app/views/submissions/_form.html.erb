@@ -1,25 +1,42 @@
-<%= form_for [@contest,@submission] do |f| %>
-  <% if @submission.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@submission.errors.count, "error") %> prohibited this submission from being saved:</h2>
+<!-- Modal -->
+<div class="modal fade" id="addEntry" tabindex="-1" role="dialog" aria-labelledby="addEntryLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <%= form_for [@contest,@submission] do |f| %>
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+          <% if @submission.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@submission.errors.count, "error") %> prohibited this submission from being saved:</h2>
 
-      <ul>
-      <% @submission.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+              <ul>
+              <% @submission.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="field">
+            <%= f.label :reps %><br>
+            <%= f.number_field :reps %>
+          </div>
+          <div class="field">
+            <%= f.label :weight %><br>
+            <%= f.text_field :weight %>
+          </div>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-u">Save changes</button>
+      </div>
+    <% end %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :reps %><br>
-    <%= f.number_field :reps %>
   </div>
-  <div class="field">
-    <%= f.label :weight %><br>
-    <%= f.text_field :weight %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
