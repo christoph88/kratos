@@ -10,6 +10,12 @@ class Submission < ActiveRecord::Base
 
   before_validation :calculate_tonnage
 
+  # model helpers
+  def calculate_tonnage
+    self.tonnage = self.weight * self.reps
+  end
+
+  # view and display helpers
   def user_name
     User.find_by_id(self.user_id).username
   end
@@ -29,10 +35,6 @@ class Submission < ActiveRecord::Base
     else
       weight.round(2)
     end
-  end
-
-  def calculate_tonnage
-    self.tonnage = self.weight * self.reps
   end
 
 end
