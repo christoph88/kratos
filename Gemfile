@@ -79,12 +79,4 @@ end
 
 group :development, :test do
   gem 'dotenv-rails'
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-end
-
-group :test do
-  gem 'shoulda-matchers'
-  gem 'cucumber-rails', require: false
-  gem 'database_cleaner'
 end
