@@ -76,6 +76,8 @@ group :development do
   gem 'pry-rails'
   gem 'faker'
   gem 'minitest-reporters'
+  gem 'guard'
+  gem 'guard-minitest'
 end
 
 group :development, :test do
