@@ -31,5 +31,8 @@ module Kratos
     # disable precompiling assets for devise
     config.assets.initialize_on_precompile = false
 
+    config.generators do |g|
+      g.test_framework :minitest, spec: true
+    end
   end
 end
