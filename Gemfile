@@ -81,3 +81,7 @@ end
 group :development, :test do
   gem 'dotenv-rails'
 end
+
+group :test do
+  gem "minitest-rails-capybara"
+end

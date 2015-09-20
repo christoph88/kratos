@@ -5,13 +5,13 @@ class LandingsControllerTest < ActionController::TestCase
   #   assert true
   # end
 
-  test "should get home" do
+  test "should get test" do
     get :test
     assert_response :success
   end
 
-  test "should get help" do
-    get :help
+  test "should get index" do
+    get :index
     assert_response :success
   end
 end
