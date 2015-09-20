@@ -1,6 +1,15 @@
 require "test_helper"
 
 feature "CanAccessHome" do
+
+  scenario "Has a working robots.txt" do
+    visit "/robots.txt"
+    page.must_have_content "Disallow"
+  end
+
+  scenario "Has Google tagmanager installed" do
+  end
+
   scenario "Has branding" do
     visit root_path
     page.must_have_content "Kratos"

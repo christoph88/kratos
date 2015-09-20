@@ -1,24 +1,30 @@
-require 'test_helper'
-require "minitest/autorun"
+require "test_helper"
 
+describe LandingsController do
 
-class LandingsControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  # sign out user to prevent devise authentication error
+  before :each do
+    sign_out :user
+  end
 
-  test "should get robots" do
+  it "generate robots.txt" do
     get :robots
-    assert_response :success
+
+    must_respond_with :success
   end
 
-  test "should get index" do
+  it "get index" do
     get :index
-    assert_response :success
+
+    must_respond_with :success
+    must_render_template :index
   end
 
-  test "should get test" do
+  it "get test" do
     get :test
-    assert_response :success
+
+    must_respond_with :success
+    must_render_template :test
   end
+
 end
