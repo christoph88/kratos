@@ -75,6 +75,7 @@ group :development do
   gem 'better_errors'
   gem 'pry-rails'
   gem 'faker'
+  gem 'minitest-reporters'
 end
 
 group :development, :test do
