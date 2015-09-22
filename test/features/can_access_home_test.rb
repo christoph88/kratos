@@ -2,22 +2,38 @@ require "test_helper"
 
 feature "CanAccessHome" do
 
+  before :each do
+    visit root_path
+  end
+
   scenario "Has a working robots.txt" do
     visit "/robots.txt"
     page.must_have_content "Disallow"
   end
 
+  scenario "Has devhelp" do
+    page.has_css?("#devhelp").must_equal false
+
+    visit "test"
+    page.has_css?("#devhelp").must_equal false
+  end
+
   scenario "Has Google tagmanager installed" do
   end
 
+  scenario "Has no breadcrumbs on homepage" do
+    page.has_css?(".breadcrumbs").must_equal false
+
+    visit "test"
+    page.has_css?(".breadcrumbs").must_equal true
+  end
+
   scenario "Has branding" do
-    visit root_path
     page.must_have_content "Kratos"
     page.find(".navbar-brand")
   end
 
   scenario "Has a header and a footer" do
-    visit root_path
     page.has_css?(".header-v6").must_equal true
     page.has_css?(".footer-v2").must_equal true
   end
