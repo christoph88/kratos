@@ -4,9 +4,9 @@ module ApplicationHelper
   def title
     base_title = t("general.base_title")
     if @title.nil?
-     base_title 
+      base_title 
     else
-     @title 
+      "#{@title}"
     end
   end
 
