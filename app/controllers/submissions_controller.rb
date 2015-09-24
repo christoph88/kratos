@@ -16,7 +16,7 @@ class SubmissionsController < ApplicationController
                   description:  "View the leaderboard of the #{@contest.name} challenge."
     
     @description = @contest.description
-    @creator = @contest.admin_name
+    @creator = @contest.admin.username
     @creation_date = @contest.created_at
 
     @notifications = Submission.find_by_sql([IO.read('app/models/sql/submissions_latest.sql'), @contest.id])

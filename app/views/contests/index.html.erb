@@ -20,7 +20,7 @@
               <div class="grid-boxes-caption">
                 <h3><%= link_to contest.name, contest_submissions_path(contest.id) %></h3>
                   <ul class="list-inline grid-boxes-news">
-                    <li><span>By</span> <%= link_to contest.admin_name, root_path %></li>
+                    <li><span>By</span> <%= link_to contest.admin.username, root_path %></li>
                       <li>|</li>
                       <li><i class="fa fa-clock-o"></i> <%= time_ago_in_words(contest.created_at, include_seconds: true) %></li>
                       <li>|</li>

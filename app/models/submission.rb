@@ -15,11 +15,6 @@ class Submission < ActiveRecord::Base
     self.tonnage = self.weight * self.reps
   end
 
-  # view and display helpers
-  def user_name
-    User.find_by_id(self.user_id).username
-  end
-
   def converted_weight(current_user)
     unless current_user.kg
       # weight in pounds

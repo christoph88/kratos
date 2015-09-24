@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   has_many :submissions
   has_many :contests, through: :submissions
 
+  has_one :contest
+
   has_attached_file :avatar, styles: { medium: "300x300#", thumb: "100x100#" }, default_url: "placeholders/:style/avatar_missing.png"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 

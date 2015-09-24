@@ -1,14 +1,11 @@
 class Contest < ActiveRecord::Base
   has_many :submissions
   has_many :users, through: :submissions
+  belongs_to :admin, class_name: 'User', foreign_key: 'admin_id'
 
   validates_presence_of :name, :admin_id
 
   acts_as_votable
-
-  def admin_name
-    User.find_by_id(self.admin_id).username
-  end
 
   def tonnage
     self.submissions.sum(:tonnage)
