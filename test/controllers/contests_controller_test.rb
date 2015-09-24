@@ -10,40 +10,50 @@ describe ContestsController do
     value(assigns(:contests)).wont_be :nil?
   end
 
-  it "gets new" do
-    get :new
-    value(response).must_be :success?
+  describe "gets new" do
+    it "redirects to login_path" do
+      session[:user_id] = nil
+      get :new
+      assert_redirected_to new_user_session_path
+    end
+
+    it "requires authentication" do
+      sign_in users :default
+      get :new
+      value(response).must_be :success?
+    end
   end
 
   it "creates contest" do
-    skip("TODO")
+    sign_in users :default
     expect {
-      post :create, contest: {  }
+      post :create, contest: { name: "test", admin_id: 1  }
     }.must_change "Contest.count"
 
     must_redirect_to contest_path(assigns(:contest))
   end
 
   it "shows contest" do
-    skip("TODO")
     get :show, id: contest
     value(response).must_be :success?
   end
 
   it "gets edit" do
-    skip("TODO")
+    skip("waiting for stackexchange help")
+    sign_in users :default
     get :edit, id: contest
     value(response).must_be :success?
   end
 
   it "updates contest" do
-    skip("TODO")
-    put :update, id: contest, contest: {  }
-    must_redirect_to contest_path(assigns(:contest))
+    sign_in users :default
+    put :update, id: contest, contest: { name: "bier" }
+    must_redirect_to contests_path
   end
 
   it "destroys contest" do
-    skip("TODO")
+    skip("waiting for stackexchange help")
+    sign_in users :default
     expect {
       delete :destroy, id: contest
     }.must_change "Contest.count", -1
