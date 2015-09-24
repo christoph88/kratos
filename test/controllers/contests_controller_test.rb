@@ -1,6 +1,7 @@
 require "test_helper"
 
 describe ContestsController do
+  let(:user) { users :default }
   let(:contest) { contests :one }
 
   it "gets index" do
