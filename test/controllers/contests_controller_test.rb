@@ -2,7 +2,7 @@ require "test_helper"
 
 describe ContestsController do
   let(:user) { users :default }
-  let(:contest) { contests :one }
+  let(:contest) { contests :default }
 
   it "gets index" do
     get :index
@@ -39,7 +39,6 @@ describe ContestsController do
   end
 
   it "gets edit" do
-    skip("waiting for stackexchange help")
     sign_in users :default
     get :edit, id: contest
     value(response).must_be :success?
@@ -48,11 +47,10 @@ describe ContestsController do
   it "updates contest" do
     sign_in users :default
     put :update, id: contest, contest: { name: "bier" }
-    must_redirect_to contests_path
+    must_redirect_to contest_path(assigns(:contest))
   end
 
   it "destroys contest" do
-    skip("waiting for stackexchange help")
     sign_in users :default
     expect {
       delete :destroy, id: contest
@@ -60,4 +58,5 @@ describe ContestsController do
 
     must_redirect_to contests_path
   end
+
 end

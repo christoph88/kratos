@@ -1,0 +1,15 @@
+default:
+  weight: 10
+  reps: 5
+  user: default
+  contest: default
+two:
+  weight: 15
+  reps: 10
+  user: default
+  contest: default
+three:
+  weight: 20
+  reps: 12
+  user: default
+  contest: default
