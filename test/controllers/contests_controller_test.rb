@@ -14,7 +14,7 @@ describe ContestsController do
     it "redirects to login_path" do
       session[:user_id] = nil
       get :new
-      assert_redirected_to new_user_session_path
+      must_redirect_to new_user_session_path
     end
 
     it "requires authentication" do
@@ -24,13 +24,23 @@ describe ContestsController do
     end
   end
 
-  it "creates contest" do
-    sign_in users :default
-    expect {
-      post :create, contest: { name: "test", admin_id: 1  }
-    }.must_change "Contest.count"
+  describe "creates contest" do
+    it "redirects to login_path" do
+      expect {
+        post :create, contest: { name: "test", admin_id: 1  }
+      }.wont_change "Contest.count"
 
-    must_redirect_to contest_path(assigns(:contest))
+      must_redirect_to new_user_session_path
+    end
+
+    it "requires authentication" do
+      sign_in users :default
+      expect {
+        post :create, contest: { name: "test", admin_id: 1  }
+      }.must_change "Contest.count"
+
+      must_redirect_to contest_path(assigns(:contest))
+    end
   end
 
   it "shows contest" do

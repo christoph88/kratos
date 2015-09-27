@@ -14,6 +14,12 @@ describe Contest do
   end
 
   it "must have tonnage" do
-    contests(:one).tonnage.must_equal 440
   end
+
+  it "must have contest type translations" do
+  end
+
+  it "must have contest short description translations" do
+  end
+
 end
