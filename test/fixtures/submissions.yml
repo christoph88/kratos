@@ -3,13 +3,16 @@ default:
   reps: 5
   user: default
   contest: default
+  tonnage: 50
 two:
   weight: 15
   reps: 10
   user: default
   contest: default
+  tonnage: 150
 three:
   weight: 20
   reps: 12
   user: default
   contest: default
+  tonnage: 240

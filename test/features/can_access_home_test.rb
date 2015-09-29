@@ -19,6 +19,8 @@ feature "CanAccessHome" do
   end
 
   scenario "Has Google tagmanager installed" do
+    #find helper to search in source
+    page.must_have_content "GTM-53RGDW"
   end
 
   scenario "Has no breadcrumbs on homepage" do
