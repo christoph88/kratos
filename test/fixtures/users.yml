@@ -10,3 +10,11 @@ default:
   name: "G-man"
   kg: true
   username: "chris88"
+  email: "1@test.be"
+
+american:
+  firstname: "Christopher"
+  name: "Smith"
+  kg: false
+  username: "christopher"
+  email: "2@test.be"
