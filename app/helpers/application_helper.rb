@@ -20,7 +20,7 @@ module ApplicationHelper
   end
 
   def metric
-    current_user.kg? ? " " + t("general.kg", default: "kg") : " " + t("general.lbs", default: "lbs")
+    current_user.nil? || current_user.kg? ? " " + t("general.kg", default: "kg") : " " + t("general.lbs", default: "lbs")
   end
 
 # ApplicationHelperEnd

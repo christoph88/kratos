@@ -10,10 +10,10 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require turbolinks
 //= require jquery
-//= require unify/jquery-migrate.min
 //= require jquery-ujs
+//= require turbolinks
+//= require unify/jquery-migrate.min
 //= require bootstrap-sass
 //= require unify/back-to-top
 //= require unify/smoothScroll

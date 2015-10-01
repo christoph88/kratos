@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   shallow do
     resources :contests do
-      resources :submissions, except: :edit
+      resources :submissions
     end
   end
 

@@ -16,7 +16,7 @@ class Submission < ActiveRecord::Base
   end
 
   def converted_weight(current_user)
-    unless current_user.kg
+    unless current_user.nil? || current_user.kg
       # weight in pounds
       weight = self.weight
     else
