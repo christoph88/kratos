@@ -80,7 +80,7 @@ class SubmissionsController < ApplicationController
 
     @contest = Contest.find_by_id(@submission.contest_id)
     @submission.destroy
-    respond_with(@contest, location: contest_path(@contest.id))
+    respond_with(@contest, location: contest_submissions_path(@contest.id))
   end
 
   private

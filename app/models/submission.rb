@@ -8,7 +8,7 @@ class Submission < ActiveRecord::Base
   validates_presence_of :user_id, :reps, :weight
   validates_uniqueness_of :tonnage, scope: [:user_id, :contest_id]
 
-  before_validation :calculate_tonnage
+  after_validation :calculate_tonnage
 
   # model helpers
   def calculate_tonnage

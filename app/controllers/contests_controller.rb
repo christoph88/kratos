@@ -1,10 +1,10 @@
 class ContestsController < ApplicationController
   before_action :set_contest, only: [:show, :edit, :update, :destroy]
 
-  # the current user can only edit, update or destroy if the id of the pin matches the id the user is linked with.
-  before_action :correct_user, only: [:edit, :update, :destroy]
   # the user has to authenticate for every action except index and show.
   before_action :authenticate_user!, except: [:index, :show]
+  # the current user can only edit, update or destroy if the id of the pin matches the id the user is linked with.
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   respond_to :html
 

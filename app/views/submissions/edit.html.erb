@@ -1,0 +1,5 @@
+<h1>Editing submission</h1>
+
+<%= link_to 'Destroy', @submission, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<%= link_to 'Back', contest_submissions_path(@submission.contest_id) %>
