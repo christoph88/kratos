@@ -38,17 +38,4 @@ feature "CanAccessHome" do
     page.has_css?(".header-v6").must_equal true
     page.has_css?(".footer-v2").must_equal true
   end
-
-  scenario "Has correct header links" do
-  end
-
-  scenario "Has correct footer links" do
-  end
-
-  scenario "Has twitter in the footer" do
-  end
-
-  scenario "Has a dynamic menu" do
-  end
-
 end

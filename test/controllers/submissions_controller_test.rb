@@ -19,6 +19,10 @@ describe SubmissionsController do
       value(response).must_be :success?
       value(assigns(:submissions)).wont_be :nil?
     end
+
+    it "should only see the best user submission" do
+      #FIXME create a test for this
+    end 
   end
 
   it "gets new" do
