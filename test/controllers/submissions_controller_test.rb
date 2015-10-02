@@ -60,6 +60,6 @@ describe SubmissionsController do
       delete :destroy, contest_id: contest, id: submission
     }.must_change "Submission.count", -1
 
-    must_redirect_to contest_submissions_path(assigns(:contest))
+    must_redirect_to contest_path(assigns(:contest))
   end
 end

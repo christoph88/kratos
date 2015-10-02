@@ -15,10 +15,6 @@ describe Submission do
     value(submission).must_be :valid?
   end
 
-  it "must be invalid" do
-    value(invalid).wont_be :valid?
-  end
-
   it "must calculate tonnage" do
     default.calculate_tonnage.must_equal 50
   end
