@@ -3,7 +3,7 @@ require "test_helper"
 #TODO add breadcrumbs to controller
 feature "CanCrudSubmissions" do
   scenario "can create a submission" do
-    #TODO find how to validate a partial
+    #TODO remove new submission modal, ajax is for later
     #TODO add fields based on the type of contest
     #TODO add option to submit in kg or in pounds
     #TODO test different contest types

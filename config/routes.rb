@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/robots.txt' => 'landings#robots'
 
   shallow do
-    resources :contests do
+    resources :contests, path: "leaderboards" do
       resources :submissions
     end
   end
