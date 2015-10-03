@@ -10,11 +10,8 @@ class SubmissionsController < ApplicationController
 
   respond_to :html
 
-  add_breadcrumb "home", :root_path
-
   def index
-    add_breadcrumb "leaderboards", contests_path
-    add_breadcrumb @contest.name, contest_submissions_path(@contest)
+    breadcrumb_base
 
     @title = "#{@contest.contest_type_tr} => #{@contest.name}"
     set_meta_tags keywords:     %w[rankings winners leaderboard],
@@ -104,6 +101,12 @@ class SubmissionsController < ApplicationController
     def correct_user
       @submission = current_user.submissions.find_by(id: params[:id])
       redirect_to submission_path, notice: t('submissions.controller.correct_user') if @submission.nil?
+    end
+
+    def breadcrumb_base
+      add_breadcrumb "home", :root_path
+      add_breadcrumb "leaderboards", contests_path
+      add_breadcrumb @contest.name, contest_submissions_path(@contest)
     end
 
 end

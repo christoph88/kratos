@@ -25,4 +25,14 @@ feature "CanSeeHeaderAndFooter" do
   scenario "can see footer content" do
     #TODO add translations
   end
+
+  scenario "can see breadcrumbs except on homepage" do
+    #TODO add to all controllers, use the breadcrumb_base private method
+    #TODO add translations to the controller locales
+    visit root_path
+    page.has_css?("ol.breadcrumb").must_equal false
+
+    visit contests_path
+    page.has_css?("ol.breadcrumb").must_equal true
+  end
 end
