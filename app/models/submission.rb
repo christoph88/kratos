@@ -8,12 +8,11 @@ class Submission < ActiveRecord::Base
   validates_presence_of :user_id, :reps, :weight
   validates_uniqueness_of :tonnage, scope: [:user_id, :contest_id]
 
-  #FIXME calculate tonnage after presence validation and before checking for uniqueness
-  after_validation :calculate_tonnage
+  before_validation :calculate_tonnage
 
   # model helpers
   def calculate_tonnage
-    self.tonnage = self.weight * self.reps
+    self.tonnage = self.weight * self.reps if weight && reps
   end
 
   def converted_weight(current_user)
