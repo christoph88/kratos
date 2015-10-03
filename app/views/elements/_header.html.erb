@@ -185,11 +185,9 @@
       <h1 class="pull-left"><%= title %></h1>
     </div><!--/container-->
 </div><!--/breadcrumbs-->
-<% if Rails.env.development? then %>
 <div class="container">
   <div class="pull-right">
-    <%= link_to "Developer info", "#collapseExample", data: {toggle: "collapse"}, role: "button", "aria-expanded" => "false", "aria-controls" => "collapseExample" %>
+    <%= render_breadcrumbs %> | <%= link_to "Developer info", "#collapseExample", data: {toggle: "collapse"}, role: "button", "aria-expanded" => "false", "aria-controls" => "collapseExample" if Rails.env.development? %>
   </div>
 </div>
-<% end %>
 <% end %>

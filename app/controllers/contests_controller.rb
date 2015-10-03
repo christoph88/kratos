@@ -9,6 +9,7 @@ class ContestsController < ApplicationController
   respond_to :html
 
   def index
+    add_breadcrumb "leaderboards", contests_path
     @title = t('contests.index.title')
     set_meta_tags keywords:     %w[leaderboard contest win],
                   description:  "View all the #{Settings.appname} leaderboards now!"

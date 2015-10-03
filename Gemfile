@@ -64,6 +64,8 @@ gem 'chronic'
 # gems needed for user uploaded pictures
 gem "paperclip", "~> 4.3"
 gem 'aws-sdk', '< 2.0'
+# add breadcrumbs
+gem "breadcrumbs_on_rails"
 # add pagination
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'

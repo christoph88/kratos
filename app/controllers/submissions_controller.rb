@@ -10,7 +10,12 @@ class SubmissionsController < ApplicationController
 
   respond_to :html
 
+  add_breadcrumb "home", :root_path
+
   def index
+    add_breadcrumb "leaderboards", contests_path
+    add_breadcrumb @contest.name, contest_submissions_path(@contest)
+
     @title = "#{@contest.contest_type_tr} => #{@contest.name}"
     set_meta_tags keywords:     %w[rankings winners leaderboard],
                   description:  "View the leaderboard of the #{@contest.name} challenge."

@@ -1,5 +1,6 @@
 require "test_helper"
 
+#TODO add breadcrumbs to controller
 feature "CanCrudSubmissions" do
   scenario "can create a submission" do
     #TODO find how to validate a partial
