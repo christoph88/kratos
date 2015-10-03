@@ -1,6 +1,7 @@
 require "test_helper"
 
-#TODO add breadcrumbs to controller
+#TODO add breadcrumbs translations
+
 feature "CanCrudSubmissions" do
   scenario "can create a submission" do
     #TODO remove new submission modal, ajax is for later
