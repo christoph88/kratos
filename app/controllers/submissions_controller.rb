@@ -12,6 +12,7 @@ class SubmissionsController < ApplicationController
 
   def index
     breadcrumb_base
+    add_breadcrumb @contest.name, contest_submissions_path(@contest)
 
     @title = "#{@contest.contest_type_tr} => #{@contest.name}"
     set_meta_tags keywords:     %w[rankings winners leaderboard],
@@ -33,6 +34,9 @@ class SubmissionsController < ApplicationController
   end
 
   def show
+    breadcrumb_base
+    add_breadcrumb t('submissions.show.breadcrumb', default: "show submission"), submission_path(@submission)
+
     @title = t('submissions.show.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
@@ -42,6 +46,9 @@ class SubmissionsController < ApplicationController
   end
 
   def new
+    breadcrumb_base
+    add_breadcrumb t('submissions.new.breadcrumb', default: "new submission"), new_contest_submission_path
+
     @title = t('submissions.new.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
@@ -51,11 +58,17 @@ class SubmissionsController < ApplicationController
   end
 
   def edit
+    breadcrumb_base
+    add_breadcrumb t('submissions.edit.breadcrumb', default: "edit submission"), edit_submission_path(@submission)
+
     @title = t('submissions.edit.title')
 
   end
 
   def create
+    breadcrumb_base
+    add_breadcrumb t('submissions.create.breadcrumb', default: "create submission"), new_contest_submission_path
+
     @title = t('submissions.create.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
@@ -67,6 +80,9 @@ class SubmissionsController < ApplicationController
   end
 
   def update
+    breadcrumb_base
+    add_breadcrumb t('submissions.edit.breadcrumb', default: "update submission"), edit_submission_path(@submission)
+
     @title = t('submissions.update.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
@@ -76,6 +92,9 @@ class SubmissionsController < ApplicationController
   end
 
   def destroy
+    breadcrumb_base
+    add_breadcrumb t('submissions.destroy.breadcrumb', default: "delete submission"), edit_submission_path(@submission)
+
     @title = t('submissions.destroy.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
@@ -104,9 +123,8 @@ class SubmissionsController < ApplicationController
     end
 
     def breadcrumb_base
-      add_breadcrumb "home", :root_path
+      add_breadcrumb "home", root_path
       add_breadcrumb "leaderboards", contests_path
-      add_breadcrumb @contest.name, contest_submissions_path(@contest)
     end
 
 end
