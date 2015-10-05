@@ -15,6 +15,7 @@ feature "CanAccessHome" do
     page.has_css?("#devhelp").must_equal false
 
     visit "test"
+    #in testing there is no devhelp only in development!
     page.has_css?("#devhelp").must_equal false
   end
 
