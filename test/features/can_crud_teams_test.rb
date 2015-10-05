@@ -1,5 +1,7 @@
 require "test_helper"
 
+#TODO add breadcrumbs and translations to controller
+#
 feature "CanCrudTeams" do
   scenario "can create a team" do
     #TODO add translations

@@ -1,7 +1,5 @@
 require "test_helper"
 
-#TODO add breadcrumbs to controller
-
 feature "CanAccessHome" do
 
   before :each do

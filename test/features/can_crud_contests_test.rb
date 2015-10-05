@@ -1,7 +1,5 @@
 require "test_helper"
 
-#TODO add breadcrumbs to controller
-
 feature "CanCrudContests" do
   scenario "can create a contest" do
     #TODO can create different contests
