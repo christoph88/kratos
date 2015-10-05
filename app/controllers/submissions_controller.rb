@@ -2,6 +2,8 @@ class SubmissionsController < ApplicationController
   before_action :set_submission, only: [:show, :edit, :update, :destroy]
   before_action :set_contest, only: [:index, :new, :create]
 
+  before_action :breadcrumb_base
+
   # the current user can only edit, update or destroy if the id of the pin matches the id the user is linked with.
   before_action :correct_user, only: [:edit, :update, :destroy]
   # the user has to authenticate for every action except index and show.
@@ -11,8 +13,6 @@ class SubmissionsController < ApplicationController
   respond_to :html
 
   def index
-    breadcrumb_base
-
     @title = "#{@contest.contest_type_tr} => #{@contest.name}"
     set_meta_tags keywords:     %w[rankings winners leaderboard],
                   description:  "View the leaderboard of the #{@contest.name} challenge."
@@ -33,7 +33,6 @@ class SubmissionsController < ApplicationController
   end
 
   def show
-    breadcrumb_base
     add_breadcrumb t('submissions.show.breadcrumb', default: "show submission"), submission_path(@submission)
 
     @title = t('submissions.show.title')
@@ -45,7 +44,6 @@ class SubmissionsController < ApplicationController
   end
 
   def new
-    breadcrumb_base
     add_breadcrumb t('submissions.new.breadcrumb', default: "new submission"), new_contest_submission_path
 
     @title = t('submissions.new.title')
@@ -57,7 +55,6 @@ class SubmissionsController < ApplicationController
   end
 
   def edit
-    breadcrumb_base
     add_breadcrumb t('submissions.edit.breadcrumb', default: "edit submission"), edit_submission_path(@submission)
 
     @title = t('submissions.edit.title')
@@ -65,7 +62,6 @@ class SubmissionsController < ApplicationController
   end
 
   def create
-    breadcrumb_base
     add_breadcrumb t('submissions.create.breadcrumb', default: "create submission"), new_contest_submission_path
 
     @title = t('submissions.create.title')
@@ -79,7 +75,6 @@ class SubmissionsController < ApplicationController
   end
 
   def update
-    breadcrumb_base
     add_breadcrumb t('submissions.edit.breadcrumb', default: "update submission"), edit_submission_path(@submission)
 
     @title = t('submissions.update.title')
@@ -91,7 +86,6 @@ class SubmissionsController < ApplicationController
   end
 
   def destroy
-    breadcrumb_base
     add_breadcrumb t('submissions.destroy.breadcrumb', default: "delete submission"), edit_submission_path(@submission)
 
     @title = t('submissions.destroy.title')
