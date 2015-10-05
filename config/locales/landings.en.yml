@@ -23,6 +23,7 @@ en:
   landings:
     index: 
       title: "Home"
+      breadcrumb: "home"
       parallax:
           title: "Kratos"
           paragraph: "Get ripped, compete and show them who's the boss!"
@@ -90,4 +91,5 @@ en:
             whois: "Fit chick"
     test: 
       title: "Testpage."
+      breadcrumb: "testpage"
 

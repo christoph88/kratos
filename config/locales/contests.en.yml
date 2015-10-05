@@ -39,23 +39,22 @@ en:
       7: "How long can you do this?"
     index:
       title: "Show all leaderboards"
-      breadcrumb: ""
+      breadcrumb: "leaderboards"
     show:
       title: "View a particular leaderboard"
-      breadcrumb: ""
+      breadcrumb: "view leaderboard"
     new:
       title: "Create a new leaderboard"
-      breadcrumb: ""
+      breadcrumb: "create a leaderboard"
     edit:
       title: "Edit a leaderboard"
-      breadcrumb: ""
+      breadcrumb: "edit a leaderboard"
     create:
       title: "Create a new leaderboard"
-      breadcrumb: ""
+      breadcrumb: "create a leaderboard"
     update:
       title: "Edit a leaderboard"
-      breadcrumb: ""
+      breadcrumb: "edit a leaderboard"
     destroy:
       title: "Delete a leaderboard"
-      breadcrumb: ""
-                  
+      breadcrumb: "delete a leaderboard"

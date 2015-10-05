@@ -9,7 +9,8 @@ class ContestsController < ApplicationController
   respond_to :html
 
   def index
-    add_breadcrumb "leaderboards", contests_path
+    breadcrumb_base
+
     @title = t('contests.index.title')
     set_meta_tags keywords:     %w[leaderboard contest win],
                   description:  "View all the #{Settings.appname} leaderboards now!"
@@ -85,3 +86,4 @@ class ContestsController < ApplicationController
       redirect_to contests_path, notice: t('controller.correct_user') if @contest.nil?
     end
 end
+

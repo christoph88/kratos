@@ -23,6 +23,7 @@ en:
   submissions:
     index:
       title: "Show all submissions"
+      breadcrumb: "show all submissions"
       descriptionh:
       submith:
       submitp:

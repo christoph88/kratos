@@ -122,9 +122,10 @@ class SubmissionsController < ApplicationController
     end
 
     def breadcrumb_base
-      add_breadcrumb "home", root_path
-      add_breadcrumb "leaderboards", contests_path
+      add_breadcrumb t('landings.index.breadcrumb', default: "home"), root_path
+      add_breadcrumb t('contests.index.breadcrumb', default: "leaderboards"), contests_path
 
+      #add contest name
       unless @contest.nil? then
         add_breadcrumb @contest.name, contest_submissions_path(@contest)
       else
