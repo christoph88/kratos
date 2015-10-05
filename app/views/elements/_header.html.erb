@@ -186,8 +186,17 @@
     </div><!--/container-->
 </div><!--/breadcrumbs-->
 <div class="container">
+  <% if Rails.env.development? %>
   <div class="pull-right">
-    <%= render_breadcrumbs %> | <%= link_to "Developer info", "#collapseExample", data: {toggle: "collapse"}, role: "button", "aria-expanded" => "false", "aria-controls" => "collapseExample" if Rails.env.development? %>
+    <ol class="breadcrumb">
+      <li>
+      // <%= link_to "Developer info", "#collapseExample", data: {toggle: "collapse"}, role: "button", "aria-expanded" => "false", "aria-controls" => "collapseExample" %>
+      </li>
+    </ol>
+  </div>
+  <% end %>
+  <div class="pull-right">
+    <%= render_breadcrumbs %>
   </div>
 </div>
 <% end %>
