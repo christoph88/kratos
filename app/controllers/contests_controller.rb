@@ -12,7 +12,7 @@ class ContestsController < ApplicationController
   respond_to :html
 
   def index
-    @title = t('contests.index.title')
+    @title = t('.title')
     set_meta_tags keywords:     %w[leaderboard contest win],
                   description:  "View all the #{Settings.appname} leaderboards now!"
 
@@ -21,8 +21,8 @@ class ContestsController < ApplicationController
   end
 
   def show
-    add_breadcrumb t('contests.show.breadcrumb', default: "show"), contest_path(@contest)
-    @title = t('contests.show.title')
+    add_breadcrumb t('.breadcrumb', default: "show"), contest_path(@contest)
+    @title = t('.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
 
@@ -30,8 +30,8 @@ class ContestsController < ApplicationController
   end
 
   def new
-    add_breadcrumb t('landings.new.breadcrumb', default: "new leaderboard"), new_contest_path
-    @title = t('contests.new.title')
+    add_breadcrumb t('.breadcrumb', default: "new leaderboard"), new_contest_path
+    @title = t('.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
 
@@ -40,16 +40,16 @@ class ContestsController < ApplicationController
   end
 
   def edit
-    add_breadcrumb t('contests.edit.breadcrumb', default: "edit"), edit_contest_path(@contest)
-    @title = t('contests.edit.title')
+    add_breadcrumb t('.breadcrumb', default: "edit"), edit_contest_path(@contest)
+    @title = t('.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
 
   end
 
   def create
-    add_breadcrumb t('landings.create.breadcrumb', default: "create leaderboard"), new_contest_path
-    @title = t('contests.create.title')
+    add_breadcrumb t('.breadcrumb', default: "create leaderboard"), new_contest_path
+    @title = t('.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
 
@@ -60,8 +60,8 @@ class ContestsController < ApplicationController
   end
 
   def update
-    add_breadcrumb t('contests.update.breadcrumb', default: "update"), edit_contest_path(@contest)
-    @title = t('contests.update.title')
+    add_breadcrumb t('.breadcrumb', default: "update"), edit_contest_path(@contest)
+    @title = t('.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
 
@@ -70,8 +70,8 @@ class ContestsController < ApplicationController
   end
 
   def destroy
-    add_breadcrumb t('contests.destroy.breadcrumb', default: "delete"), edit_contest_path(@contest)
-    @title = t('contests.destroy.title')
+    add_breadcrumb t('.breadcrumb', default: "delete"), edit_contest_path(@contest)
+    @title = t('.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
 

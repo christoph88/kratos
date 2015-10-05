@@ -11,11 +11,9 @@ require "test_helper"
 
 feature "CanSeeHeaderAndFooter" do
   scenario "can see header and footer on every page" do
-    #TODO add translations
   end
 
   scenario "can see logo in header and footer" do
-    #TODO add translations
   end
 
   scenario "can see header content" do
@@ -27,8 +25,6 @@ feature "CanSeeHeaderAndFooter" do
   end
 
   scenario "can see breadcrumbs except on homepage" do
-    #TODO add to all controllers, use the breadcrumb_base private method
-    #TODO add translations to the controller locales
     visit root_path
     page.has_css?("ol.breadcrumb").must_equal false
 

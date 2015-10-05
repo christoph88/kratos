@@ -33,9 +33,9 @@ class SubmissionsController < ApplicationController
   end
 
   def show
-    add_breadcrumb t('submissions.show.breadcrumb', default: "show submission"), submission_path(@submission)
+    add_breadcrumb t('.breadcrumb', default: "show submission"), submission_path(@submission)
 
-    @title = t('submissions.show.title')
+    @title = t('.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
     
@@ -44,9 +44,9 @@ class SubmissionsController < ApplicationController
   end
 
   def new
-    add_breadcrumb t('submissions.new.breadcrumb', default: "new submission"), new_contest_submission_path
+    add_breadcrumb t('.breadcrumb', default: "new submission"), new_contest_submission_path
 
-    @title = t('submissions.new.title')
+    @title = t('.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
 
@@ -55,16 +55,16 @@ class SubmissionsController < ApplicationController
   end
 
   def edit
-    add_breadcrumb t('submissions.edit.breadcrumb', default: "edit submission"), edit_submission_path(@submission)
+    add_breadcrumb t('.breadcrumb', default: "edit submission"), edit_submission_path(@submission)
 
-    @title = t('submissions.edit.title')
+    @title = t('.title')
 
   end
 
   def create
-    add_breadcrumb t('submissions.create.breadcrumb', default: "create submission"), new_contest_submission_path
+    add_breadcrumb t('.breadcrumb', default: "create submission"), new_contest_submission_path
 
-    @title = t('submissions.create.title')
+    @title = t('.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
 
@@ -75,9 +75,9 @@ class SubmissionsController < ApplicationController
   end
 
   def update
-    add_breadcrumb t('submissions.edit.breadcrumb', default: "update submission"), edit_submission_path(@submission)
+    add_breadcrumb t('.breadcrumb', default: "update submission"), edit_submission_path(@submission)
 
-    @title = t('submissions.update.title')
+    @title = t('.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
 
@@ -86,9 +86,9 @@ class SubmissionsController < ApplicationController
   end
 
   def destroy
-    add_breadcrumb t('submissions.destroy.breadcrumb', default: "delete submission"), edit_submission_path(@submission)
+    add_breadcrumb t('.breadcrumb', default: "delete submission"), edit_submission_path(@submission)
 
-    @title = t('submissions.destroy.title')
+    @title = t('.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
 

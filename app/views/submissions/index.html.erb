@@ -23,7 +23,7 @@
             <h2 class="heading-xs pull-left"><i class="fa fa-trophy"></i> <%= t(".submith", default: "Submit to leaderboard") %></h2>
             </div>
             <p><%= t(".submitp", default: "Compete now and submit your best score to the leaderboard!") %></p>
-            <p><%= link_to t(".submitb", default: "Add entry"), "#", class: "btn btn-u btn-block", data: {toggle: "modal", target: "#addEntry"} %></p>
+            <p><%= link_to t(".submitb", default: "Add entry"), new_contest_submission_path, class: "btn btn-u btn-block" %></p>
             <p><%= raw t(".submitm", href: link_to(t(".submitm_link", default: "pounds or kgs!"), edit_user_registration_path), default: "Show in %{href}") %></p>
 
             <hr>
@@ -42,5 +42,3 @@
     </div><!--/end row-->
 </div>
 <!--=== End Profile ===-->
-
-<%= render partial: "form" %>

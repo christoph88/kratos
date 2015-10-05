@@ -8,13 +8,13 @@ class LandingsController < ApplicationController
   end
 
   def index
-    @title = t('landings.index.title')
+    @title = t('.title')
     set_meta_tags keywords:     %w[leaderboards contests weightlifting powerlifting strongman compete ranking],
                   description:  "This is the kratos homepage."
   end
 
   def test
-    add_breadcrumb t('landings.test.breadcrumb', default: "testpage"), test_path
+    add_breadcrumb t('.breadcrumb', default: "testpage"), test_path
     @title = t('landings.test.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
