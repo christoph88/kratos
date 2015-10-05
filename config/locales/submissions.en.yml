@@ -38,15 +38,21 @@ en:
         reps:
     show:
       title: "View a particular submission"
+      breadcrumb: "show submission"
     new:
       title: "Create a new submission"
+      breadcrumb: "new submission"
     edit:
       title: "Edit a submission"
+      breadcrumb: "edit submission"
     create:
       title: "Create a new submission"
+      breadcrumb: "create submission"
     update:
-      title: "Edit a submission"
+      title: "Update a submission"
+      breadcrumb: "update submission"
     destroy:
       title: "Delete a submission"
+      breadcrumb: "delete submission"
     controller:
       correct_user: "You cannot edit this submission."

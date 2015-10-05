@@ -1,5 +1,5 @@
 class SubmissionsController < ApplicationController
-  before_action :set_submission, only: [:show, :update, :destroy]
+  before_action :set_submission, only: [:show, :edit, :update, :destroy]
   before_action :set_contest, only: [:index, :new, :create]
 
   # the current user can only edit, update or destroy if the id of the pin matches the id the user is linked with.
@@ -12,7 +12,6 @@ class SubmissionsController < ApplicationController
 
   def index
     breadcrumb_base
-    add_breadcrumb @contest.name, contest_submissions_path(@contest)
 
     @title = "#{@contest.contest_type_tr} => #{@contest.name}"
     set_meta_tags keywords:     %w[rankings winners leaderboard],
@@ -125,6 +124,12 @@ class SubmissionsController < ApplicationController
     def breadcrumb_base
       add_breadcrumb "home", root_path
       add_breadcrumb "leaderboards", contests_path
+
+      unless @contest.nil? then
+        add_breadcrumb @contest.name, contest_submissions_path(@contest)
+      else
+        add_breadcrumb @submission.contest.name, contest_submissions_path(@submission.contest.id)
+      end
     end
 
 end
