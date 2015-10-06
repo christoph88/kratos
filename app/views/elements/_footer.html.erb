@@ -8,20 +8,20 @@
                     <%= link_to root_path do %>
                         <%= image_tag("logo.png", id: "logo-footer", class: "footer-logo", alt: "Logo") %>
                     <% end %>
-                    <p class="margin-bottom-20"><%= t('.description-text') %></p>
+                    <p class="margin-bottom-20"><%= t(".description-text") %></p>
 
                 </div>
                 <!-- End About -->
 
                 <!-- Link List -->
                 <div class="col-md-3 md-margin-bottom-40">
-                  <div class="headline"><h2 class="heading-sm"><%= t('.useful-links') %></h2></div>
+                  <div class="headline"><h2 class="heading-sm"><%= t(".useful-links.title") %></h2></div>
                     <ul class="list-unstyled link-list">
-                        <li><%= link_to t('.about_us', default: "About us"), about_us_path %><i class="fa fa-angle-right"></i></li>
-                        <li><%= link_to t('.leaderboards.button', default: "Leaderboard"), contests_path %><i class="fa fa-angle-right"></i></li>
-                        <li><%= link_to t('.teams', default: "Teams"), teams_path %><i class="fa fa-angle-right"></i></li>
-                        <li><%= link_to t('.following', default: "Following"), following_path %><i class="fa fa-angle-right"></i></li>
-                        <li><%= link_to t('.profile', default: "Profile"), edit_user_registration_path %><i class="fa fa-angle-right"></i></li>
+                        <li><%= link_to t(".useful-links.about-us", default: "about us"), about_us_path %><i class="fa fa-angle-right"></i></li>
+                        <li><%= link_to t(".useful-links.leaderboards", default: "leaderboards"), contests_path %><i class="fa fa-angle-right"></i></li>
+                        <li><%= link_to t(".useful-links.teams", default: "teams"), teams_path %><i class="fa fa-angle-right"></i></li>
+                        <li><%= link_to t(".useful-links.following", default: "following"), following_path %><i class="fa fa-angle-right"></i></li>
+                        <li><%= link_to t(".useful-links.profile", default: "profile"), edit_user_registration_path %><i class="fa fa-angle-right"></i></li>
                     </ul>
                 </div>
                 <!-- End Link List -->
@@ -29,7 +29,7 @@
                 <!-- Latest Tweets -->
                 <div class="col-md-3 md-margin-bottom-40">
                     <div class="latest-tweets">
-                      <div class="headline"><h2 class="heading-sm"><%= t('.latest-tweets') %></h2></div>
+                      <div class="headline"><h2 class="heading-sm"><%= t(".latest-tweets") %></h2></div>
                         <div class="latest-tweets-inner">
                             <i class="fa fa-twitter"></i>
                             <p>
@@ -54,12 +54,10 @@
 
                 <!-- Address -->
                 <div class="col-md-3 md-margin-bottom-40">
-                  <div class="headline"><h2 class="heading-sm"><%= t('.contact-us') %></h2></div>
+                  <div class="headline"><h2 class="heading-sm"><%= t(".contact-us.title") %></h2></div>
                     <address class="md-margin-bottom-40">
-                        <i class="fa fa-home"></i>25, Lorem Lis Street, California, US <br />
-                        <i class="fa fa-phone"></i>Phone: 800 123 3456 <br />
-                        <i class="fa fa-globe"></i>Website: <a href="#">www.htmlstream.com</a> <br />
-                        <i class="fa fa-envelope"></i>Email: <a href="mailto:info@anybiz.com">info@anybiz.com</a>
+                        <%= t(".contact-us.paragraph") %><br />
+                        <i class="fa fa-envelope"></i><%= t(".contact-us.mail") %>: <a href="mailto:<%= ENV["SUPPORT_EMAIL"] %>"><%= ENV["SUPPORT_EMAIL"] %></a>
                     </address>
                 </div>
                 <!-- End Address -->
@@ -69,7 +67,7 @@
 
         <div class="copyright">
             <div class="container">
-                <p class="text-center"><%= raw t('.copyright') %></p>
+                <p class="text-center"><%= raw t(".copyright") %></p>
             </div>
         </div><!--/copyright-->
 </div>
