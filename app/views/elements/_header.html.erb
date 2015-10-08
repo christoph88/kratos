@@ -157,11 +157,11 @@
                         </li>
                         <!-- End Leaderboards -->
                         <!-- Teams -->
-                        <%= content_tag(:li, (link_to t('.teams'), test_path), class: ('active' if current_page?(test_path))) %>
+                        <%= content_tag(:li, (link_to t('.teams'), teams_path), class: ('active' if current_page?(test_path))) %>
                         <!-- End Teams -->
 
                         <!-- Following -->
-                        <%= content_tag(:li, (link_to t('.following'), test_path), class: ('active' if current_page?(test_path))) %>
+                        <%= content_tag(:li, (link_to t('.following'), following_path), class: ('active' if current_page?(test_path))) %>
                         <!-- End Following -->
 
                         <!-- Profile -->
