@@ -30,24 +30,18 @@
                 <div class="col-md-3 md-margin-bottom-40">
                     <div class="latest-tweets">
                       <div class="headline"><h2 class="heading-sm"><%= t(".latest-tweets") %></h2></div>
+                      <% user_timeline(Settings.twitter).take(3).each do |tweet| %>
                         <div class="latest-tweets-inner">
                             <i class="fa fa-twitter"></i>
                             <p>
-                                <a href="#">@htmlstream</a>
-                                At vero seos etodela ccusamus et
-                                <a href="#">http://t.co/sBav7dm</a>
-                                <small class="twitter-time">2 hours ago</small>
+                              <%= link_to tweet.user.name, "#{tweet.user.url}" %>
+                              <%= tweet.text %>
+                              <%#OPTIMIZE fix short url instead of this%>
+                              <%= link_to tweet.url, "#{tweet.url}" %>
+                              <small class="twitter-time"><%= time_ago_in_words(tweet.created_at) %></small>
                             </p>
                         </div>
-                        <div class="latest-tweets-inner">
-                            <i class="fa fa-twitter"></i>
-                            <p>
-                                <a href="#">@htmlstream</a>
-                                At vero seos etodela ccusamus et
-                                <a href="#">http://t.co/sBav7dm</a>
-                                <small class="twitter-time">4 hours ago</small>
-                            </p>
-                        </div>
+                      <% end %>
                     </div>
                 </div>
                 <!-- End Latest Tweets -->

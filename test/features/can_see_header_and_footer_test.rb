@@ -10,25 +10,36 @@
 require "test_helper"
 
 feature "CanSeeHeaderAndFooter" do
+
+  before :each do
+    visit root_path
+  end
+
   scenario "can see header and footer on every page" do
-    #TODO add translations
+    page.has_css?(".header-v6").must_equal true
+    page.has_css?(".footer-v2").must_equal true
+
+    visit test_path
+    page.has_css?(".header-v6").must_equal true
+    page.has_css?(".footer-v2").must_equal true
   end
 
   scenario "can see logo in header and footer" do
-    #TODO add translations
+    page.has_css?(".header-v6 #shrink-logo").must_equal true
+    page.has_css?(".footer-v2 #logo-footer").must_equal true
   end
 
-  scenario "can see header content" do
-    #TODO add translations
+  scenario "can see working leaderboard dropdown in header" do
+    #TODO add all header translations
+    #TODO add leaderboard dropdow
   end
 
-  scenario "can see footer content" do
-    #TODO add translations
+  scenario "can see twitter in the footer" do
+    #TODO do this using twitter gem
+    page.has_css?(".footer-v2 .latest-tweets-inner").must_equal true
   end
 
   scenario "can see breadcrumbs except on homepage" do
-    #TODO add to all controllers, use the breadcrumb_base private method
-    #TODO add translations to the controller locales
     visit root_path
     page.has_css?("ol.breadcrumb").must_equal false
 
