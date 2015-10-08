@@ -35,7 +35,6 @@ feature "CanSeeHeaderAndFooter" do
   end
 
   scenario "can see twitter in the footer" do
-    #TODO do this using twitter gem
     page.has_css?(".footer-v2 .latest-tweets-inner").must_equal true
   end
 
