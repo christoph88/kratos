@@ -30,7 +30,7 @@
                 <div class="col-md-3 md-margin-bottom-40">
                     <div class="latest-tweets">
                       <div class="headline"><h2 class="heading-sm"><%= t(".latest-tweets") %></h2></div>
-                      <% user_timeline(Settings.twitter).take(3).each do |tweet| %>
+                      <% $client.user_timeline(Settings.twitter).take(3).each do |tweet| %>
                         <div class="latest-tweets-inner">
                             <i class="fa fa-twitter"></i>
                             <p>

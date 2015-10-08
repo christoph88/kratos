@@ -18,6 +18,7 @@ class ContestsController < ApplicationController
 
     @contests = Contest.all
     respond_with(@contests)
+
   end
 
   def show
