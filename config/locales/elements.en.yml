@@ -22,24 +22,26 @@
 en:
   elements:
     header:
-      leaderboards:
-        button: "leaderboards"
-        latest:
-          button: "latest"
-        top-lists:
-          button: "top lists"
-        trending:
-          button: "trending"
-        participated:
-          button: "participated"
+      leaderboards: "leaderboards"
       teams: "teams"
       following: "following"
       profile: "profile"
       log_out: "log out"
       sign_up: "register"
     footer:
-      description-text: "Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals."
-      useful-links: "Useful Links"
+      description-text: "Kratos is a platform enabling people to compete with each other globally."
+      useful-links:
+        title: "Useful Links"
+        about-us: "about us"
+        leaderboards: "leaderboards"
+        teams: "teams"
+        following: "following"
+        profile: "profile"
       latest-tweets: "Latest Tweets"
-      contact-us: "Contact Us"
+      contact-us:
+        title: "Contact Us"
+        paragraph: "Have ideas, questions or found errors? Contact us!"
+        mail: "Email"
       copyright: "2015 &copy;. Kratos. All Rights Reserved."
+    devhelp:
+      footer: "tst"

@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby "2.1.5"
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 # Use postgresql as the database for Active Record
@@ -69,6 +68,8 @@ gem "breadcrumbs_on_rails"
 # add pagination
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
+# add twitter gem
+gem 'twitter'
 
 # Gems for Heroku
 gem 'rails_12factor', group: :production
