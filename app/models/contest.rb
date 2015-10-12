@@ -7,6 +7,9 @@ class Contest < ActiveRecord::Base
 
   acts_as_votable
 
+  has_attached_file :avatar, styles: { medium: "360", thumb: "100" }, default_url: "placeholders/:style/contest_avatar_missing.png"
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
+
   def tonnage
     self.submissions.sum(:tonnage)
   end

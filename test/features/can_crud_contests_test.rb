@@ -8,6 +8,7 @@ feature "CanCrudContests" do
   
   scenario "can view a contest" do
     #TODO can see a custom contest summary
+    #TODO can see a contest image
     #TODO add translations
   end
   
