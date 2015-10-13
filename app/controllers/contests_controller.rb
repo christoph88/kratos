@@ -1,13 +1,12 @@
 class ContestsController < ApplicationController
+  # the user has to authenticate for every action except index and show.
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_contest, only: [:show, :edit, :update, :destroy]
+  # the current user can only edit, update or destroy if the id of the pin matches the id the user is linked with.
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   before_action :breadcrumb_base
   before_action :breadcrumb_contest, only: [:show, :edit, :update, :destroy]
-
-  # the user has to authenticate for every action except index and show.
-  before_action :authenticate_user!, except: [:index, :show]
-  # the current user can only edit, update or destroy if the id of the pin matches the id the user is linked with.
-  before_action :correct_user, only: [:edit, :update, :destroy]
 
   respond_to :html
 
@@ -41,7 +40,7 @@ class ContestsController < ApplicationController
   end
 
   def edit
-    add_breadcrumb t('.breadcrumb', default: "edit"), edit_contest_path(@contest)
+    add_breadcrumb t('.breadcrumb', default: "edit"), contest_path(@contest)
     @title = t('.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
@@ -61,7 +60,7 @@ class ContestsController < ApplicationController
   end
 
   def update
-    add_breadcrumb t('.breadcrumb', default: "update"), edit_contest_path(@contest)
+    add_breadcrumb t('.breadcrumb', default: "update"), contest_path(@contest)
     @title = t('.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
@@ -86,12 +85,12 @@ class ContestsController < ApplicationController
     end
 
     def contest_params
-      params.require(:contest).permit(:name, :description)
+      params.require(:contest).permit(:name, :description, :avatar)
     end
 
     def correct_user
-      @contest = current_user.contests.find_by(id: params[:id])
-      redirect_to contests_path, notice: t('controller.correct_user') if @contest.nil?
+      @contest = Contest.find_by(id: params[:id])
+      redirect_to contests_path, notice: t('controller.correct_user') unless @contest.admin == current_user
     end
 
     def breadcrumb_base

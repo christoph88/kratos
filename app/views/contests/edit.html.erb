@@ -1,5 +1,7 @@
 <h1>Editing contest</h1>
 
+<%= image_tag @contest.avatar.url(:medium) %>
+
 <%= render 'form' %>
 
 <%= link_to 'Destroy', @contest, method: :delete, data: { confirm: 'Are you sure?' } %>

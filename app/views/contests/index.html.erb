@@ -18,7 +18,7 @@
                 <%= image_tag contest.avatar.url(:medium), class: "img-responsive", alt: image_alt('placeholder/1.jpg') %>
               <% end %>
               <div class="grid-boxes-caption">
-                <h3><%= link_to contest.name, contest_submissions_path(contest.id) %></h3>
+                <h3><%= link_to contest.name, contest_submissions_path(contest) %></h3>
                   <ul class="list-inline grid-boxes-news">
                     <li><span>By</span> <%= link_to contest.admin.username, root_path %></li>
                       <li>|</li>
@@ -27,7 +27,7 @@
                       <li><a href="#"><i class="fa fa-users"></i> <%= contest.submissions.count %></a></li>
                   </ul>
                   <p><%= contest.description %></p>
-                  <h3 class="heading-xs">Edit me please <span class="pull-right">70%</span></h3>
+                  <h3 class="heading-xs"><%= link_to "Edit me please", edit_contest_path(contest) %><span class="pull-right">70%</span></h3>
                   <div class="progress progress-u progress-xxs">
                     <div class="progress-bar progress-bar-u" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
                     </div>
