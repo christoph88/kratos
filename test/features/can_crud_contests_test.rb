@@ -24,17 +24,23 @@ feature "CanCrudContests" do
   end
   
   scenario "should be able to use pagination" do
+    #TODO implement
   end
   
   scenario "can search for a contest" do
+    #TODO implement
   end
   
   scenario "can see weightlifting quotes" do
+    #TODO create quote db
+    #TODO randomly load quotes
   end
 
   scenario "can update a contest" do
+    #TODO implement
   end
   
   scenario "can destroy a contest" do
+    #TODO implement
   end
 end
