@@ -1,3 +1,3 @@
 en:
   controller:
-    correct_user: "You cannot delete this! (incorrect user)"
+    correct_user: "You cannot edit this! (incorrect user)"
