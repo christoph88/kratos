@@ -2,6 +2,7 @@ require "test_helper"
 
 describe ContestsController do
   let(:user) { users :default }
+  let(:american) { users :american }
   let(:contest) { contests :default }
 
   it "gets index" do
@@ -48,10 +49,20 @@ describe ContestsController do
     value(response).must_be :success?
   end
 
-  it "gets edit" do
-    sign_in users :default
-    get :edit, id: contest
-    value(response).must_be :success?
+  describe "gets edit" do
+    it "should not allow every user" do
+      sign_in users :american
+      #contest has an other admin
+      get :edit, id: contest
+      value(response).wont_be :success?
+    end
+
+    it "should only allow admin" do
+      #using correct user
+      sign_in users :default
+      get :edit, id: contest
+      value(response).must_be :success?
+    end
   end
 
   it "updates contest" do

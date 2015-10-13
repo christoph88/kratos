@@ -8,3 +8,6 @@
 default:
   name: "contestsuperior"
   admin: default
+two:
+  name: "contest"
+  admin: american
