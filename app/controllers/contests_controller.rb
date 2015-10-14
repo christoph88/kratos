@@ -15,7 +15,7 @@ class ContestsController < ApplicationController
     set_meta_tags keywords:     %w[leaderboard contest win],
                   description:  "View all the #{Settings.appname} leaderboards now!"
 
-    @quote = Quote.all
+    @quotes = Quote.all
 
     @contests = Contest.all
     respond_with(@contests)
