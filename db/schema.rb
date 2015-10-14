@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20151014183659) do
   end
 
   create_table "quotes", force: true do |t|
-    t.string "text"
+    t.text   "text"
     t.string "author"
   end
 

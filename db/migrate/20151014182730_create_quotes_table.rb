@@ -1,7 +1,7 @@
 class CreateQuotesTable < ActiveRecord::Migration
   def up
     create_table :quotes do |t|
-      t.string :text
+      t.text :text
     end
   end
   def down
