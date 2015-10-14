@@ -31,9 +31,7 @@ feature "CanCrudContests" do
   end
   
   scenario "can see weightlifting quotes" do
-    #TODO randomly load quotes
-    #TODO add authors to quote db
-    #TODO figure out if html stuff inside db is needed or need to post as raw
+    #OPTIMIZE put quotes on gdrive an acces it from there
   end
 
   scenario "can update a contest" do
