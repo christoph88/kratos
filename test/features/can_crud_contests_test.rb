@@ -18,7 +18,6 @@ feature "CanCrudContests" do
   end
   
   scenario "can view a contest" do
-    #TODO do not load all contests at once, look at documentation for bulk load
     #TODO can see a custom contest summary
     #TODO can see a contest image
   end
@@ -32,8 +31,9 @@ feature "CanCrudContests" do
   end
   
   scenario "can see weightlifting quotes" do
-    #TODO create quote db
     #TODO randomly load quotes
+    #TODO add authors to quote db
+    #TODO figure out if html stuff inside db is needed or need to post as raw
   end
 
   scenario "can update a contest" do
