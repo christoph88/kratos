@@ -40,6 +40,17 @@ en:
     index:
       title: "Show all leaderboards"
       breadcrumb: "leaderboards"
+      create:
+        title:
+        paragraph:
+        button:
+      contest:
+        by: 
+        reps:
+        reps2:
+        kg:
+        kg2:
+        edit:
     show:
       title: "View a particular leaderboard"
       breadcrumb: "view leaderboard"

@@ -1,12 +1,10 @@
 require "test_helper"
     #TODO add translations for all the pages
-    #index
     #new
     #show
     #edit
     #form
     #TODO add design for all the pages
-    #index
     #new
     #show
     #edit
@@ -18,8 +16,7 @@ feature "CanCrudContests" do
   end
   
   scenario "can view a contest" do
-    #TODO can see a custom contest summary
-    #TODO can see a contest image
+    #OPTIMIZE find another contest placeholder image
   end
   
   scenario "should be able to use pagination" do
@@ -32,6 +29,7 @@ feature "CanCrudContests" do
   
   scenario "can see weightlifting quotes" do
     #OPTIMIZE put quotes on gdrive an acces it from there
+    #OPTIMIZE add following quotes https://www.muscleandstrength.com/articles/badass-muscle-workout-bodybuilding-quotes
   end
 
   scenario "can update a contest" do

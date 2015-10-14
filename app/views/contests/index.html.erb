@@ -13,12 +13,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-9 animated fadeInLeft">
-                    <span>Unify is a clean and fully responsive incredible Template.</span>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi  vehicula sem ut volutpat. Ut non libero magna fusce condimentum eleifend enim a feugiat corrupti quos.</p>
+                  <span><%= t(".create.title", default: "Create contest") %></span>
+                    <p><%= t(".create.paragraph", default: "Create your contest and blablalba") %></p>
                 </div>
                 <div class="col-md-3 btn-buy animated fadeInRight">
                     <%= link_to new_contest_path, class: "btn-u btn-u-lg" do %>
-                      <i class="fa fa-plus-circle"></i> Create contest
+                      <i class="fa fa-plus-circle"></i> <%= t(".create.button", default: "Create contest") %>
                     <% end %>
                 </div>
             </div>
@@ -36,7 +36,8 @@
               <div class="grid-boxes-caption">
                 <h3><%= link_to contest.name, contest_submissions_path(contest) %></h3>
                   <ul class="list-inline grid-boxes-news">
-                    <li><span>By</span> <%= link_to contest.admin.username, root_path %></li>
+                    <%#OPTIMIZE link to user profile/overview%>
+                    <li><span><%= t(".contest.by", default: "By") %></span> <%= link_to contest.admin.username, root_path %></li>
                       <li>|</li>
                       <li><i class="fa fa-clock-o"></i> <%= time_ago_in_words(contest.created_at, include_seconds: true) %></li>
                       <li>|</li>
@@ -48,17 +49,17 @@
 
                   <ul class="list-inline blog-info-v2">
                     <li>
-                      <strong><%= contest.submissions.sum(:reps) %> reps</strong>
-                      <span>done</span>
+                    <strong><%= contest.submissions.sum(:reps) %> <%= t(".contest.reps", default: "reps") %></strong>
+                    <span><%= t(".create.reps2", default: "done") %></span>
                     </li>
                     <li>
-                      <strong><%= contest.tonnage %> kg</strong>
-                      <span>lifted</span>
+                    <strong><%= contest.tonnage %> <%= t(".contest.kg", default: "kg") %></strong>
+                    <span><%= t(".contest.kg2", default: "lifted") %></span>
                     </li>
                     <li class="pull-right">
                       <% if contest.admin == current_user then %>
                         <%= link_to edit_contest_path(contest) do %>
-                          <i class="fa fa-pencil-square-o"></i> edit
+                          <i class="fa fa-pencil-square-o"></i> <%= t(".contest.edit", default: "edit") %>
                         <% end %>
                       <% end %>
                     </li>
