@@ -1,3 +1,4 @@
 # general settings
 appname: "Kratos"
 twitter: "gem"
+quotes_csv: "/home/christoph/Documenten/kratosproject/quotes/quotes.csv"

@@ -15,7 +15,7 @@ def make_quotes
 
   #reload all records from csv file
   #quotes are place automatically, raw output is used
-  filename="/home/christoph/Documenten/kratosproject/quotes/quotes.csv"
+  filename= Settings.quotes_csv
   CSV.foreach(filename, :headers => true) do |row|
     Quote.create!(row.to_hash)
   end
