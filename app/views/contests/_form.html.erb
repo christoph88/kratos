@@ -20,6 +20,10 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
+    <%= f.label :contest_type %><br>
+    <%= f.collection_select(:contest, :contest_type, t(".contest_type"), :contest_type, :contest_type, prompt: true) %>
+  </div>
+  <div class="field">
     <%= f.file_field :avatar %>
   </div>
   <div class="actions">
