@@ -52,20 +52,20 @@ en:
         kg2:
         edit:
     show:
-      title: "View a particular leaderboard"
+      title: "View leaderboard - %{contest}"
       breadcrumb: "view leaderboard"
     new:
       title: "Create a new leaderboard"
       breadcrumb: "create a leaderboard"
     edit:
-      title: "Edit a leaderboard"
+      title: "Edit leaderboard - %{contest}"
       breadcrumb: "edit a leaderboard"
     create:
       title: "Create a new leaderboard"
       breadcrumb: "create a leaderboard"
     update:
-      title: "Edit a leaderboard"
+      title: "Edit leaderboard - %{contest}"
       breadcrumb: "edit a leaderboard"
     destroy:
-      title: "Delete a leaderboard"
+      title: "Delete leaderboard - %{contest}"
       breadcrumb: "delete a leaderboard"

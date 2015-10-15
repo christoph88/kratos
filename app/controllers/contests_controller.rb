@@ -24,7 +24,7 @@ class ContestsController < ApplicationController
 
   def show
     add_breadcrumb t('.breadcrumb', default: "show"), contest_path(@contest)
-    @title = t('.title')
+    @title = t('.title', contest: @contest.name)
     #set_meta_tags keywords:     %w[],
                   #description:  ""
 
@@ -43,7 +43,7 @@ class ContestsController < ApplicationController
 
   def edit
     add_breadcrumb t('.breadcrumb', default: "edit"), contest_path(@contest)
-    @title = t('.title')
+    @title = t('.title', contest: @contest.name)
     #set_meta_tags keywords:     %w[],
                   #description:  ""
 
@@ -63,7 +63,7 @@ class ContestsController < ApplicationController
 
   def update
     add_breadcrumb t('.breadcrumb', default: "update"), contest_path(@contest)
-    @title = t('.title')
+    @title = t('.title', contest: @contest.name)
     #set_meta_tags keywords:     %w[],
                   #description:  ""
 
@@ -73,7 +73,7 @@ class ContestsController < ApplicationController
 
   def destroy
     add_breadcrumb t('.breadcrumb', default: "delete"), edit_contest_path(@contest)
-    @title = t('.title')
+    @title = t('.title', contest: @contest.name)
     #set_meta_tags keywords:     %w[],
                   #description:  ""
 
