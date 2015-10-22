@@ -1,0 +1,6 @@
+default:
+  text: "christoph is the best!"
+  author: "christoph" 
+one:
+  text: "x reps"
+  author: "big bear" 
