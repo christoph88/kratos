@@ -16,19 +16,19 @@
 
                   <%= devise_error_messages! %>
 
-                  <label><%= t(".username") %> <span class="color-red">*</span></label>
+                  <label><%= t(".username") %><%= raw redstar(@user, :username) %></label>
                   <%= f.text_field :username, class: "form-control margin-bottom-20" %>
 
-                  <label><%= t(".email") %> <span class="color-red">*</span></label>
+                  <label><%= t(".email") %><%= raw redstar(@user, :username) %></label>
                   <%= f.email_field :email, class: "form-control margin-bottom-20" %>
 
                 <div class="row">
                     <div class="col-sm-6">
-                        <label><%= t(".password") %> <span class="color-red">*</span></label>
+                        <label><%= t(".password") %><%= raw redstar(@user, :username) %></label>
                         <%= f.password_field :password, class: "form-control margin-bottom-20" %>
                     </div>
                     <div class="col-sm-6">
-                        <label><%= t(".confirm_password") %> <span class="color-red">*</span></label>
+                        <label><%= t(".confirm_password") %><%= raw redstar(@user, :username) %></label>
                         <%= f.password_field :password_confirmation, class: "form-control margin-bottom-20" %>
                     </div>
                 </div>
