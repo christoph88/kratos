@@ -81,6 +81,7 @@ group :development do
   gem 'minitest-reporters'
   gem 'guard'
   gem 'guard-minitest'
+  gem 'guard-ctags-bundler'
 end
 
 group :development, :test do
