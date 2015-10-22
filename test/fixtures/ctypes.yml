@@ -1,0 +1,6 @@
+default:
+  name: "weight x reps"
+  desc: "Total tonnage is calculated by multiplying weight x reps, the one with the highest tonnage wins." 
+test:
+  name: "weight x reps"
+  desc: "Total tonnage is calculated by multiplying weight x reps, the one with the highest tonnage wins." 

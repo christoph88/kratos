@@ -6,8 +6,8 @@ namespace :db do
   task quote: :environment do
     make_quotes
   end
-  task contest_type: :environment do
-    make_contest_types
+  task ctype: :environment do
+    make_ctypes
   end
 end
 
@@ -24,7 +24,7 @@ def make_quotes
   end
 end
 
-def make_contest_types
+def make_ctypes
   #delete all current records
   Ctype.delete_all
 

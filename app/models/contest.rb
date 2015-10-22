@@ -4,7 +4,7 @@ class Contest < ActiveRecord::Base
   belongs_to :admin, class_name: 'User', foreign_key: 'admin_id'
   belongs_to :ctype
 
-  validates_presence_of :name, :admin_id
+  validates_presence_of :name, :admin_id, :ctype_id
 
   acts_as_votable
 

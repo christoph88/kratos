@@ -21,22 +21,6 @@
 
 en:
   contests:
-    contest_type:
-      1: "weight x reps"
-      2: "one rep maximum"
-      3: "max reps"
-      4: "total cumulative reps over time"
-      5: "total cumulative tonnage over time"
-      6: "fastest time"
-      7: "longest time"
-    contest_short_descr:
-      1: "Total tonnage is calculated by multiplying weight x reps, the one with the highest tonnage wins."
-      2: "Big weights count here, what's the biggest weight you can lift?"
-      3: "How many reps can you do with a given weight?"
-      4: "How many reps can you do within a given time?"
-      5: "Are you a beast? What is the most tonnage (weight x reps) you can complete within a given time?"
-      6: "What is your fastest time?"
-      7: "How long can you do this?"
     index:
       title: "Show all leaderboards"
       breadcrumb: "leaderboards"

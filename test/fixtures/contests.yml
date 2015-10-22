@@ -8,6 +8,8 @@
 default:
   name: "contestsuperior"
   admin: default
+  ctype: default
 two:
   name: "contest"
   admin: american
+  ctype: default
