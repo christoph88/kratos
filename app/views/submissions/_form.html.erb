@@ -16,9 +16,9 @@
   </div>
 
   <div class="row">
-    <% if @contest.ctype.name == 1 ||
-          @contest.ctype.name == 2 ||
-          @contest.ctype.name == 5
+    <% if @contest.ctype.id == 1 ||
+          @contest.ctype.id == 2 ||
+          @contest.ctype.id == 5
     %>
     <div class="col-sm-6">
       <%= f.label :weight %>
@@ -26,10 +26,10 @@
     </div>
     <% end %>
 
-    <% if @contest.ctype.name == 1 ||
-          @contest.ctype.name == 3 ||
-          @contest.ctype.name == 4 ||
-          @contest.ctype.name == 5
+    <% if @contest.ctype.id == 1 ||
+          @contest.ctype.id == 3 ||
+          @contest.ctype.id == 4 ||
+          @contest.ctype.id == 5
     %>
     <div class="col-sm-6">
       <%= f.label :reps %>
@@ -37,8 +37,8 @@
     </div>
     <% end %>
 
-    <% if @contest.ctype.name == 6 ||
-          @contest.ctype.name == 7
+    <% if @contest.ctype.id == 6 ||
+          @contest.ctype.id == 7
     %>
     <div class="col-sm-6">
       <%= f.label :time %>

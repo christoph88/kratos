@@ -1,38 +1,47 @@
-<% content_for :dynamic_stylesheets do %>
-  <%= stylesheet_link_tag "pages/page_log_reg_v1.css", 'data-turbolinks-track' => true %>
-<%= stylesheet_link_tag "unify/brand-buttons-inversed.css", 'data-turbolinks-track' => true %>
-<%end%>
+<!--=== Content Part ===-->
+<div class="container content">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+      <%= form_for @contest, html: { multipart: true } do |f| %>
+      <div class="reg-header">
+        <h2><%= @title %></h2>
+        <p><%= raw t(".paragraph") %></p>
+      </div>
 
-<%= form_for @contest, html: { multipart: true } do |f| %>
-  <% if @contest.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@contest.errors.count, "error") %> prohibited this contest from being saved:</h2>
 
-      <ul>
-      <% @contest.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+      <label><%= t(".name") %><%= raw redstar(@contest, :name) %></label>
+      <%= f.text_field :name, class: "form-control margin-bottom-20" %>
+
+      <label><%= t(".description") %><%= raw redstar(@contest, :description) %></label>
+      <%= f.text_area :description, class: "form-control margin-bottom-20" %>
+
+      <label><%= t(".ctype") %><%= raw redstar(@contest, :ctype_id) %></label>
+      <%= collection_select(:contest, :ctype_id, Ctype.all, :id, :name) %>
+
+      <div class="media">
+        <div class="media-body">
+          <label><%= f.label :avatar %><%= raw redstar(@contest, :avatar) %></label>
+          <%= f.file_field :avatar, class: "form-control margin-bottom-20" %>
+        </div>
+        <div class="media-right media-middle">
+          <%= image_tag(@contest.avatar.url(:thumb), class: "media-object img-circle", size: "64x64") %>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-lg-6 text-left">
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %><br>
+        </div>
+        <div class="col-lg-6 text-right">
+          <%= f.submit t('.update', default: "Update"), class: "btn-u" %>
+        </div>
+      </div>
+
+    <% end %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :ctype %><br>
-    <%= collection_select(:contest, :ctype_id, Ctype.all, :id, :name) %>
-  </div>
-  <div class="field">
-    <%= f.file_field :avatar %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div><!--/container-->
+<!--=== End Content Part ===-->
 
