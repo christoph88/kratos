@@ -12,6 +12,7 @@ require "test_helper"
 
 feature "CanCrudContests" do
   scenario "can create a contest" do
+    #TODO add stars on required fields
   end
   
   scenario "can view a contest" do

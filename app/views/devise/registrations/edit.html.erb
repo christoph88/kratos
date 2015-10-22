@@ -1,3 +1,4 @@
+<%#FIXME translations missing for username etc%>
 <% content_for :dynamic_stylesheets do %>
   <%= stylesheet_link_tag "pages/page_log_reg_v1.css", 'data-turbolinks-track' => true %>
 <%= stylesheet_link_tag "unify/brand-buttons-inversed.css", 'data-turbolinks-track' => true %>
@@ -17,14 +18,14 @@
       <%= devise_error_messages! %>
 
 
-      <label><%= t(".kg") %></label>
+      <label><%= t(".kg") %><%= raw redstar(@user, :kg) %></label>
       <div class="form-control margin-bottom-20">
         <%= f.check_box :kg %> <%= f.label :kg, t('.kg') %>
       </div>
 
       <div class="media">
         <div class="media-body">
-          <label><%= f.label :avatar %></label>
+          <label><%= f.label :avatar %><%= raw redstar(@user, :avatar) %></label>
           <%= f.file_field :avatar, class: "form-control margin-bottom-20" %>
         </div>
         <div class="media-right media-middle">
@@ -32,39 +33,39 @@
         </div>
       </div>
 
-      <label><%= t(".username") %> <span class="color-red">*</span></label>
+      <label><%= t(".username") %><%= raw redstar(@user, :username) %></label>
       <%= f.text_field :username, class: "form-control margin-bottom-20" %>
 
-      <label><%= t(".firstname") %></label>
+      <label><%= t(".firstname") %><%= raw redstar(@user, :firstname) %></label>
       <%= f.text_field :firstname, class: "form-control margin-bottom-20" %>
 
-      <label><%= t(".name") %></label>
+      <label><%= t(".name") %><%= raw redstar(@user, :name) %></label>
       <%= f.text_field :name, class: "form-control margin-bottom-20" %>
 
-      <label><%= t(".email") %> <span class="color-red">*</span></label>
+      <label><%= t(".email") %><%= raw redstar(@user, :email) %></label>
       <%= f.email_field :email, class: "form-control margin-bottom-20" %>
 
-      <label><%= t(".birthdate") %></label>
+      <label><%= t(".birthdate") %><%= raw redstar(@user, :birthdate) %></label>
       <%= f.date_field :birthdate, class: "form-control margin-bottom-20" %>
 
-      <label><%= t(".bio") %></label>
+      <label><%= t(".bio") %><%= raw redstar(@user, :bio) %></label>
       <%= f.text_area :bio, class: "form-control margin-bottom-20" %>
 
       <div class="row">
         <div class="col-sm-6">
-          <label><%= t(".password") %></label>
+          <label><%= t(".password") %><%= raw redstar(@user, :password) %></label>
           <%= f.password_field :password, class: "form-control margin-bottom-20" %>
           <span class="help-block"><i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it', :default => "leave blank if you don't want to change it") %>)</i></span>
         </div>
         <div class="col-sm-6">
-          <label><%= t(".confirm_password") %></label>
+          <label><%= t(".confirm_password") %><%= raw redstar(@user, :password_confirmation) %></label>
           <%= f.password_field :password_confirmation, class: "form-control margin-bottom-20" %>
         </div>
       </div>
 
       <% unless current_user.provider == "facebook" %>
 
-        <label><%= t(".current_password") %> <span class="color-red">*</span></label>
+        <label><%= t(".current_password") %><%= raw redstar(@user, :current_password) %></label>
       <%= f.password_field :current_password, class: "form-control margin-bottom-20" %>
 
     <% end %>

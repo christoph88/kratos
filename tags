@@ -55,7 +55,9 @@ new	app/controllers/users/registrations_controller.rb	/^  def new$/;"	f	class:Us
 new	app/controllers/users/sessions_controller.rb	/^  def new$/;"	f	class:Users
 pagetitle	app/helpers/application_helper.rb	/^  def pagetitle$/;"	f	class:ApplicationHelper
 passthru	app/controllers/users/omniauth_callbacks_controller.rb	/^  def passthru$/;"	f	class:Users
+redstar	app/helpers/application_helper.rb	/^  def redstar(obj, attr)$/;"	f	class:ApplicationHelper
 require_user_signed_in	app/controllers/application_controller.rb	/^  def require_user_signed_in$/;"	f	class:ApplicationController
+required?	app/helpers/application_helper.rb	/^  def required?(obj, attr)$/;"	f	class:ApplicationHelper
 robots	app/controllers/landings_controller.rb	/^  def robots$/;"	f	class:LandingsController
 set_contest	app/controllers/contests_controller.rb	/^    def set_contest$/;"	f	class:ContestsController
 set_contest	app/controllers/submissions_controller.rb	/^    def set_contest$/;"	f	class:SubmissionsController

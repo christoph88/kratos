@@ -42,6 +42,11 @@ en:
         we_need_your_current_password_to_confirm_your_changes: "we need your current password to confirm your changes"
         update: "Update"
         kg: "Prefer kg metrics over pounds"
+        username: "Username"
+        email: "Email Address"
+        password: "Password"
+        confirm_password: "Confirm password"
+        sign_up: "Sign up"
       new:
         paragraph: "Already Signed Up? Click %{href} to login your account."
         paragraph_link: "sign in"

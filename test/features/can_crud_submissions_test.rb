@@ -8,6 +8,7 @@ feature "CanCrudSubmissions" do
     #TODO test different contest types
     #TODO convert kg to pounds when submittion (when needed)
     #TODO add translations
+    #TODO add stars on required fields
   end
   
   scenario "can view a submission" do
