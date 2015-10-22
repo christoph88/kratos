@@ -1,3 +1,8 @@
+<% content_for :dynamic_stylesheets do %>
+  <%= stylesheet_link_tag "pages/page_log_reg_v1.css", 'data-turbolinks-track' => true %>
+<%= stylesheet_link_tag "unify/brand-buttons-inversed.css", 'data-turbolinks-track' => true %>
+<%end%>
+
 <%= form_for @contest, html: { multipart: true } do |f| %>
   <% if @contest.errors.any? %>
     <div id="error_explanation">
@@ -30,3 +35,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+
