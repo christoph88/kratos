@@ -13,10 +13,6 @@ require "test_helper"
 feature "CanCrudContests" do
   scenario "can create a contest" do
     #TODO can create different types of contests
-    #TODO create contest_type model
-    #TODO create correct relations contest_type model with contest
-    #TODO create csv to import that translation
-    #TODO cleanup views with the model code for the contest translations
   end
   
   scenario "can view a contest" do
