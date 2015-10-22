@@ -1,5 +1,5 @@
 # general settings
 appname: "Kratos"
 twitter: "gem"
-quotes_csv: "/home/christoph/Documenten/kratosproject/quotes/quotes.csv"
-contest_types_csv: "/home/christoph/Documenten/kratosproject/quotes/contest_types.csv"
+quotes_csv: "/home/christoph/Documenten/kratosproject/setup/quotes.csv"
+ctypes_csv: "/home/christoph/Documenten/kratosproject/setup/ctypes.csv"

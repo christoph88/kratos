@@ -26,12 +26,12 @@ end
 
 def make_contest_types
   #delete all current records
-  Contest_type.delete_all
+  Ctype.delete_all
 
   #reload all records from csv file
   #quotes are place automatically, raw output is used
-  filename= Settings.contest_types_csv
+  filename= Settings.ctypes_csv
   CSV.foreach(filename, :headers => true) do |row|
-    Contest_type.create!(row.to_hash)
+    Ctype.create!(row.to_hash)
   end
 end
