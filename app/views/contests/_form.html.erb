@@ -1,8 +1,12 @@
+<% content_for :dynamic_stylesheets do %>
+  <%= stylesheet_link_tag "pages/page_log_reg_v1.css", 'data-turbolinks-track' => true %>
+<%end%>
+
 <!--=== Content Part ===-->
 <div class="container content">
   <div class="row">
     <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-      <%= form_for @contest, html: { multipart: true } do |f| %>
+      <%= form_for @contest, html: { multipart: true, class: "reg-page" } do |f| %>
       <div class="reg-header">
         <h2><%= @title %></h2>
         <p><%= raw t(".paragraph") %></p>
@@ -32,7 +36,8 @@
 
       <div class="row">
         <div class="col-lg-6 text-left">
-          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %><br>
+          <%#TODO if contest edit than add destroy%>
+          <%= link_to 'Destroy', @contest, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
         <div class="col-lg-6 text-right">
           <%= f.submit t('.update', default: "Update"), class: "btn-u" %>
