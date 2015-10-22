@@ -20,8 +20,8 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :contest_type %><br>
-    <%= f.collection_select(:contest, :contest_type, t(".contest_type"), :contest_type, :contest_type, prompt: true) %>
+    <%= f.label :ctype %><br>
+    <%= collection_select(:contest, :ctype_id, Ctype.all, :id, :name) %>
   </div>
   <div class="field">
     <%= f.file_field :avatar %>

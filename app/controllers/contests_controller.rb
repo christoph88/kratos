@@ -87,7 +87,7 @@ class ContestsController < ApplicationController
     end
 
     def contest_params
-      params.require(:contest).permit(:name, :description, :avatar)
+      params.require(:contest).permit(:name, :description, :avatar, :ctype_id)
     end
 
     def correct_user

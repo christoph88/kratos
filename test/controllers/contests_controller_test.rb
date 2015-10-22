@@ -28,7 +28,7 @@ describe ContestsController do
   describe "creates contest" do
     it "redirects to login_path" do
       expect {
-        post :create, contest: { name: "test", admin_id: 1  }
+        post :create, contest: { name: "test", admin_id: 1, ctype_id: 1  }
       }.wont_change "Contest.count"
 
       must_redirect_to new_user_session_path
@@ -37,7 +37,7 @@ describe ContestsController do
     it "requires authentication" do
       sign_in users :default
       expect {
-        post :create, contest: { name: "test", admin_id: 1  }
+        post :create, contest: { name: "test", admin_id: 1, ctype_id: 1  }
       }.must_change "Contest.count"
 
       must_redirect_to contest_path(assigns(:contest))
