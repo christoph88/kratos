@@ -16,6 +16,11 @@
   <%= @contest.admin.username %>
 </p>
 
+<p>
+  <strong>Contest type</strong>
+  <%= @contest.ctype.name %>
+</p>
+
 <%= link_to 'Edit', edit_contest_path(@contest) %> |
 <%= button_to "Delete", @contest, method: :delete %>
 <%= link_to 'Back', contests_path %>
