@@ -37,7 +37,7 @@
       <div class="row">
         <div class="col-lg-6 text-left">
           <%#TODO if contest edit than add destroy%>
-          <%= link_to 'Destroy', @contest, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to t('.destroy'), @contest, method: :delete, data: { confirm: 'Are you sure?' } unless current_page?(controller: 'contests', action: 'new') %>
         </div>
         <div class="col-lg-6 text-right">
           <%= f.submit t('.update', default: "Update"), class: "btn-u" %>
