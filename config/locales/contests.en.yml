@@ -41,9 +41,23 @@ en:
     new:
       title: "Create a new leaderboard"
       breadcrumb: "create a leaderboard"
+      paragraph: "Start competing now and create your own leaderboard. Different contest types are possible."
+      name:
+      description:
+      ctype: "Leaderboard type"
+      avatar: "Leaderboard image"
+      destroy: "Delete this leaderboard"
+      update: "Create leaderboard"
     edit:
       title: "Edit leaderboard - %{contest}"
       breadcrumb: "edit a leaderboard"
+      paragraph: "You can edit your leaderboard here."
+      name:
+      description:
+      ctype: "Leaderboard type"
+      avatar: "Leaderboard image"
+      destroy: "Delete this leaderboard"
+      update: "Update leaderboard"
     create:
       title: "Create a new leaderboard"
       breadcrumb: "create a leaderboard"
