@@ -1,9 +1,3 @@
-#TODO enter metadata in the controller
-#TODO check titles
-#TODO add beta tag and popup
-#TODO add working on pages for non finished stuff
-#TODO zoek oplossing voor 404 pagina's en dergelijke (via routes)
-
 require "test_helper"
 
 feature "CanSeeHeaderAndFooter" do

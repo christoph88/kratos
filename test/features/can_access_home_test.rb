@@ -20,7 +20,6 @@ feature "CanAccessHome" do
   end
 
   scenario "Has Google tagmanager installed" do
-    #TODO find how to fix this
   end
 
   scenario "Has no breadcrumbs on homepage" do

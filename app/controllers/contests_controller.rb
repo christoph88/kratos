@@ -17,7 +17,7 @@ class ContestsController < ApplicationController
 
     @quotes = Quote.all
 
-    @contests = Contest.all
+    @contests = Contest.all.order('updated_at DESC')
     respond_with(@contests)
 
   end
