@@ -58,7 +58,7 @@ class ContestsController < ApplicationController
     @contest = current_user.contests.new(contest_params)
     @contest.admin_id = current_user.id
     @contest.save
-    respond_with(@contest)
+    redirect_to contest_submissions_path(@contest)
   end
 
   def update
@@ -68,7 +68,7 @@ class ContestsController < ApplicationController
                   #description:  ""
 
     @contest.update(contest_params)
-    respond_with(@contest)
+    redirect_to contest_submissions_path(@contest)
   end
 
   def destroy

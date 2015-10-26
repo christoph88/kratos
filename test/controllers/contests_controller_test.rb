@@ -40,7 +40,7 @@ describe ContestsController do
         post :create, contest: { name: "test", admin_id: 1, ctype_id: 1  }
       }.must_change "Contest.count"
 
-      must_redirect_to contest_path(assigns(:contest))
+      must_redirect_to contest_submissions_path(assigns(:contest))
     end
   end
 
@@ -68,7 +68,7 @@ describe ContestsController do
   it "updates contest" do
     sign_in users :default
     put :update, id: contest, contest: { name: "bier" }
-    must_redirect_to contest_path(assigns(:contest))
+    must_redirect_to contest_submissions_path(assigns(:contest))
   end
 
   it "destroys contest" do
