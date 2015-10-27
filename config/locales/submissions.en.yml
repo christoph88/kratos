@@ -24,22 +24,24 @@ en:
     index:
       title: "Show all submissions"
       breadcrumb: "show all submissions"
-      descriptionh:
-      submith:
-      submitp:
-      submitb:
-      submitm:
-      submitm_link:
+      descriptionh: "change me"
+      submith: "change me"
+      submitp: "change me"
+      submitb: "change me"
+      submitm: "change me"
+      submitm_link: "change me"
       latest_1:
-        latesth:
+        latesth: "change me"
       leaderboard_1:
-        ago:
-        rank:
-        weight:
-        reps:
+        ago: "change me"
+        rank: "change me"
+        weight: "change me"
+        reps: "change me"
     show:
       title: "View a particular submission"
       breadcrumb: "show submission"
+    form:
+      submit: "change me"
     new:
       title: "Create a new submission"
       breadcrumb: "new submission"
