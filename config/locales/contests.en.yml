@@ -25,9 +25,9 @@ en:
       title: "Show all leaderboards"
       breadcrumb: "leaderboards"
       create:
-        title:
-        paragraph:
-        button:
+        title: "Create your own leaderboard"
+        paragraph: "Start creating your own leaderboard right now. Different contesttypes are possible. From max reps to 1 rep maximum to total tonnage over time."
+        button: "Create leaderboard"
       contest:
         by: 
         reps:
