@@ -10,6 +10,8 @@ default:
   name: "G-man"
   kg: true
   username: "chris88"
+  # the encrypted password equals "testtest"
+  encrypted_password: "$2a$10$BrTI30QWxV8CqzILtLl1GOtV0XZY8160J00WRRx6QjpkWoEKKhCMG"
   email: "1@test.be"
 
 american:
