@@ -3,6 +3,7 @@ require "test_helper"
 feature "CanCreateContests" do
   scenario "Can create leaderboards after logging in" do
     
+    #FIXME create a leaderboard and login
     visit new_user_session_path
     page.must_have_content "Login to your account"
 
