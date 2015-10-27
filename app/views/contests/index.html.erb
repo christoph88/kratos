@@ -50,10 +50,10 @@
                   <ul class="list-inline blog-info-v2">
                     <li>
                     <strong><%= contest.submissions.sum(:reps) %> <%= t(".contest.reps") %></strong>
-                    <span><%= t(".create.reps2") %></span>
+                    <span><%= t(".contest.reps2") %></span>
                     </li>
                     <li>
-                    <strong><%= contest.tonnage %> <%= t(".contest.kg") %></strong>
+                    <strong><%= contest.tonnage %> <%= metric %></strong>
                     <span><%= t(".contest.kg2") %></span>
                     </li>
                     <li class="pull-right">

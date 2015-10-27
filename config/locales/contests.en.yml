@@ -29,12 +29,11 @@ en:
         paragraph: "Start creating your own leaderboard right now. Different contesttypes are possible. From max reps to 1 rep maximum to total tonnage over time."
         button: "Create leaderboard"
       contest:
-        by: 
-        reps:
-        reps2:
-        kg:
-        kg2:
-        edit:
+        by: "by"
+        reps: "reps"
+        reps2: "done"
+        kg2: "lifted"
+        edit: "edit"
     show:
       title: "View leaderboard - %{contest}"
       breadcrumb: "view leaderboard"
