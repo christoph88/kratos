@@ -10,16 +10,16 @@
                       <%= image_tag(submission.user.avatar.url(:thumb), class: "rounded-x", size: "50x50") %>
                       <div class="name-location">
                           <strong><%= submission.user.username %></strong>
-                          <span><i class="fa fa-map-marker"></i><%= time_ago_in_words(submission.created_at, include_seconds: true) %> <%= t(".ago", default: "ago" ) %></span>
+                          <span><i class="fa fa-map-marker"></i><%= time_ago_in_words(submission.created_at, include_seconds: true) %> <%= t(".ago") %></span>
                       </div>
                       <div class="clearfix margin-bottom-20"></div>
                       <p><%= submission.user.bio %></p>
                       <p><%= link_to "edit", edit_submission_path(submission) %></p>
                       <hr>
                       <ul class="list-inline share-list">
-                        <li<%= ' class="top-rank"' if rank < 3 %>><i class="fa fa-trophy"></i><strong><%= t(".rank", default: "Rank" ) %>: <%= rank %></strong></li>
-                        <li><i class="fa fa-balance-scale"></i><%= "#{t(".weight", default: "Weight" )}: #{submission.converted_weight(current_user).to_s + metric}" %></li>
-                        <li><i class="fa fa-refresh"></i><%= "#{t(".reps", default: "Reps")}: #{submission.reps}" %></li>
+                        <li<%= ' class="top-rank"' if rank < 3 %>><i class="fa fa-trophy"></i><strong><%= t(".rank") %>: <%= rank %></strong></li>
+                        <li><i class="fa fa-balance-scale"></i><%= "#{t(".weight")}: #{submission.converted_weight(current_user).to_s + metric}" %></li>
+                        <li><i class="fa fa-refresh"></i><%= "#{t(".reps")}: #{submission.reps}" %></li>
                       </ul>
                   </div>
               </div>

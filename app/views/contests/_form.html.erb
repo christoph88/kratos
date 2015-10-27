@@ -39,7 +39,7 @@
           <%= link_to translations[:destroy], @contest, method: :delete, data: { confirm: 'Are you sure?' } unless current_page?(controller: 'contests', action: 'new') %>
         </div>
         <div class="col-lg-6 text-right">
-          <%= f.submit translations[:update], default: "Update", class: "btn-u" %>
+          <%= f.submit translations[:update], class: "btn-u" %>
         </div>
       </div>
 

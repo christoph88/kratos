@@ -12,7 +12,7 @@
         <!--Left Sidebar-->
         <div class="col-md-3 md-margin-bottom-40">
             <div class="panel-heading-v2 overflow-h">
-            <h2 class="heading-xs pull-left"><i class="fa fa-info"></i> <%= t(".descriptionh", default: "Description") %></h2>
+            <h2 class="heading-xs pull-left"><i class="fa fa-info"></i> <%= t(".descriptionh") %></h2>
             </div>
             <p><%= @description %></p>
             <p>Admin: <strong><%= @creator %></strong></p>
@@ -20,11 +20,11 @@
             <hr>
 
             <div class="panel-heading-v2 overflow-h">
-            <h2 class="heading-xs pull-left"><i class="fa fa-trophy"></i> <%= t(".submith", default: "Submit to leaderboard") %></h2>
+            <h2 class="heading-xs pull-left"><i class="fa fa-trophy"></i> <%= t(".submith") %></h2>
             </div>
-            <p><%= t(".submitp", default: "Compete now and submit your best score to the leaderboard!") %></p>
-            <p><%= link_to t(".submitb", default: "Add entry"), new_contest_submission_path, class: "btn btn-u btn-block" %></p>
-            <p><%= raw t(".submitm", href: link_to(t(".submitm_link", default: "pounds or kgs!"), edit_user_registration_path), default: "Show in %{href}") %></p>
+            <p><%= t(".submitp") %></p>
+            <p><%= link_to t(".submitb"), new_contest_submission_path, class: "btn btn-u btn-block" %></p>
+            <p><%= raw t(".submitm", href: link_to(t(".submitm_link"), edit_user_registration_path)) %></p>
 
             <hr>
 

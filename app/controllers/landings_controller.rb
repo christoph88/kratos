@@ -14,7 +14,7 @@ class LandingsController < ApplicationController
   end
 
   def test
-    add_breadcrumb t('.breadcrumb', default: "testpage"), test_path
+    add_breadcrumb t('.breadcrumb'), test_path
     @title = t('landings.test.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
@@ -23,6 +23,6 @@ class LandingsController < ApplicationController
   private
 
   def breadcrumb_base
-    add_breadcrumb t('landings.index.breadcrumb', default: "home"), root_path
+    add_breadcrumb t('landings.index.breadcrumb'), root_path
   end
 end

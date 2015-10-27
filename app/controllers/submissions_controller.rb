@@ -33,7 +33,7 @@ class SubmissionsController < ApplicationController
   end
 
   def show
-    add_breadcrumb t('.breadcrumb', default: "show submission"), submission_path(@submission)
+    add_breadcrumb t('.breadcrumb'), submission_path(@submission)
 
     @title = t('.title')
     #set_meta_tags keywords:     %w[],
@@ -44,7 +44,7 @@ class SubmissionsController < ApplicationController
   end
 
   def new
-    add_breadcrumb t('.breadcrumb', default: "new submission"), new_contest_submission_path
+    add_breadcrumb t('.breadcrumb'), new_contest_submission_path
 
     @title = t('.title')
     #set_meta_tags keywords:     %w[],
@@ -55,14 +55,14 @@ class SubmissionsController < ApplicationController
   end
 
   def edit
-    add_breadcrumb t('.breadcrumb', default: "edit submission"), edit_submission_path(@submission)
+    add_breadcrumb t('.breadcrumb'), edit_submission_path(@submission)
 
     @title = t('.title')
 
   end
 
   def create
-    add_breadcrumb t('.breadcrumb', default: "create submission"), new_contest_submission_path
+    add_breadcrumb t('.breadcrumb'), new_contest_submission_path
 
     @title = t('.title')
     #set_meta_tags keywords:     %w[],
@@ -75,7 +75,7 @@ class SubmissionsController < ApplicationController
   end
 
   def update
-    add_breadcrumb t('.breadcrumb', default: "update submission"), edit_submission_path(@submission)
+    add_breadcrumb t('.breadcrumb'), edit_submission_path(@submission)
 
     @title = t('.title')
     #set_meta_tags keywords:     %w[],
@@ -86,7 +86,7 @@ class SubmissionsController < ApplicationController
   end
 
   def destroy
-    add_breadcrumb t('.breadcrumb', default: "delete submission"), edit_submission_path(@submission)
+    add_breadcrumb t('.breadcrumb'), edit_submission_path(@submission)
 
     @title = t('.title')
     #set_meta_tags keywords:     %w[],
@@ -116,8 +116,8 @@ class SubmissionsController < ApplicationController
     end
 
     def breadcrumb_base
-      add_breadcrumb t('landings.index.breadcrumb', default: "home"), root_path
-      add_breadcrumb t('contests.index.breadcrumb', default: "leaderboards"), contests_path
+      add_breadcrumb t('landings.index.breadcrumb'), root_path
+      add_breadcrumb t('contests.index.breadcrumb'), contests_path
 
       #add contest name
       unless @contest.nil? then

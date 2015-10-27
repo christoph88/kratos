@@ -23,7 +23,7 @@ class ContestsController < ApplicationController
   end
 
   def show
-    add_breadcrumb t('.breadcrumb', default: "show"), contest_path(@contest)
+    add_breadcrumb t('.breadcrumb'), contest_path(@contest)
     @title = t('.title', contest: @contest.name)
     #set_meta_tags keywords:     %w[],
                   #description:  ""
@@ -32,7 +32,7 @@ class ContestsController < ApplicationController
   end
 
   def new
-    add_breadcrumb t('.breadcrumb', default: "new leaderboard"), new_contest_path
+    add_breadcrumb t('.breadcrumb'), new_contest_path
     @title = t('.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
@@ -42,7 +42,7 @@ class ContestsController < ApplicationController
   end
 
   def edit
-    add_breadcrumb t('.breadcrumb', default: "edit"), contest_path(@contest)
+    add_breadcrumb t('.breadcrumb'), contest_path(@contest)
     @title = t('.title', contest: @contest.name)
     #set_meta_tags keywords:     %w[],
                   #description:  ""
@@ -50,7 +50,7 @@ class ContestsController < ApplicationController
   end
 
   def create
-    add_breadcrumb t('.breadcrumb', default: "create leaderboard"), new_contest_path
+    add_breadcrumb t('.breadcrumb'), new_contest_path
     @title = t('.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
@@ -62,7 +62,7 @@ class ContestsController < ApplicationController
   end
 
   def update
-    add_breadcrumb t('.breadcrumb', default: "update"), contest_path(@contest)
+    add_breadcrumb t('.breadcrumb'), contest_path(@contest)
     @title = t('.title', contest: @contest.name)
     #set_meta_tags keywords:     %w[],
                   #description:  ""
@@ -72,7 +72,7 @@ class ContestsController < ApplicationController
   end
 
   def destroy
-    add_breadcrumb t('.breadcrumb', default: "delete"), edit_contest_path(@contest)
+    add_breadcrumb t('.breadcrumb'), edit_contest_path(@contest)
     @title = t('.title', contest: @contest.name)
     #set_meta_tags keywords:     %w[],
                   #description:  ""
@@ -96,8 +96,8 @@ class ContestsController < ApplicationController
     end
 
     def breadcrumb_base
-      add_breadcrumb t('landings.index.breadcrumb', default: "home"), root_path
-      add_breadcrumb t('contests.index.breadcrumb', default: "leaderboards"), contests_path
+      add_breadcrumb t('landings.index.breadcrumb'), root_path
+      add_breadcrumb t('contests.index.breadcrumb'), contests_path
     end
 
     def breadcrumb_contest
