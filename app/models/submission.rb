@@ -1,6 +1,3 @@
-# NOTES
-# The submission model saves in pounds by default
-
 class Submission < ActiveRecord::Base
   belongs_to :user
   belongs_to :contest
@@ -16,12 +13,13 @@ class Submission < ActiveRecord::Base
   end
 
   def converted_weight(current_user)
+    # The submission model saves in pounds by default
     unless current_user.nil? || current_user.kg
       # weight in pounds
       weight = self.weight
     else
       # weight in kgs
-      weight = self.weight * 2.20462262
+      weight = self.weight * 0.45359237
     end
     
     # drop decimal point if even number

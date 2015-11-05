@@ -1,9 +1,14 @@
 namespace :db do
   desc "Fill database with sample data"
 
+  task testsub: :environment do
+    make_submissions
+  end
+
   task populate: :environment do
     make_users
     make_contests
+    make_submissions
   end
 end
 
@@ -33,7 +38,8 @@ def make_users
       bio:                    bio,
       email:                  email,
       password:               password,
-      password_confirmation:  password
+      password_confirmation:  password,
+      data_source:            "rake_populate"
     )
   end
 end
@@ -48,8 +54,30 @@ def make_contests
     users.each { |user| user.contests.create!(
       name:         name,
       description:  description,
-      admin_id:     user.id
+      admin_id:     user.id,
+      ctype_id:     1,
+      data_source:  "rake_populate"
     ) }
   end
 end
 
+#FIXME add source field so it is easy to see what's test data and what not
+#FIXME fix make_submissions script so only "test" contests get populated
+def make_submissions
+  users = User.all.limit(15)
+  contests = Contest.where(data_source: "rake_populate")
+
+  contests.each do |contest|
+
+    users.each do |user| 
+      contest.submissions.create!(
+        reps:         rand(1..20),
+        weight:       rand(100..350),
+        user_id:      user.id,
+        contest_id:   contest.id,
+        data_source:  "rake_populate"
+      )
+    end
+
+  end
+end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151022175534) do
+ActiveRecord::Schema.define(version: 20151105145847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20151022175534) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.integer  "ctype_id"
+    t.string   "data_source"
   end
 
   create_table "ctypes", force: true do |t|
@@ -48,6 +49,7 @@ ActiveRecord::Schema.define(version: 20151022175534) do
     t.datetime "updated_at"
     t.decimal  "tonnage"
     t.datetime "time"
+    t.string   "data_source"
   end
 
   add_index "submissions", ["contest_id"], name: "index_submissions_on_contest_id", using: :btree
@@ -78,6 +80,7 @@ ActiveRecord::Schema.define(version: 20151022175534) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.boolean  "kg"
+    t.string   "data_source"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
