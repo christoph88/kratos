@@ -15,8 +15,8 @@
             <h2 class="heading-xs pull-left"><i class="fa fa-info"></i> <%= t(".descriptionh") %></h2>
             </div>
             <p><%= @description %></p>
-            <p>Admin: <strong><%= @creator %></strong></p>
-            <p><%= link_to "edit", edit_contest_path(@contest) %></p>
+            <p><%= t(".admin") %>: <strong><%= @creator %></strong></p>
+            <p><%= link_to t(".editcontest"), edit_contest_path(@contest) if current_user == @contest.admin %></p>
 
             <hr>
 

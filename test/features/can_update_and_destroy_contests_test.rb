@@ -12,6 +12,7 @@ feature "CanUpdateAndDestroyContests" do
     page.has_css?(".grid-boxes-caption").must_equal true
     click_link "contestsuperior"
 
+    # find a contest without any submission, or else the placeholder does not show.
     find('div.container.content.profile > div > div.col-md-3.md-margin-bottom-40 > p:nth-child(4) > a').click
 
     within ".reg-page" do
@@ -30,10 +31,8 @@ feature "CanUpdateAndDestroyContests" do
 
     page.must_have_content "editcontest"
     
+    #only on pages without any submissions
     page.wont_have_content ".placeholder"
-    #OPTIMIZE must have all translations
-    page.wont_have_content "change me"
-
 
     visit contests_path
     page.must_have_content "editcontest"
