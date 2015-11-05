@@ -30,7 +30,7 @@ en:
       submith: "Add score to leaderboard"
       submitp: "Compete now and submit your best score to the leaderboard!"
       submitb: "add score"
-      submitm: "Show in"
+      submitm: "Show in %{href}"
       submitm_link: "pounds or kg!"
       latest_1:
         latesth: "Latest submissions"
