@@ -21,7 +21,7 @@ describe Submission do
 
   describe "must be able to convert weights" do
     it "must convert to kg" do
-      weight = 10 * 2.20462262
+      weight = 10 * 0.45359237
       default.converted_weight(kg).must_equal weight.round(2)
     end
 
@@ -31,7 +31,7 @@ describe Submission do
 
     it "must round to 2 decimals when uneven" do
       # 5 characters including the dot
-      default.converted_weight(kg).to_s.length.must_equal 5
+      default.converted_weight(kg).to_s.length.must_equal 4
     end
 
     it "must drop decimals (round) when even number" do
