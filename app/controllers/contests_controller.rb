@@ -23,7 +23,7 @@ class ContestsController < ApplicationController
   end
 
   def show
-    add_breadcrumb t('.breadcrumb'), contest_path(@contest)
+    add_breadcrumb t('.breadcrumb'), contest_submissions_path(@contest)
     @title = t('.title', contest: @contest.name)
     #set_meta_tags keywords:     %w[],
                   #description:  ""

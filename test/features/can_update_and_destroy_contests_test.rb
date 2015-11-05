@@ -1,7 +1,7 @@
 require "test_helper"
 
 feature "CanUpdateAndDestroyContests" do
-  scenario "Can update or destory leaderboards after logging in" do
+  scenario "Can update or destroy leaderboards after logging in" do
     
     visit root_path
     within ".navbar-nav" do
