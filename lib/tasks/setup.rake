@@ -1,12 +1,18 @@
 require 'csv'    
 
 namespace :db do
-  desc "Fill database with quotes"
+  desc "Setup database with app specific values."
 
-  task quote: :environment do
+  task app: :environment do
+    make_quotes
+    make_ctypes
+  end
+
+  task aquote: :environment do
     make_quotes
   end
-  task ctype: :environment do
+
+  task actype: :environment do
     make_ctypes
   end
 end

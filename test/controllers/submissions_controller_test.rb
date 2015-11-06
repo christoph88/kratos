@@ -15,7 +15,7 @@ describe SubmissionsController do
     it "should show user kg preferences" do
       sign_in users :default
       get :index, contest_id: contest
-      submission.converted_weight(user).must_equal 22.0462262.round(2)
+      submission.converted_weight(user).must_equal 4.5359237.round(2)
       value(response).must_be :success?
       value(assigns(:submissions)).wont_be :nil?
     end

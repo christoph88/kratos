@@ -1,13 +1,21 @@
 namespace :db do
   desc "Fill database with sample data"
 
-  task testsub: :environment do
-    make_submissions
-  end
-
   task populate: :environment do
     make_users
     make_contests
+    make_submissions
+  end
+
+  task pusers: :environment do
+    make_users
+  end
+
+  task pcontests: :environment do
+    make_contests
+  end
+
+  task psubmissions: :environment do
     make_submissions
   end
 end
@@ -51,18 +59,18 @@ def make_contests
     name        = Faker::Team.creature
     description = Faker::Lorem.sentence
 
-    users.each { |user| user.contests.create!(
+    users.each do |user|
+      user.contests.create!(
       name:         name,
       description:  description,
       admin_id:     user.id,
       ctype_id:     1,
-      data_source:  "rake_populate"
-    ) }
+      data_source:  "rake_populate")
+    end
+
   end
 end
 
-#FIXME add source field so it is easy to see what's test data and what not
-#FIXME fix make_submissions script so only "test" contests get populated
 def make_submissions
   users = User.all.limit(15)
   contests = Contest.where(data_source: "rake_populate")
