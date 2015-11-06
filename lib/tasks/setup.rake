@@ -3,7 +3,7 @@ require 'csv'
 namespace :db do
   desc "Setup database with app specific values."
 
-  task app: :environment do
+  task asetup: :environment do
     make_quotes
     make_ctypes
   end
