@@ -28,7 +28,6 @@ feature "CanUpdateAndDestroyContests" do
     # placeholder only on pages without any submissions
 
     click_link "contest"
-    save_and_open_page
     page.has_css? ".placeholder"
 
     # look for contests with submissions

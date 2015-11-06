@@ -28,14 +28,6 @@ feature "CanCreateAndReadContests" do
 
     page.must_have_content "createreadcontest"
     
-    #OPTIMIZE must placeholder when no submission with call to action
-    page.must_have_content ".placeholder"
-    #OPTIMIZE must have edit button
-    page.must_have_content "edit"
-    #OPTIMIZE must have all translations
-    page.wont_have_content "change me"
-
-
     visit contests_path
     page.must_have_content "createreadcontest"
 
