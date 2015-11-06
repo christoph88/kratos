@@ -60,12 +60,15 @@ def make_contests
     description = Faker::Lorem.sentence
 
     users.each do |user|
-      user.contests.create!(
+      # use new instead of create to bypass validations
+      contest = user.contests.new(
       name:         name,
       description:  description,
       admin_id:     user.id,
       ctype_id:     1,
       data_source:  "rake_populate")
+
+      contest.save
     end
 
   end
