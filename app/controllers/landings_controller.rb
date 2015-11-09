@@ -18,6 +18,9 @@ class LandingsController < ApplicationController
     @title = t('landings.test.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
+    @quotes = Quote.all
+
+    @contests = Contest.all.order('updated_at DESC').paginate(page: params[:page], per_page: 10)
   end
 
   private

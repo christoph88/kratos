@@ -32,7 +32,10 @@ Rails.application.config.assets.precompile += %w( owl.carousel/owl-carousel.js )
 Rails.application.config.assets.precompile += %w( init/init_homepage.js )
 # contests#index
 Rails.application.config.assets.precompile += %w( masonry/blog_masonry_3col.css )
+Rails.application.config.assets.precompile += %w( imagesloaded/imagesloaded.pkgd.js )
+Rails.application.config.assets.precompile += %w( jquery-masonry/dist/masonry.pkgd.js )
 Rails.application.config.assets.precompile += %w( masonry/blog-masonry.js )
+#OPTIMIZE delete unneeded js files for masonry
 Rails.application.config.assets.precompile += %w( masonry/jquery.masonry.min.js )
 # submissions#index
 Rails.application.config.assets.precompile += %w( pages/profile.css )

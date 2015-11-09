@@ -7,6 +7,7 @@
     "jquery": "latest",
     "jquery-ujs": "latest",
     "jquery-parallax": "latest",
+    "imagesloaded": "latest",
     "jquery-masonry": "latest",
     "respond": "latest",
     "html5shiv": "latest",
