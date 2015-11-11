@@ -74,10 +74,12 @@ gem 'twitter'
 # Gems for Heroku
 gem 'rails_12factor', group: :production
 
+# Gems for db:populate
+gem 'faker'
+
 group :development do
   gem 'better_errors'
   gem 'pry-rails'
-  gem 'faker'
   gem 'minitest-reporters'
   gem 'guard'
   gem 'guard-minitest'
