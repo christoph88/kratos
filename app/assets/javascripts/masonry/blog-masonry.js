@@ -10,9 +10,10 @@ $(document).ready(function(){
     $container.imagesLoaded( function(){
         $container.masonry({
             itemSelector : '.grid-boxes-in',
-            gutterWidth: '.grid-boxes-gutter',
-            isAnimated: true,
-            columnWidth: '.grid-boxes-in'
+            //isAnimated: true,
+            percentPosition: true,
+            gutter: '.grid-gutter',
+            columnWidth: '.grid-sizer'
           
           //function( containerWidth ) {
                 //var box_width = (((containerWidth - 2*gutter)/3) | 0) ;

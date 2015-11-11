@@ -29,6 +29,8 @@
 <div class="blog_masonry_3col">
     <div class="container content grid-boxes">
 
+      <div class="grid-sizer"></div>
+      <div class="grid-gutter"></div>
         <% @contests.each.with_index do |contest, index| %>
           <div class="grid-boxes-in">
               <%= link_to contest_submissions_path(contest.id) do %>

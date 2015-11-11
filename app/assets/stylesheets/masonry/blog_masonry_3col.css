@@ -1,24 +1,25 @@
-.grid-boxes-gutter{
+.grid-gutter{
   width: 30px;
 }
 
 /* 1 columns */
-  .grid-boxes-in-width,
+  .grid-sizer,
   .grid-boxes-in {
   width: 100%;
 }
 
 /* 2 columns */
-@media screen and (min-width: 300px) {
-  .grid-boxes-in-width,
+@media screen and (min-width: 480px) {
+  .grid-sizer,
   .grid-boxes-in {
+    width: 30px;
     width: calc((100% - 30px) / 2);
   }
 }
 
 /* 3 columns */
 @media screen and (min-width: 960px) {
-  .grid-boxes-in-width,
+  .grid-sizer,
   .grid-boxes-in {
     width: calc((100% - 2 * 30px) / 3);
   }
