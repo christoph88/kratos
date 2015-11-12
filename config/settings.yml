@@ -1,6 +1,8 @@
 # general settings
 appname: "Kratos"
 twitter: "gem"
-quotes_csv: "/home/christoph/Documenten/kratosproject/setup/quotes.csv"
-ctypes_csv: "/home/christoph/Documenten/kratosproject/setup/ctypes.csv"
+#quotes_csv: "/home/christoph/Documenten/kratosproject/setup/quotes.csv"
+quotes_csv: "https://docs.google.com/spreadsheets/d/1RvYKswgsnei2kb_oscu4ib3c4nSycY3kLzTCaT9uaG4/pub?gid=0&single=true&output=csv"
+#ctypes_csv: "/home/christoph/Documenten/kratosproject/setup/ctypes.csv"
+ctypes_csv: "https://docs.google.com/spreadsheets/d/1dWSSAqkAp8nyHBSCaH5r4AUMiSr31j5Y8QGjVv_4UUg/pub?gid=0&single=true&output=csv"
 test: "bier"

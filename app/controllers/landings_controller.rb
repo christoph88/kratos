@@ -18,9 +18,20 @@ class LandingsController < ApplicationController
     @title = t('landings.test.title')
     #set_meta_tags keywords:     %w[],
                   #description:  ""
-    @quotes = Quote.all
 
-    @contests = Contest.all.order('updated_at DESC').paginate(page: params[:page], per_page: 10)
+    uri = URI.parse(Settings.quotes_csv)
+    uri = URI.parse(Settings.ctypes_csv)
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true
+    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+    request = Net::HTTP::Get.new(uri.request_uri)
+    response = http.request(request)
+    tempquotes = Tempfile.new('quotes.csv')
+    File.open(tempquotes.path,'wb') do |f|
+      f.write response.body
+    end
+    @data = File.read(tempquotes.path)
+
   end
 
   private
