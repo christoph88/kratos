@@ -13,7 +13,9 @@ Rails.application.routes.draw do
   end
 
 
-  get '/test', to: 'landings#test'
+  unless Rails.env.production? then
+    get '/test', to: 'landings#test'
+  end
   get '/about_us', to: 'landings#test'
   get '/teams', to: 'landings#test'
   get '/following', to: 'landings#test'
