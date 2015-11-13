@@ -1,0 +1,1 @@
+$(document).ready(function(){var e=$(".grid-boxes");e.imagesLoaded(function(){e.masonry({itemSelector:".grid-boxes-in",percentPosition:!0,gutter:".grid-gutter",columnWidth:".grid-sizer"})})});
