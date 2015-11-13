@@ -68,6 +68,8 @@ gem "breadcrumbs_on_rails"
 # add pagination
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
+# add search functionality
+gem 'textacular', '~> 3.0'
 # add twitter gem
 gem 'twitter'
 
