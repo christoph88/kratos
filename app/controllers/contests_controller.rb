@@ -16,8 +16,15 @@ class ContestsController < ApplicationController
                   description:  "View all the #{Settings.appname} leaderboards now!"
 
     @quotes = Quote.all
+    
+    if params[:search].nil? || params[:search].blank? then
+      @search = Contest.all.order('updated_at DESC')
+    else
+      @search = Contest.fuzzy_search(params[:search]).order('updated_at DESC')
+    end
 
-    @contests = Contest.all.order('updated_at DESC').paginate(page: params[:page], per_page: 10)
+    @contests = @search.paginate(page: params[:page], per_page: 10)
+
     respond_with(@contests)
 
   end

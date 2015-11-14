@@ -16,6 +16,9 @@
                 <div class="col-md-9 animated fadeInLeft">
                   <span><%= t(".create.title") %></span>
                     <p><%= t(".create.paragraph") %></p>
+                    <%= form_tag contests_path, :method => 'get' do %>
+                      <p><%= text_field_tag :search, params[:search] %> <%= submit_tag "Search", :name => nil %></p>
+                  <% end %>
                 </div>
                 <div class="col-md-3 btn-buy animated fadeInRight">
                     <%= link_to new_contest_path, class: "btn-u btn-u-lg" do %>
@@ -87,6 +90,6 @@
 <!--=== End Content Part ===-->
 <div class="container">
   <div class="pagination pull-right">
-    <%= will_paginate @submissions, renderer: BootstrapPagination::Rails %>
+    <%= will_paginate @contests, renderer: BootstrapPagination::Rails %>
   </div>
 </div>
