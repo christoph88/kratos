@@ -28,7 +28,8 @@ en:
         title: "Search leaderboards"
         field: "Search a leaderboard ..."
         help: "Remember: you can also search for hashtags e.g. #squats, #america, ..."
-        cta: "Challenge your friends and create a <%= link_to énew leaderboardé"
+        cta: "Challenge your friends and create a %{href}"
+        cta_link: "new leaderboard."
         remove: "Remove search"
       contest:
         by: "by"

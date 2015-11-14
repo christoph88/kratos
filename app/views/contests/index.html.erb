@@ -26,7 +26,7 @@
                 <% end %>
                 <div class="help-block"><%= t(".search.help") %></div>
                 <ul class="list-inline up-ul">
-                  <li><%= t(".search.cta") %>, new_contest_path, class: "text-highlights text-highlights-green" %></li>
+                  <li><%= raw t(".search.cta", href: link_to(t(".search.cta_link"), new_contest_path, class: "text-highlights text-highlights-green")) %></li>
                   <% unless params[:search].blank? %>
                   <li><%= link_to t(".search.remove"), contests_path, class: "text-highlights text-highlights-green" %></li>
                   <% end %>
