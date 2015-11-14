@@ -34,7 +34,7 @@
         <% @contests.each.with_index do |contest, index| %>
           <div class="grid-boxes-in">
               <%= link_to contest_submissions_path(contest.id) do %>
-                <%= image_tag contest.avatar.url(:medium), class: "img-responsive", alt: image_alt('placeholder/1.jpg') %>
+                <%= image_tag contest.avatar.url(:medium), class: "img-responsive", alt: image_alt(contest.avatar.url(:medium)) %>
               <% end %>
               <div class="grid-boxes-caption">
                 <h3><%= link_to contest.name, contest_submissions_path(contest) %></h3>

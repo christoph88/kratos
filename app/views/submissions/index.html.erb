@@ -11,8 +11,9 @@
   <div class="row">
         <!--Left Sidebar-->
         <div class="col-md-3 md-margin-bottom-40">
+            <%= image_tag @contest.avatar.url(:medium), class: "img-responsive profile-img margin-bottom-20", alt: image_alt(@contest.avatar.url(:medium)) %>
             <div class="panel-heading-v2 overflow-h">
-            <h2 class="heading-xs pull-left"><i class="fa fa-info"></i> <%= t(".descriptionh") %></h2>
+              <h2 class="heading-xs pull-left"><i class="fa fa-info"></i> <%= t(".descriptionh") %></h2>
             </div>
             <p><%= @description %></p>
             <p><%= t(".admin") %>: <strong><%= @creator %></strong></p>
