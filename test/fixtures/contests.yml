@@ -13,3 +13,7 @@ two:
   name: "contest"
   admin: american
   ctype: default
+tree:
+  name: "searchforcontestx"
+  admin: default
+  ctype: default
