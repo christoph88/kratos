@@ -24,10 +24,12 @@ en:
     index:
       title: "Show all leaderboards"
       breadcrumb: "leaderboards"
-      create:
-        title: "Create your own leaderboard"
-        paragraph: "Start creating your own leaderboard right now. Different contesttypes are possible. From max reps to 1 rep maximum to total tonnage over time."
-        button: "Create leaderboard"
+      search:
+        title: "Search leaderboards"
+        field: "Search a leaderboard ..."
+        help: "Remember: you can also search for hashtags e.g. #squats, #america, ..."
+        cta: "Challenge your friends and create a <%= link_to énew leaderboardé"
+        remove: "Remove search"
       contest:
         by: "by"
         reps: "reps"

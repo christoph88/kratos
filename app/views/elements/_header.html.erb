@@ -27,7 +27,7 @@
                             <i class="menu-icons-style search search-close search-btn fa fa-search"></i>
                             <div class="search-open">
                                 <%= form_tag contests_path, :method => 'get' do %>
-                                  <%= text_field_tag :search, params[:search], class: "animated fadeIn form-control", placeholder: "Search a leaderboard ..."  %>
+                                  <%= text_field_tag :search, params[:search], class: "animated fadeIn form-control", placeholder: t(".search") %>
                               <% end %>
                             </div>
                         </li>

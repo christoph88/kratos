@@ -28,6 +28,7 @@ en:
       profile: "profile"
       log_out: "log out"
       sign_up: "register"
+      search: "Search a leaderboard ..."
     footer:
       description-text: "Kratos is a platform enabling people to compete with each other globally."
       useful-links:
