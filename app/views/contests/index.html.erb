@@ -9,22 +9,32 @@
 <%end%>
 
 
-<!--=== Create contest Part ===-->
-<div class="purchase">
+<!--=== Search Block Version 2 ===-->
+    <div class="search-block-v2">
         <div class="container">
-            <div class="row">
-                <div class="col-md-9 animated fadeInLeft">
-                  <span><%= t(".create.title") %></span>
-                    <p><%= t(".create.paragraph") %></p>
+            <div class="col-md-6 col-md-offset-3">
+                <h2>Search leaderboards</h2>
+                <%= form_tag contests_path, :method => 'get' do %>
+                <div class="input-group">
+                        <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Search a leaderboard ..."  %>
+                    <span class="input-group-btn">
+                        <%= button_tag class: "btn-u" do %>
+                          <i class="fa fa-search"></i>
+                        <% end %>
+                    </span>
                 </div>
-                <div class="col-md-3 btn-buy animated fadeInRight">
-                    <%= link_to new_contest_path, class: "btn-u btn-u-lg" do %>
-                      <i class="fa fa-plus-circle"></i> <%= t(".create.button") %>
-                    <% end %>
-                </div>
+                <% end %>
+                <div class="help-block">Remember: you can also search for hashtags e.g. #squats, #america, ...</div>
+                <ul class="list-inline up-ul">
+                  <li>Challenge your friends and create a <%= link_to "new leaderboard", new_contest_path, class: "text-highlights text-highlights-green" %></li>
+                  <% unless params[:search].blank? %>
+                  <li><%= link_to "Remove search", contests_path, class: "text-highlights text-highlights-green" %></li>
+                  <% end %>
+                </ul>
             </div>
         </div>
-    </div>
+    </div><!--/container-->
+<!--=== End Search Block Version 2 ===-->
 <!--=== Content Part ===-->
 <div class="blog_masonry_3col">
     <div class="container content grid-boxes">
