@@ -80,6 +80,9 @@
           <% end %>
 
         <% end %>
+        <% if @contests.blank? then %>
+          <p>No leaderboards found, <%= link_to "create a new one", new_contest_path %> or <%= link_to "show all.", contests_path %></p>
+        <% end %>
 
 
     </div><!--/container-->
