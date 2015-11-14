@@ -24,7 +24,6 @@ feature "CanSearch" do
       find(".btn-u").click
     end
 
-    save_and_open_page
     page.must_have_content "searchforcontestx"
     #save_and_open_page
   end
