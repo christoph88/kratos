@@ -10,7 +10,7 @@ feature "CanCreateAndReadContests" do
 
     page.must_have_content "Show all leaderboards"
     page.has_css?(".grid-boxes-caption").must_equal true
-    click_link "Create leaderboard"
+    click_link "new leaderboard."
 
     within ".reg-page" do
       fill_in "user[login]", with: "chris88"
